@@ -32,6 +32,7 @@ CREATE TABLE `lremap_authors` (
   `affiliation` text COLLATE utf8_bin,
   `country` text COLLATE utf8_bin,
   PRIMARY KEY (`resourceid`,`authornumber`),
+  KEY `AIDX` (`authornumber`),
   CONSTRAINT `fk_authors2papers` FOREIGN KEY (`resourceid`) REFERENCES `lremap_papers` (`resourceid`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -53,7 +54,39 @@ CREATE TABLE `lremap_authors_norm` (
   `affiliation` text COLLATE utf8_bin,
   `country` text COLLATE utf8_bin,
   PRIMARY KEY (`resourceid`,`authornumber`),
+  KEY `AIDXN` (`authornumber`),
   CONSTRAINT `fk_authorsnorm2papersnorm` FOREIGN KEY (`resourceid`) REFERENCES `lremap_papers_norm` (`resourceid`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `lremap_conference_years`
+--
+
+DROP TABLE IF EXISTS `lremap_conference_years`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `lremap_conference_years` (
+  `CONF` varchar(50) COLLATE utf8_bin NOT NULL,
+  `YEAR` char(4) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`CONF`,`YEAR`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `lremap_conferences`
+--
+
+DROP TABLE IF EXISTS `lremap_conferences`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `lremap_conferences` (
+  `CONF` varchar(50) COLLATE utf8_bin NOT NULL,
+  `YEAR` char(4) COLLATE utf8_bin NOT NULL,
+  `TYPE` char(4) COLLATE utf8_bin NOT NULL,
+  `subEVentOf` varchar(50) COLLATE utf8_bin NOT NULL,
+  `location` varchar(255) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`CONF`,`YEAR`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -70,7 +103,8 @@ CREATE TABLE `lremap_papers` (
   `status` text COLLATE utf8_bin,
   `title` text COLLATE utf8_bin,
   `category1` text COLLATE utf8_bin,
-  PRIMARY KEY (`resourceid`,`paperid`),
+  PRIMARY KEY (`resourceid`),
+  KEY `PIDX` (`paperid`),
   CONSTRAINT `fk_papers2resources` FOREIGN KEY (`resourceid`) REFERENCES `lremap_resource` (`resourceid`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -88,7 +122,8 @@ CREATE TABLE `lremap_papers_norm` (
   `status` text COLLATE utf8_bin,
   `title` text COLLATE utf8_bin,
   `category1` text COLLATE utf8_bin,
-  PRIMARY KEY (`resourceid`,`paperid`),
+  PRIMARY KEY (`resourceid`),
+  KEY `index2` (`paperid`),
   CONSTRAINT `fk_papersnorm2resourcesnorm` FOREIGN KEY (`resourceid`) REFERENCES `lremap_resource_norm` (`resourceid`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -132,10 +167,10 @@ DROP TABLE IF EXISTS `lremap_resource_keys`;
 CREATE TABLE `lremap_resource_keys` (
   `resourceid` varchar(32) COLLATE utf8_bin NOT NULL DEFAULT 'fa53b91ccc1b78668d5af58e1ed3a485',
   `resource_normid` varchar(32) COLLATE utf8_bin NOT NULL DEFAULT 'fa53b91ccc1b78668d5af58e1ed3a485',
-  PRIMARY KEY (`resourceid`,`resource_normid`),
+  PRIMARY KEY (`resourceid`),
   UNIQUE KEY `NID` (`resource_normid`),
-  CONSTRAINT `fk_key2sub` FOREIGN KEY (`resourceid`) REFERENCES `lremap_subs` (`resourceid`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_keynorm2subnorm` FOREIGN KEY (`resource_normid`) REFERENCES `lremap_subs_norm` (`resourceid`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_keys2subs` FOREIGN KEY (`resourceid`) REFERENCES `lremap_subs` (`resourceid`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_keysnorm2subsnorm` FOREIGN KEY (`resource_normid`) REFERENCES `lremap_subs_norm` (`resourceid`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -220,7 +255,8 @@ CREATE TABLE `lremap_subs` (
   `CONF` varchar(50) COLLATE utf8_bin NOT NULL,
   `YEAR` char(4) COLLATE utf8_bin NOT NULL,
   `passcode` varchar(20) COLLATE utf8_bin NOT NULL DEFAULT '',
-  PRIMARY KEY (`resourceid`,`passcode`,`CONF`,`YEAR`)
+  PRIMARY KEY (`resourceid`),
+  KEY `SIDX` (`CONF`,`YEAR`,`passcode`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -236,7 +272,21 @@ CREATE TABLE `lremap_subs_norm` (
   `CONF` varchar(50) COLLATE utf8_bin NOT NULL,
   `YEAR` char(4) COLLATE utf8_bin NOT NULL,
   `passcode` varchar(20) COLLATE utf8_bin NOT NULL DEFAULT '',
-  PRIMARY KEY (`resourceid`,`passcode`,`CONF`,`YEAR`)
+  PRIMARY KEY (`resourceid`),
+  KEY `SIDXN` (`CONF`,`YEAR`,`passcode`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `lremap_years`
+--
+
+DROP TABLE IF EXISTS `lremap_years`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `lremap_years` (
+  `YEAR` varchar(4) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`YEAR`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -427,31 +477,6 @@ CREATE TABLE `stage_lremap_resource_norm` (
   `doc` text COLLATE utf8_bin,
   PRIMARY KEY (`passcode`,`resourceid`,`CONF`,`YEAR`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
-
--- additional tables --
-DROP TABLE IF EXISTS `lremap_conferences`;
-CREATE TABLE `lremap_conferences` (
-  `CONF` varchar(50) COLLATE utf8_bin NOT NULL,
-  `YEAR` char(4) COLLATE utf8_bin NOT NULL,
-  `TYPE` char(4) COLLATE utf8_bin NOT NULL,
-  `subEVentOf` varchar(50) COLLATE utf8_bin NOT NULL,
-  `location` varchar(255) COLLATE utf8_bin NOT NULL,
-  PRIMARY KEY (`CONF`,`YEAR`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
-
-
-DROP TABLE IF EXISTS `lremap_years`;
-CREATE TABLE `lremap_years` (
-  `YEAR` varchar(4) COLLATE utf8_bin NOT NULL,
-  PRIMARY KEY (`YEAR`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
-
-DROP TABLE IF EXISTS `lremap_conference_years`;
-CREATE TABLE `lremap_conference_years` (
-  `CONF` varchar(50) COLLATE utf8_bin NOT NULL,
-  `YEAR` char(4) COLLATE utf8_bin NOT NULL,
-  PRIMARY KEY (`CONF`,`YEAR`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -463,4 +488,4 @@ CREATE TABLE `lremap_conference_years` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-06-30  8:44:05
+-- Dump completed on 2015-07-03 17:46:08
