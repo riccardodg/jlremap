@@ -427,6 +427,31 @@ CREATE TABLE `stage_lremap_resource_norm` (
   `doc` text COLLATE utf8_bin,
   PRIMARY KEY (`passcode`,`resourceid`,`CONF`,`YEAR`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- additional tables --
+DROP TABLE IF EXISTS `lremap_conferences`;
+CREATE TABLE `lremap_conferences` (
+  `CONF` varchar(50) COLLATE utf8_bin NOT NULL,
+  `YEAR` char(4) COLLATE utf8_bin NOT NULL,
+  `TYPE` char(4) COLLATE utf8_bin NOT NULL,
+  `subEVentOf` varchar(50) COLLATE utf8_bin NOT NULL,
+  `location` varchar(255) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`CONF`,`YEAR`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+
+DROP TABLE IF EXISTS `lremap_years`;
+CREATE TABLE `lremap_years` (
+  `YEAR` varchar(4) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`YEAR`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+DROP TABLE IF EXISTS `lremap_conference_years`;
+CREATE TABLE `lremap_conference_years` (
+  `CONF` varchar(50) COLLATE utf8_bin NOT NULL,
+  `YEAR` char(4) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`CONF`,`YEAR`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

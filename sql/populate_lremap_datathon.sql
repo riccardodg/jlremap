@@ -82,3 +82,10 @@ SELECT resourceid, conf, year, passcode FROM lremap_datathon.ods_lremap_resource
 
 REPLACE INTO lremap_subs_norm
 SELECT  resourceid, conf, year, passcode FROM lremap_datathon.ods_lremap_resource_norm_keys;
+
+-- additional tables --
+REPLACE INTO lremap_conferences SELECT distinct conf, year,type, subeventof, location FROM START_DB.START_conferences;
+
+REPLACE INTO lremap_years select distinct year from lremap_resource order by 1;
+
+REPLACE INTO lremap_conference_years select distinct conf,year from lremap_resource order by 1;

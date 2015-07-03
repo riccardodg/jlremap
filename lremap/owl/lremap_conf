@@ -1,0 +1,22 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:conf="http://www.resourcebook.eu/lremap/owl/lremap_conf#"
+    xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:tl="http://purl.org/NET/c4dm/timeline.owl#"
+    xmlns:base="http://www.resourcebook.eu/lremap/owl/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:swc="http://data.semanticweb.org/ns/swc/ontology#"
+    xmlns:year="http://www.resourcebook.eu/lremap/owl/lremap_year#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
+  <rdf:Description rdf:about="http://data.semanticweb.org/ns/swc/ontology#LREC2014">
+    <rdfs:label xml:lang="en">LREC2014</rdfs:label>
+    <swc:hasLocation rdf:resource="http://data.semanticweb.org/ns/swc/ontology#Reykjavik"/>
+    <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ConferenceEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="lremap_conf#">
+    <owl:imports rdf:resource="http://data.semanticweb.org/ns/swc/ontology#"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+</rdf:RDF>
