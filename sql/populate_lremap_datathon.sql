@@ -89,3 +89,24 @@ REPLACE INTO lremap_conferences SELECT distinct conf, year,type, subeventof, loc
 REPLACE INTO lremap_years select distinct year from lremap_resource order by 1;
 
 REPLACE INTO lremap_conference_years select distinct conf,year from lremap_resource order by 1;
+
+--add old conferences to the list --
+-- 2010 --
+REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('LREC2010', '2010','MAIN', '', 'La_Valletta');
+REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('COLING2010', '2010','MAIN', '', 'Beijing');
+
+-- 2011 --
+REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('O-COCOSDA2011', '2011','MAIN', '', 'Hsinchu');
+REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('ACLHT2011', '2011','MAIN', '', 'Portland');
+REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('IJCNLP2011', '2011','MAIN', '', 'Chiang_Mai');
+REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('IS2011', '2011','MAIN', '', 'Florence');
+REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('LTC2011', '2011','MAIN', '', 'Poznan');
+REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('RANLP2011', '2011','MAIN', '', 'Hissar');
+
+-- 2012 --
+REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('LREC2012', '2012','MAIN', '', 'Istambul');
+
+-- 2013 --
+REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('IS', '2013','MAIN', '', 'Lyon');
+REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('NAACL', '2013','MAIN', '', 'Atlanta');
+

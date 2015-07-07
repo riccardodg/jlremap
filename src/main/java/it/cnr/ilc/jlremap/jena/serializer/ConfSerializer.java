@@ -114,31 +114,25 @@ public class ConfSerializer {
         Property atYear = null;
         String confName, year, mainEvent = "";
         Individual y0 = null;
-        /* in this loop create main and location list*/
+
         for (LremapConferences item : confs) {
             Locations.add(item.getLocation());
-            confName = item.getLremapConferencesPK().getConf();
-            year = item.getLremapConferencesPK().getYear();
-            mainEvent = confName + year;
-
-            if (item.getType().equals("MAIN")) {
-                main = model.createResource(SWC + mainEvent);
-            }
-
-        }
-        for (LremapConferences item : confs) {
             String type = item.getType();
 
             confName = item.getLremapConferencesPK().getConf();
             year = item.getLremapConferencesPK().getYear();
-
+            if (confName.contains(year)) {
+                mainEvent = confName;
+            } else {
+                mainEvent = confName + year;
+            }
             if (type.equals("MAIN")) {
+
                 r = model.createResource(SWC + "ConferenceEvent");
                 y0 = m.createIndividual(SWC + mainEvent, r);
-                /* create instance */
 
-                /*add hasLocation*/
             } else {
+                main = model.createResource(SWC + item.getSubEVentOf());
                 r = model.createResource(SWC + "WorkshopEvent");
                 y0 = m.createIndividual(SWC + confName + year, r);
                 subEventOf = m.createProperty(SWC + "isSubEventOf");
@@ -158,18 +152,17 @@ public class ConfSerializer {
 //            y0.addSameAs(sameas);
 //            year.addSubClass(subyear);  
         }
-        
+
         /*add location as 
-        <owl:NamedIndividual rdf:about="&swc;#Reykjavik">
-		<rdf:type rdf:resource="&geo;#SpatialThing"/>
-	</owl:NamedIndividual>
-        */
-        
-        for (String loc :Locations){
-            Resource l = m.createResource(GEO+"SpatialThing");
-            y0=m.createIndividual(SWC+loc, l);
+         <owl:NamedIndividual rdf:about="&swc;#Reykjavik">
+         <rdf:type rdf:resource="&geo;#SpatialThing"/>
+         </owl:NamedIndividual>
+         */
+        for (String loc : Locations) {
+            Resource l = m.createResource(GEO + "SpatialThing");
+            y0 = m.createIndividual(SWC + loc, l);
         }
-        
+
         model.write(out, format, BASE);
 
     }
