@@ -110,3 +110,102 @@ REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES (
 REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('IS', '2013','MAIN', '', 'Lyon');
 REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('NAACL', '2013','MAIN', '', 'Atlanta');
 
+
+-- add default values up to 2014--
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("type","Annotation_Tool");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("type","Corpus");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("type","Corpus_Tool");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("type","Evaluation_Data");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("type","Evaluation_Methodology-Formalism-Guidelines");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("type","Evaluation_Package");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("type","Evaluation_Standard-Best_Practice");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("type","Evaluation_Tool");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("type","Grammar-Language_Model");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("type","Image_Analyser");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("type","Language_Identifier");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("type","Language_Modeling_Tool");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("type","Language_Resources-Technologies_Infrastructure");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("type","Lexicon");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("type","Machine_Translation_Tool");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("type","Metadata");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("type","NoType");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("type","Ontology");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("type","Prosodic_Analyser");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("type","Representation-Annotation_Formalism-Guidelines");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("type","Representation-Annotation_Standard-Best_Practice");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("type","Named_Entity_Recognizer");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("type","Signal_Processing-Feature_Extraction");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("type","Speaker_recogniser");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("type","Speech_Recognizer-Transcriber");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("type","Spoken_Dialogue_Tool");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("type","Text-to-Speech_Synthesizer");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("type","Tagger-Parser");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("type","Terminology");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("type","Tokenizer");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("type","Transcriber");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("type","Word_Sense_Disambiguator");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("type","Not_Applicable");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("type","Not_Relevant");
+
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("avail","Freely_Available");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("avail","From_Data_Center(s)");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("avail","From_Owner");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("avail","Not_Available");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("avail","Not_Applicable");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("avail","Not_Relevant");
+
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("status","Existing-updated");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("status","Existing-used");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("status","Newly_created-finished");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("status","Newly_created-in_progress");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("status","Not_Applicable");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("status","Not_Relevant");
+
+
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("mod","Modality_Independent");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("mod","Multimodal_Multimedia");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("mod","Sign_Language");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("mod","Speech");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("mod","Speech-Written");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("mod","Written");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("mod","Not_Applicable");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("mod","Not_Relevant");
+
+
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("lan_type","Bi");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("lan_type","Zero");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("lan_type","Mono");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("lan_type","Multi");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("lan_type","Tri");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("lan_type","Not_Applicable");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("lan_type","Not_Relevant");
+
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("use","Acquisition");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("use","Dialogue");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("use","Discourse");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("use","Document_Classification-Text_categorisation");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("use","Emotion_Recognition-Generation");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("use","Information_Extraction-Information_Retrieval");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("use","Knowledge_Discovery-Representation");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("use","Language_Identification");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("use","Language_Modelling");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("use","Machine_Translation-SpeechToSpeech_Translation");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("use","Multimedia_Document_Processing");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("use","Named_Entity_Recognition");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("use","Natural_Language_Generation");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("use","Person_Identification");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("use","Question_Answering");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("use","Semantic_Web");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("use","Sign_Language_Recognition-Generation");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("use","Speech_Recognition-Understanding");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("use","Speech_Synthesis");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("use","Summarisation");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("use","Text_Mining");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("use","Textual_Entailment");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("use","Topic_Detection_and_Tracking");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("use","Voice_Control");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("use","Web_Services");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("use","Word_Sense_Disambiguation");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("use","Not_Applicable");
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("use","Not_Relevant");
+

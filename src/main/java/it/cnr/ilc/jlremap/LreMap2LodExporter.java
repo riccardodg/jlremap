@@ -6,6 +6,7 @@
 package it.cnr.ilc.jlremap;
 
 import it.cnr.ilc.jlremap.controllers.ConfController;
+import it.cnr.ilc.jlremap.controllers.LremapYearsJpaController;
 import it.cnr.ilc.jlremap.controllers.YearController;
 import it.cnr.ilc.jlremap.entities.LremapConferences;
 import it.cnr.ilc.jlremap.entities.LremapYears;
@@ -16,6 +17,8 @@ import java.io.OutputStream;
 import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import org.apache.log4j.*;
 
 /**
@@ -66,7 +69,7 @@ public class LreMap2LodExporter {
      * default format is RDF. Use -o switch to specify a valid Jena format
      */
     private static String __FORMAT__ = "";
-    
+
     /**
      * current directory
      */
@@ -76,7 +79,7 @@ public class LreMap2LodExporter {
      * For years, data are serialized in a single file
      */
     private static String __YEAR_FILE__ = "lremap_year";
-    
+
     /**
      * For years, data are serialized in a single file
      */
@@ -187,9 +190,14 @@ public class LreMap2LodExporter {
         log.debug(logmess);
 
         if (whatToDo.equalsIgnoreCase("y")) {
-            serializeYears();
+            //serializeYears();
+            EntityManagerFactory emf = Persistence.createEntityManagerFactory("lremapPu");
+            LremapYearsJpaController controller = new LremapYearsJpaController(emf);
+            years=controller.findLremapYearsEntities();
+            LremapYears year=controller.findLremapYears("2010");
+            System.err.println("years "+year);
         }
-        
+
         if (whatToDo.equalsIgnoreCase("c")) {
             serializeYears();
             serializeConferences();
@@ -204,7 +212,7 @@ public class LreMap2LodExporter {
         String routine = className + "/serializeYears";
         String logmess = "";
         YearController controller = new YearController();
-        
+
         YearSerializer serializer;
 
         String outYearFile = __DIR__ + __SINGLE_FOLDER__ + __YEAR_FILE__;
@@ -235,7 +243,7 @@ public class LreMap2LodExporter {
         }
 
     }
-    
+
     /**
      * serialize years
      */
@@ -243,7 +251,7 @@ public class LreMap2LodExporter {
         String routine = className + "/serializeConferences";
         String logmess = "";
         ConfController controller = new ConfController();
-        
+
         ConfSerializer serializer;
 
         String outFile = __DIR__ + __SINGLE_FOLDER__ + __CONF_FILE__;
