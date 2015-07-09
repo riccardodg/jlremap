@@ -5,12 +5,14 @@
  */
 package it.cnr.ilc.jlremap;
 
-import it.cnr.ilc.jlremap.controllers.ConfController;
+import it.cnr.ilc.jlremap.controllers.LremapConferencesJpaController;
+import it.cnr.ilc.jlremap.controllers.LremapResourceJpaController;
 import it.cnr.ilc.jlremap.controllers.LremapYearsJpaController;
-import it.cnr.ilc.jlremap.controllers.YearController;
 import it.cnr.ilc.jlremap.entities.LremapConferences;
+import it.cnr.ilc.jlremap.entities.LremapResource;
 import it.cnr.ilc.jlremap.entities.LremapYears;
 import it.cnr.ilc.jlremap.jena.serializer.ConfSerializer;
+import it.cnr.ilc.jlremap.jena.serializer.ResourceSerializer;
 import it.cnr.ilc.jlremap.jena.serializer.YearSerializer;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
@@ -31,6 +33,7 @@ public class LreMap2LodExporter {
     /*entities*/
     private static List<LremapYears> years = new ArrayList<LremapYears>();
     private static List<LremapConferences> confs = new ArrayList<LremapConferences>();
+    private static List<LremapResource> resources = new ArrayList<LremapResource>();
 
     /**
      * for log
@@ -94,6 +97,22 @@ public class LreMap2LodExporter {
      * base folder for multiple files
      */
     private static String __MULTI_FOLDER__ = "/lremap/owl/instances/";
+
+    /**
+     * base resource folder for multiple files
+     */
+    private static String __MULTI_FOLDER_RES__ = "/lremap/owl/instances/resources/";
+
+    /**
+     * File where all resources are serialized (singleFile=0) listofresources
+     */
+    private static String __RES_FILE__ = "lremap_ri";
+
+    /**
+     * File where the list of resources is serialized. This file is used when
+     * singleFile is 1
+     */
+    private static String __LIST_OF_RES__ = "listofresources";
 
     /**
      * main
@@ -188,19 +207,22 @@ public class LreMap2LodExporter {
 
         logmess = String.format("VERBOSE Parameters: whatToDo -%s- logLevel -%d- singleFile -%d-", whatToDo, logLevel, singleFile);
         log.debug(logmess);
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("lremapPu");
 
         if (whatToDo.equalsIgnoreCase("y")) {
-            //serializeYears();
-            EntityManagerFactory emf = Persistence.createEntityManagerFactory("lremapPu");
-            LremapYearsJpaController controller = new LremapYearsJpaController(emf);
-            years=controller.findLremapYearsEntities();
-            LremapYears year=controller.findLremapYears("2010");
-            System.err.println("years "+year);
+            serializeYears(emf);
+
         }
 
         if (whatToDo.equalsIgnoreCase("c")) {
-            serializeYears();
-            serializeConferences();
+            serializeYears(emf);
+            serializeConferences(emf);
+        }
+
+        if (whatToDo.equalsIgnoreCase("r")) {
+            serializeYears(emf);
+            serializeConferences(emf);
+            serializeResources(emf, singleFile);
         }
 
     }
@@ -208,10 +230,10 @@ public class LreMap2LodExporter {
     /**
      * serialize years
      */
-    private static void serializeYears() {
+    private static void serializeYears(EntityManagerFactory emf) {
         String routine = className + "/serializeYears";
         String logmess = "";
-        YearController controller = new YearController();
+        LremapYearsJpaController controller = new LremapYearsJpaController(emf);
 
         YearSerializer serializer;
 
@@ -223,7 +245,7 @@ public class LreMap2LodExporter {
             logmess = String.format("VERBOSE Extracting YEAR in %s", routine);
             log.debug(logmess);
         }
-        years = controller.getYears();
+        years = controller.findLremapYearsEntities();
 
         if (__VERBOSE__) {
             logmess = String.format("VERBOSE CREATING OutputStream in %s using -%s-", routine, outYearFile);
@@ -245,12 +267,12 @@ public class LreMap2LodExporter {
     }
 
     /**
-     * serialize years
+     * serialize conferences
      */
-    private static void serializeConferences() {
+    private static void serializeConferences(EntityManagerFactory emf) {
         String routine = className + "/serializeConferences";
         String logmess = "";
-        ConfController controller = new ConfController();
+        LremapConferencesJpaController controller = new LremapConferencesJpaController(emf);
 
         ConfSerializer serializer;
 
@@ -259,10 +281,10 @@ public class LreMap2LodExporter {
          * ONLY SINFLE FILE *
          */
         if (__VERBOSE__) {
-            logmess = String.format("VERBOSE Extracting YEAR in %s", routine);
+            logmess = String.format("VERBOSE Extracting CONFERENCES in %s", routine);
             log.debug(logmess);
         }
-        confs = controller.geConferences();
+        confs = controller.findLremapConferencesEntities();
 
         if (__VERBOSE__) {
             logmess = String.format("VERBOSE CREATING OutputStream in %s using -%s-", routine, outFile);
@@ -278,6 +300,64 @@ public class LreMap2LodExporter {
                 serializer = new ConfSerializer(confs, ps, __FORMAT__);
             }
             serializer.write();
+        } catch (Exception e) {
+        }
+
+    }
+
+    /**
+     * serialize conferences
+     */
+    private static void serializeResources(EntityManagerFactory emf, int mode) {
+        String routine = className + "/serializeResources";
+        String logmess = "";
+        LremapResourceJpaController controller = new LremapResourceJpaController(emf);
+
+        ResourceSerializer serializer = null;
+
+        String allFile = __DIR__ + __SINGLE_FOLDER__ + __RES_FILE__;
+
+        String list = __DIR__ + __MULTI_FOLDER__ + __LIST_OF_RES__;
+
+        String single = __DIR__ + __MULTI_FOLDER_RES__;
+        System.out.println("list " + list);
+        /**
+         * ONLY SINFLE FILE *
+         */
+        if (__VERBOSE__) {
+            logmess = String.format("VERBOSE Extracting RESOURCES in %s", routine);
+            log.debug(logmess);
+        }
+        resources = controller.findLremapResourceEntities(20, 1);
+//        System.err.println("resources "+resources);
+//        
+//        System.err.println("single "+controller.findLremapResource("0024120f81f7764db24d7dc41fb26457").getAvail());
+
+        if (__VERBOSE__) {
+            logmess = String.format("VERBOSE CREATING Correct ResourceSerializer in %s using -%d-", routine, mode);
+            log.debug(logmess);
+        }
+        try {
+            if (mode == 0) // all file
+            {
+                serializer = new ResourceSerializer(resources, allFile, mode);
+            }
+            if (mode == 1) {
+                serializer = new ResourceSerializer(resources, list, single, mode);
+            }
+
+            serializer.setFormat(__FORMAT__);
+            serializer.setEmf(emf);
+            serializer.init();
+            serializer.writeSingleFileAndList();
+
+//            if (__FORMAT__.equals("")) {
+//                serializer = new ConfSerializer(confs, ps);
+//
+//            } else {
+//                serializer = new ConfSerializer(confs, ps, __FORMAT__);
+//            }
+//            serializer.write();
         } catch (Exception e) {
         }
 

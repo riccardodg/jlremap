@@ -73,6 +73,7 @@ public class ConfSerializer {
         String DC = "http://purl.org/dc/elements/1.1/";
         String BASE = "http://www.resourcebook.eu/lremap/owl/";
         String CONF = "http://www.resourcebook.eu/lremap/owl/lremap_conf#";
+        String CONFIRI = "http://www.resourcebook.eu/lremap/owl/lremap_conf";
         String SWC = "http://data.semanticweb.org/ns/swc/ontology#";
         String TL = "http://purl.org/NET/c4dm/timeline.owl#";
         String GEO = "http://www.w3.org/2003/01/geo/wgs84_pos#";
@@ -91,9 +92,12 @@ public class ConfSerializer {
         m.setNsPrefix("geo", GEO);
         m.setNsPrefix("base", BASE);
         m.setNsPrefix("conf", CONF);
-        Ontology ont = m.createOntology(CONF);
+        Ontology ont = m.createOntology("http://www.resourcebook.eu/lremap/owl/lremap_conf#");
+        //System.err.println("SSSS "+ont.getURI());
         ont.addImport(model.createResource(SWC));
-        Literal comment = m.createLiteral("This ontology models the conferencesmanaged in LREMAP according to the SWC ontology");
+        String cmt = String.format("This ontology models the conferences managed in LREMAP (So far -%d-) according to the SWC ontology", confs.size());
+        Literal comment = m.createLiteral(cmt);
+        ont.addVersionInfo(CONF+"/1.0.0");
         ont.addComment(comment);
         /*adding individuals 
         
@@ -163,7 +167,7 @@ public class ConfSerializer {
             y0 = m.createIndividual(SWC + loc, l);
         }
 
-        model.write(out, format, BASE);
+        model.write(out, format);
 
     }
 }

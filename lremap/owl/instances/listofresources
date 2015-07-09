@@ -1,0 +1,93 @@
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix mer:     <http://www.resourcebook.eu/lremap/owl/mergedNew.owl#> .
+@prefix lor:     <http://www.resourcebook.eu/lremap/owl/instances/resources/> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+
+<http://www.resourcebook.eu/lremap/owl/instances/resources/0/004/0044ab5c980edb5facf41158816df819>
+      a       mer:Resource ;
+      rdfs:label "Conference -LREC2012- and Year -2012- and Passcode -657- and Type -Machine Learning Tool- and Name -A Library for Large Linear Classification (LIBLINEAR 1.51)-" .
+
+<http://www.resourcebook.eu/lremap/owl/instances/resources/0/005/00549c6057acac99a484563146cd92c4>
+      a       mer:Resource ;
+      rdfs:label "Conference -NAACL- and Year -2013- and Passcode -970- and Type -Corpus- and Name -Sportic-" .
+
+<http://www.resourcebook.eu/lremap/owl/instances/resources/0/010/01008480e59d888859c249d1782b3701>
+      a       mer:Resource ;
+      rdfs:label "Conference -LREC2010- and Year -2010- and Passcode -W15_8X-C4C6B6F9D4- and Type -Corpus- and Name -The Eurogene corpus-" .
+
+<http://www.resourcebook.eu/lremap/owl/instances/resources/0/006/00678131ddfc366b3ae231e137c2cdea>
+      a       mer:Resource ;
+      rdfs:label "Conference -LREC2010- and Year -2010- and Passcode -532X-H5F7G8J8B3- and Type -Annotation Tool- and Name -GIVE-2 Corpus Collection Software-" .
+
+<http://www.resourcebook.eu/lremap/owl/instances/resources/0/009/009c9453810f8fccfd1db226bf7fe22e>
+      a       mer:Resource ;
+      rdfs:label "Conference -ACLHT2011- and Year -2011- and Passcode -251- and Type -Corpus- and Name -Penn Discourse Treebank-" .
+
+<http://www.resourcebook.eu/lremap/owl/instances/resources/0/005/005bae0938de242f53aeb3e7f89bef13>
+      a       mer:Resource ;
+      rdfs:label "Conference -LREC- and Year -2014- and Passcode -552X-E2B2C3D9P3- and Type -Corpus- and Name -MERLOT Corpus-" .
+
+<http://www.resourcebook.eu/lremap/owl/instances/resources/0/005/00584e7a01e0afb9b491699fc643ed07>
+      a       mer:Resource ;
+      rdfs:label "Conference -LREC2010- and Year -2010- and Passcode -803X-E5B6A6B3D8- and Type -Resource-Tool for Acquisition- and Name -mwetoolkit-" .
+
+<http://www.resourcebook.eu/lremap/owl/instances/resources/0/00f/00fddd9abd3b346f129e9f8516799233>
+      a       mer:Resource ;
+      rdfs:label "Conference -COLING2010- and Year -2010- and Passcode -469X-J3E3A8D6D6- and Type -Tagger/Parser- and Name -TreeTagger-" .
+
+<http://www.resourcebook.eu/lremap/owl/instances/resources/0/008/00851cf7cbb5126e8bc2b5c27fe3aff5>
+      a       mer:Resource ;
+      rdfs:label "Conference -LREC2010- and Year -2010- and Passcode -485X-E6G6B6E9H4- and Type -Terminology- and Name -FrameNet-" .
+
+<http://www.resourcebook.eu/lremap/owl/instances/resources/0/006/006e391481c069e76fd57037a1bbc5eb>
+      a       mer:Resource ;
+      rdfs:label "Conference -LREC2012- and Year -2012- and Passcode -859- and Type -Corpus Tool- and Name -KinOath-" .
+
+<http://www.resourcebook.eu/lremap/owl/instances/listofresources>
+      a       owl:Ontology ;
+      rdfs:comment "This file lists the Language Resources contained in the LREMAP (So far -20-)" ;
+      owl:imports mer: ;
+      owl:versionInfo "http://www.resourcebook.eu/lremap/owl/instances/listofresources/1.0.0" .
+
+<http://www.resourcebook.eu/lremap/owl/instances/resources/0/00b/00b525b3310d4f134dc62b4820e9141e>
+      a       mer:Resource ;
+      rdfs:label "Conference -LREC2010- and Year -2010- and Passcode -917X-D8F5F9G3J4- and Type -Annotation Tool- and Name -SALTO-" .
+
+<http://www.resourcebook.eu/lremap/owl/instances/resources/0/00a/00aac08b1cf2d0de77abe0ba022b5dee>
+      a       mer:Resource ;
+      rdfs:label "Conference -LREC- and Year -2014- and Passcode -939X-J5F2B3J4F9- and Type -Sentiment Analysis Tool- and Name -A hybrid System for Evaluations Analysis-" .
+
+<http://www.resourcebook.eu/lremap/owl/instances/resources/0/00e/00e91b3e98d969e069c010f383e86ff2>
+      a       mer:Resource ;
+      rdfs:label "Conference -LREC2012- and Year -2012- and Passcode -179- and Type -Corpus- and Name -Data repository of spontaneous spoken Czech-" .
+
+<http://www.resourcebook.eu/lremap/owl/instances/resources/0/00d/00daec1cbbe298a0703303f479c41304>
+      a       mer:Resource ;
+      rdfs:label "Conference -IJCNLP2011- and Year -2011- and Passcode -391- and Type -Evaluation Data- and Name -CoNLL 2006 Shared Task Data-" .
+
+<http://www.resourcebook.eu/lremap/owl/instances/resources/0/008/008e0905e71c2686bc55204355dfb668>
+      a       mer:Resource ;
+      rdfs:label "Conference -LREC2012- and Year -2012- and Passcode -944- and Type -Coreference Resolution Toolkit- and Name -a Beautiful Anaphora Resolution Toolkit (BART)-" .
+
+<http://www.resourcebook.eu/lremap/owl/instances/resources/0/00c/00c379e636fb0fa0a573fcd49172909e>
+      a       mer:Resource ;
+      rdfs:label "Conference -LREC2010- and Year -2010- and Passcode -559X-C8J6J3F8A4- and Type -Annotation Tool- and Name -JOS ToTaLe text analyser-" .
+
+<http://www.resourcebook.eu/lremap/owl/instances/resources/0/006/006d3ed7455e75cca800715ce8837caf>
+      a       mer:Resource ;
+      rdfs:label "Conference -COLING2010- and Year -2010- and Passcode -23X-C3D6D9A7F3- and Type -Not Inserted- and Name -Sentence Re-ranker based on Information Extraction-" .
+
+<http://www.resourcebook.eu/lremap/owl/instances/resources/0/002/0024120f81f7764db24d7dc41fb26457>
+      a       mer:Resource ;
+      rdfs:label "Conference -LREC- and Year -2014- and Passcode -1194X-J6P6G3G4H5- and Type -Corpus- and Name -Sample annotated text for definiteness annotations-" .
+
+<http://www.resourcebook.eu/lremap/owl/instances/resources/0/007/00723e1c50e0ee051790a84f83e1d8ff>
+      a       mer:Resource ;
+      rdfs:label "Conference -LREC- and Year -2014- and Passcode -886X-B4G4H9B4J6- and Type -Ontology- and Name -english and Arabic WordNet-" .
+
+<http://www.resourcebook.eu/lremap/owl/instances/resources/0/00a/00aebd9c13463a1a1016f991df6fe74d>
+      a       mer:Resource ;
+      rdfs:label "Conference -LREC2010- and Year -2010- and Passcode -200X-P7A7G3A5P3- and Type -Lexicon- and Name -DanNet-" .

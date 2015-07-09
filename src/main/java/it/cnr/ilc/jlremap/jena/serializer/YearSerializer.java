@@ -97,7 +97,7 @@ public class YearSerializer {
             //subyear.addSameAs(sameas);
             
             Individual y0 = m.createIndividual( YEAR + lremapYear.getYear(), subyear );
-            System.err.println(YEAR + lremapYear.getYear());
+            //System.err.println(YEAR + lremapYear.getYear());
             //m.removeNsPrefix(YEAR + lremapYear.getYear());
             y0.addSameAs(sameas);
             year.addSubClass(subyear);  
