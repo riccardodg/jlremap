@@ -1,0 +1,27 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:sub="http://www.resourcebook.eu/lremap/owl/lremap_sub"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:ri="http://www.resourcebook.eu/lremap/owl/instances"
+    xmlns:mer="http://www.resourcebook.eu/lremap/owl/mergedNew.owl#"
+    xmlns:lvont="http://lexvo.org/ontology"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:lremap="http://www.resourcebook.eu/lremap/owl/lremap_resource.owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:dcterms="http://purl.org/dc/terms/#" > 
+  <rdf:Description rdf:about="http://www.resourcebook.eu/lremap/owl/instances">
+    <owl:imports rdf:resource="http://www.resourcebook.eu/lremap/owl/mergedNew.owl#"/>
+    <rdfs:comment>This file describes the LR with id -2ec788e35747249dc71fe28f0a70e78a-</rdfs:comment>
+    <owl:versionInfo>http://www.resourcebook.eu/lremap/owl/instances/resources/2/2ec/2ec788e35747249dc71fe28f0a70e78a/1.0.0</owl:versionInfo>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.resourcebook.eu/lremap/owl/instances/resources/2/2ec/2ec788e35747249dc71fe28f0a70e78a#NIST_LRE_">
+    <rdfs:label>Original name -NIST LRE 2007-</rdfs:label>
+    <rdf:type rdf:resource="http://www.resourcebook.eu/lremap/owl/lremap_resource.owl#ResourceName"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.resourcebook.eu/lremap/owl/instances/resources/2/2ec/2ec788e35747249dc71fe28f0a70e78a">
+    <lremap:hasResourceName rdf:resource="http://www.resourcebook.eu/lremap/owl/instances/resources/2/2ec/2ec788e35747249dc71fe28f0a70e78a#NIST_LRE_"/>
+    <rdf:type rdf:resource="http://www.resourcebook.eu/lremap/owl/lremap_resource.owl#Corpus"/>
+  </rdf:Description>
+</rdf:RDF>

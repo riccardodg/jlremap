@@ -1,0 +1,27 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:sub="http://www.resourcebook.eu/lremap/owl/lremap_sub"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:ri="http://www.resourcebook.eu/lremap/owl/instances"
+    xmlns:mer="http://www.resourcebook.eu/lremap/owl/mergedNew.owl#"
+    xmlns:lvont="http://lexvo.org/ontology"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:lremap="http://www.resourcebook.eu/lremap/owl/lremap_resource.owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:dcterms="http://purl.org/dc/terms/#" > 
+  <rdf:Description rdf:about="http://www.resourcebook.eu/lremap/owl/instances/resources/6/6ed/6ed162eb7d223bea276fb3fffa8709ab#stand-off_annotation_proposed_by_ISO_committee_on_Language_Resources_Management">
+    <rdfs:label>Original name -stand-off annotation proposed by ISO committee on Language Resources Management-</rdfs:label>
+    <rdf:type rdf:resource="http://www.resourcebook.eu/lremap/owl/lremap_resource.owl#ResourceName"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.resourcebook.eu/lremap/owl/instances">
+    <owl:imports rdf:resource="http://www.resourcebook.eu/lremap/owl/mergedNew.owl#"/>
+    <rdfs:comment>This file describes the LR with id -6ed162eb7d223bea276fb3fffa8709ab-</rdfs:comment>
+    <owl:versionInfo>http://www.resourcebook.eu/lremap/owl/instances/resources/6/6ed/6ed162eb7d223bea276fb3fffa8709ab/1.0.0</owl:versionInfo>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.resourcebook.eu/lremap/owl/instances/resources/6/6ed/6ed162eb7d223bea276fb3fffa8709ab">
+    <lremap:hasResourceName rdf:resource="http://www.resourcebook.eu/lremap/owl/instances/resources/6/6ed/6ed162eb7d223bea276fb3fffa8709ab#stand-off_annotation_proposed_by_ISO_committee_on_Language_Resources_Management"/>
+    <rdf:type rdf:resource="http://www.resourcebook.eu/lremap/owl/lremap_resource.owl#Representation-Annotation_Standard-Best_Practice"/>
+  </rdf:Description>
+</rdf:RDF>

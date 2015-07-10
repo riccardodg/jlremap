@@ -1,0 +1,27 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:sub="http://www.resourcebook.eu/lremap/owl/lremap_sub"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:ri="http://www.resourcebook.eu/lremap/owl/instances"
+    xmlns:mer="http://www.resourcebook.eu/lremap/owl/mergedNew.owl#"
+    xmlns:lvont="http://lexvo.org/ontology"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:lremap="http://www.resourcebook.eu/lremap/owl/lremap_resource.owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:dcterms="http://purl.org/dc/terms/#" > 
+  <rdf:Description rdf:about="http://www.resourcebook.eu/lremap/owl/instances">
+    <owl:imports rdf:resource="http://www.resourcebook.eu/lremap/owl/mergedNew.owl#"/>
+    <rdfs:comment>This file describes the LR with id -84971f9e8c4784b5f34b711e54756df4-</rdfs:comment>
+    <owl:versionInfo>http://www.resourcebook.eu/lremap/owl/instances/resources/8/849/84971f9e8c4784b5f34b711e54756df4/1.0.0</owl:versionInfo>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.resourcebook.eu/lremap/owl/instances/resources/8/849/84971f9e8c4784b5f34b711e54756df4#Diccionario_Clave_de_Uso_Del_EspaÃ±ol_Actual">
+    <rdfs:label>Original name -Diccionario Clave de Uso Del EspaÃ±ol Actual-</rdfs:label>
+    <rdf:type rdf:resource="http://www.resourcebook.eu/lremap/owl/lremap_resource.owl#ResourceName"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.resourcebook.eu/lremap/owl/instances/resources/8/849/84971f9e8c4784b5f34b711e54756df4">
+    <lremap:hasResourceName rdf:resource="http://www.resourcebook.eu/lremap/owl/instances/resources/8/849/84971f9e8c4784b5f34b711e54756df4#Diccionario_Clave_de_Uso_Del_EspaÃ±ol_Actual"/>
+    <rdf:type rdf:resource="http://www.resourcebook.eu/lremap/owl/lremap_resource.owl#Lexicon"/>
+  </rdf:Description>
+</rdf:RDF>

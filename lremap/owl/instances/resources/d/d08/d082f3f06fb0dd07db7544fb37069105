@@ -1,0 +1,31 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:sub="http://www.resourcebook.eu/lremap/owl/lremap_sub"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:ri="http://www.resourcebook.eu/lremap/owl/instances"
+    xmlns:mer="http://www.resourcebook.eu/lremap/owl/mergedNew.owl#"
+    xmlns:lvont="http://lexvo.org/ontology"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:lremap="http://www.resourcebook.eu/lremap/owl/lremap_resource.owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:dcterms="http://purl.org/dc/terms/#" > 
+  <rdf:Description rdf:about="http://www.resourcebook.eu/lremap/owl/instances">
+    <owl:imports rdf:resource="http://www.resourcebook.eu/lremap/owl/mergedNew.owl#"/>
+    <rdfs:comment>This file describes the LR with id -d082f3f06fb0dd07db7544fb37069105-</rdfs:comment>
+    <owl:versionInfo>http://www.resourcebook.eu/lremap/owl/instances/resources/d/d08/d082f3f06fb0dd07db7544fb37069105/1.0.0</owl:versionInfo>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.resourcebook.eu/lremap/owl/instances/resources/d/d08/d082f3f06fb0dd07db7544fb37069105#LDC_MADCAT_Management_Web_App">
+    <rdfs:label>Original name -LDC MADCAT Management Web App-</rdfs:label>
+    <rdf:type rdf:resource="http://www.resourcebook.eu/lremap/owl/lremap_resource.owl#ResourceName"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.resourcebook.eu/lremap/owl/instances/resources/d/d08/d082f3f06fb0dd07db7544fb37069105">
+    <lremap:hasResourceName rdf:resource="http://www.resourcebook.eu/lremap/owl/instances/resources/d/d08/d082f3f06fb0dd07db7544fb37069105#LDC_MADCAT_Management_Web_App"/>
+    <rdf:type rdf:resource="http://www.resourcebook.eu/lremap/owl/lremap_resource.owl#Data_Collection_and_Annotation_Management_System"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.resourcebook.eu/lremap/owl/lremap_resource.owl#Data_Collection_and_Annotation_Management_System">
+    <rdfs:subClassOf rdf:resource="http://www.resourcebook.eu/lremap/owl/lremap_resource.owl#ResourceType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+</rdf:RDF>

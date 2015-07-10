@@ -1,0 +1,27 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:sub="http://www.resourcebook.eu/lremap/owl/lremap_sub"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:ri="http://www.resourcebook.eu/lremap/owl/instances"
+    xmlns:mer="http://www.resourcebook.eu/lremap/owl/mergedNew.owl#"
+    xmlns:lvont="http://lexvo.org/ontology"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:lremap="http://www.resourcebook.eu/lremap/owl/lremap_resource.owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:dcterms="http://purl.org/dc/terms/#" > 
+  <rdf:Description rdf:about="http://www.resourcebook.eu/lremap/owl/instances">
+    <owl:imports rdf:resource="http://www.resourcebook.eu/lremap/owl/mergedNew.owl#"/>
+    <rdfs:comment>This file describes the LR with id -fc2ef090fba8f418ce3df5f3a421c3cb-</rdfs:comment>
+    <owl:versionInfo>http://www.resourcebook.eu/lremap/owl/instances/resources/f/fc2/fc2ef090fba8f418ce3df5f3a421c3cb/1.0.0</owl:versionInfo>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.resourcebook.eu/lremap/owl/instances/resources/f/fc2/fc2ef090fba8f418ce3df5f3a421c3cb">
+    <lremap:hasResourceName rdf:resource="http://www.resourcebook.eu/lremap/owl/instances/resources/f/fc2/fc2ef090fba8f418ce3df5f3a421c3cb#TIPSem"/>
+    <rdf:type rdf:resource="http://www.resourcebook.eu/lremap/owl/lremap_resource.owl#Named_Entity_Recognizer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.resourcebook.eu/lremap/owl/instances/resources/f/fc2/fc2ef090fba8f418ce3df5f3a421c3cb#TIPSem">
+    <rdfs:label>Original name -TIPSem-</rdfs:label>
+    <rdf:type rdf:resource="http://www.resourcebook.eu/lremap/owl/lremap_resource.owl#ResourceName"/>
+  </rdf:Description>
+</rdf:RDF>

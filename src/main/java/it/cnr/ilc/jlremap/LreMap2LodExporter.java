@@ -328,7 +328,8 @@ public class LreMap2LodExporter {
             logmess = String.format("VERBOSE Extracting RESOURCES in %s", routine);
             log.debug(logmess);
         }
-        resources = controller.findLremapResourceEntities(20, 1);
+        //resources = controller.findLremapResourceEntities(20, 1);
+        resources = controller.findLremapResourceEntities();
 //        System.err.println("resources "+resources);
 //        
 //        System.err.println("single "+controller.findLremapResource("0024120f81f7764db24d7dc41fb26457").getAvail());
@@ -349,6 +350,8 @@ public class LreMap2LodExporter {
             serializer.setFormat(__FORMAT__);
             serializer.setEmf(emf);
             serializer.init();
+//            for (String s:serializer.getUses())
+//                System.err.println("s "+s);
             serializer.writeSingleFileAndList();
 
 //            if (__FORMAT__.equals("")) {
@@ -359,6 +362,7 @@ public class LreMap2LodExporter {
 //            }
 //            serializer.write();
         } catch (Exception e) {
+            
         }
 
     }

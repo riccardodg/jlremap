@@ -1,41 +1,53 @@
-@prefix owl:     <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix year:    <http://www.resourcebook.eu/lremap/owl/lremap_year#> .
-@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
-@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix dc:      <http://purl.org/dc/elements/1.1/> .
-@prefix base:    <http://www.resourcebook.eu/lremap/owl/> .
-
-<http://www.resourcebook.eu/lremap/owl/lremap_year#2014>
-      a       <http://www.resourcebook.eu/lremap/owl/lremap_year#2014> , owl:Class ;
-      rdfs:subClassOf year:Year ;
-      =       <http://dbpedia.org/resource/2014> .
-
-year:
-      a       owl:Ontology ;
-      rdfs:comment "Simple Year Ontology" .
-
-<http://www.resourcebook.eu/lremap/owl/lremap_year#2010>
-      a       owl:Class , <http://www.resourcebook.eu/lremap/owl/lremap_year#2010> ;
-      rdfs:subClassOf year:Year ;
-      =       <http://dbpedia.org/resource/2010> .
-
-<http://www.resourcebook.eu/lremap/owl/lremap_year#2011>
-      a       owl:Class , <http://www.resourcebook.eu/lremap/owl/lremap_year#2011> ;
-      rdfs:subClassOf year:Year ;
-      =       <http://dbpedia.org/resource/2011> .
-
-year:Year
-      a       owl:Class ;
-      rdfs:label "Year"@en ;
-      rdfs:seeAlso <http://dbpedia.org/ontology/Year> .
-
-<http://www.resourcebook.eu/lremap/owl/lremap_year#2012>
-      a       owl:Class , <http://www.resourcebook.eu/lremap/owl/lremap_year#2012> ;
-      rdfs:subClassOf year:Year ;
-      =       <http://dbpedia.org/resource/2012> .
-
-<http://www.resourcebook.eu/lremap/owl/lremap_year#2013>
-      a       owl:Class , <http://www.resourcebook.eu/lremap/owl/lremap_year#2013> ;
-      rdfs:subClassOf year:Year ;
-      =       <http://dbpedia.org/resource/2013> .
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:j.0="http://www.resourcebook.eu/lremap/owl/lremap_year#2012"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:j.1="http://www.resourcebook.eu/lremap/owl/lremap_year#2011"
+    xmlns:j.2="http://www.resourcebook.eu/lremap/owl/lremap_year#2010"
+    xmlns:base="http://www.resourcebook.eu/lremap/owl/"
+    xmlns:j.3="http://www.resourcebook.eu/lremap/owl/lremap_year#2014"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:j.4="http://www.resourcebook.eu/lremap/owl/lremap_year#2013"
+    xmlns:year="http://www.resourcebook.eu/lremap/owl/lremap_year#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
+  <rdf:Description rdf:about="lremap_year#2014">
+    <rdfs:subClassOf rdf:resource="lremap_year#Year"/>
+    <owl:sameAs rdf:resource="http://dbpedia.org/resource/2014"/>
+    <rdf:type rdf:resource="lremap_year#2014"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="lremap_year#">
+    <rdfs:comment>Simple Year Ontology</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="lremap_year#2010">
+    <rdfs:subClassOf rdf:resource="lremap_year#Year"/>
+    <owl:sameAs rdf:resource="http://dbpedia.org/resource/2010"/>
+    <rdf:type rdf:resource="lremap_year#2010"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="lremap_year#2011">
+    <rdfs:subClassOf rdf:resource="lremap_year#Year"/>
+    <owl:sameAs rdf:resource="http://dbpedia.org/resource/2011"/>
+    <rdf:type rdf:resource="lremap_year#2011"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="lremap_year#Year">
+    <rdfs:seeAlso rdf:resource="http://dbpedia.org/ontology/Year"/>
+    <rdfs:label xml:lang="en">Year</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="lremap_year#2012">
+    <rdfs:subClassOf rdf:resource="lremap_year#Year"/>
+    <owl:sameAs rdf:resource="http://dbpedia.org/resource/2012"/>
+    <rdf:type rdf:resource="lremap_year#2012"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="lremap_year#2013">
+    <rdfs:subClassOf rdf:resource="lremap_year#Year"/>
+    <owl:sameAs rdf:resource="http://dbpedia.org/resource/2013"/>
+    <rdf:type rdf:resource="lremap_year#2013"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+</rdf:RDF>

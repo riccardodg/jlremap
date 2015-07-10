@@ -1,264 +1,266 @@
-@prefix geo:     <http://www.w3.org/2003/01/geo/wgs84_pos#> .
-@prefix owl:     <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
-@prefix tl:      <http://purl.org/NET/c4dm/timeline.owl#> .
-@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix conf:    <http://www.resourcebook.eu/lremap/owl/lremap_conf#> .
-@prefix swc:     <http://data.semanticweb.org/ns/swc/ontology#> .
-@prefix dc:      <http://purl.org/dc/elements/1.1/> .
-@prefix base:    <http://www.resourcebook.eu/lremap/owl/> .
-
-swc:VisLR2014
-      a       swc:WorkshopEvent ;
-      rdfs:label "VisLR 2014"@en ;
-      swc:hasLocation swc:Reykjavik ;
-      swc:isSubEventOf swc:LREC2014 ;
-      tl:atYear "2014"^^xsd:gYear .
-
-swc:Istambul
-      a       geo:SpatialThing .
-
-swc:LRT4HDA2014
-      a       swc:WorkshopEvent ;
-      rdfs:label "LRT4HDA 2014"@en ;
-      swc:hasLocation swc:Reykjavik ;
-      swc:isSubEventOf swc:LREC2014 ;
-      tl:atYear "2014"^^xsd:gYear .
-
-swc:NAACL2013
-      a       swc:ConferenceEvent ;
-      rdfs:label "NAACL 2013"@en ;
-      swc:hasLocation swc:Atlanta ;
-      tl:atYear "2013"^^xsd:gYear .
-
-swc:Hsinchu
-      a       geo:SpatialThing .
-
-swc:LTC2011
-      a       swc:ConferenceEvent ;
-      rdfs:label "LTC2011 2011"@en ;
-      swc:hasLocation swc:Poznan ;
-      tl:atYear "2011"^^xsd:gYear .
-
-swc:ES3LOD2014
-      a       swc:WorkshopEvent ;
-      rdfs:label "ES3LOD 2014"@en ;
-      swc:hasLocation swc:Reykjavik ;
-      swc:isSubEventOf swc:LREC2014 ;
-      tl:atYear "2014"^^xsd:gYear .
-
-swc:OSACT2014
-      a       swc:WorkshopEvent ;
-      rdfs:label "OSACT 2014"@en ;
-      swc:hasLocation swc:Reykjavik ;
-      swc:isSubEventOf swc:LREC2014 ;
-      tl:atYear "2014"^^xsd:gYear .
-
-swc:BioTxtM2014
-      a       swc:WorkshopEvent ;
-      rdfs:label "BioTxtM 2014"@en ;
-      swc:hasLocation swc:Reykjavik ;
-      swc:isSubEventOf swc:LREC2014 ;
-      tl:atYear "2014"^^xsd:gYear .
-
-swc:BUCC20142014
-      a       swc:WorkshopEvent ;
-      rdfs:label "BUCC2014 2014"@en ;
-      swc:hasLocation swc:Reykjavik ;
-      swc:isSubEventOf swc:LREC2014 ;
-      tl:atYear "2014"^^xsd:gYear .
-
-swc:SPLET2014
-      a       swc:WorkshopEvent ;
-      rdfs:label "SPLET 2014"@en ;
-      swc:hasLocation swc:Reykjavik ;
-      swc:isSubEventOf swc:LREC2014 ;
-      tl:atYear "2014"^^xsd:gYear .
-
-swc:Portland
-      a       geo:SpatialThing .
-
-swc:IJCNLP2011
-      a       swc:ConferenceEvent ;
-      rdfs:label "IJCNLP2011 2011"@en ;
-      swc:hasLocation swc:Chiang_Mai ;
-      tl:atYear "2011"^^xsd:gYear .
-
-swc:LRE-Rel22014
-      a       swc:WorkshopEvent ;
-      rdfs:label "LRE-Rel2 2014"@en ;
-      swc:hasLocation swc:Reykjavik ;
-      swc:isSubEventOf swc:LREC2014 ;
-      tl:atYear "2014"^^xsd:gYear .
-
-swc:CNL2014
-      a       swc:WorkshopEvent ;
-      rdfs:label "CNL 2014"@en ;
-      swc:hasLocation swc:Reykjavik ;
-      swc:isSubEventOf swc:LREC2014 ;
-      tl:atYear "2014"^^xsd:gYear .
-
-swc:RANLP2011
-      a       swc:ConferenceEvent ;
-      rdfs:label "RANLP2011 2011"@en ;
-      swc:hasLocation swc:Hissar ;
-      tl:atYear "2011"^^xsd:gYear .
-
-swc:IS2013
-      a       swc:ConferenceEvent ;
-      rdfs:label "IS 2013"@en ;
-      swc:hasLocation swc:Lyon ;
-      tl:atYear "2013"^^xsd:gYear .
-
-swc:LDL2014
-      a       swc:WorkshopEvent ;
-      rdfs:label "LDL 2014"@en ;
-      swc:hasLocation swc:Reykjavik ;
-      swc:isSubEventOf swc:LREC2014 ;
-      tl:atYear "2014"^^xsd:gYear .
-
-swc:Hissar
-      a       geo:SpatialThing .
-
-conf:
-      a       owl:Ontology ;
-      rdfs:comment "This ontology models the conferences managed in LREMAP (So far -32-) according to the SWC ontology" ;
-      owl:imports swc: ;
-      owl:versionInfo "http://www.resourcebook.eu/lremap/owl/lremap_conf#/1.0.0" .
-
-swc:La_Valletta
-      a       geo:SpatialThing .
-
-swc:Poznan
-      a       geo:SpatialThing .
-
-swc:Florence
-      a       geo:SpatialThing .
-
-swc:Lyon
-      a       geo:SpatialThing .
-
-swc:WILDRE2014
-      a       swc:WorkshopEvent ;
-      rdfs:label "WILDRE 2014"@en ;
-      swc:hasLocation swc:Reykjavik ;
-      swc:isSubEventOf swc:LREC2014 ;
-      tl:atYear "2014"^^xsd:gYear .
-
-swc:LREC2014
-      a       swc:ConferenceEvent ;
-      rdfs:label "LREC 2014"@en ;
-      swc:hasLocation swc:Reykjavik ;
-      tl:atYear "2014"^^xsd:gYear .
-
-swc:Beijing
-      a       geo:SpatialThing .
-
-swc:LREC2012
-      a       swc:ConferenceEvent ;
-      rdfs:label "LREC2012 2012"@en ;
-      swc:hasLocation swc:Istambul ;
-      tl:atYear "2012"^^xsd:gYear .
-
-swc:ACLHT2011
-      a       swc:ConferenceEvent ;
-      rdfs:label "ACLHT2011 2011"@en ;
-      swc:hasLocation swc:Portland ;
-      tl:atYear "2011"^^xsd:gYear .
-
-swc:O-COCOSDA2011
-      a       swc:ConferenceEvent ;
-      rdfs:label "O-COCOSDA2011 2011"@en ;
-      swc:hasLocation swc:Hsinchu ;
-      tl:atYear "2011"^^xsd:gYear .
-
-swc:LREC2010
-      a       swc:ConferenceEvent ;
-      rdfs:label "LREC2010 2010"@en ;
-      swc:hasLocation swc:La_Valletta ;
-      tl:atYear "2010"^^xsd:gYear .
-
-swc:SignLanguage2014
-      a       swc:WorkshopEvent ;
-      rdfs:label "SignLanguage 2014"@en ;
-      swc:hasLocation swc:Reykjavik ;
-      swc:isSubEventOf swc:LREC2014 ;
-      tl:atYear "2014"^^xsd:gYear .
-
-swc:IS2011
-      a       swc:ConferenceEvent ;
-      rdfs:label "IS2011 2011"@en ;
-      swc:hasLocation swc:Florence ;
-      tl:atYear "2011"^^xsd:gYear .
-
-swc:COLING2010
-      a       swc:ConferenceEvent ;
-      rdfs:label "COLING2010 2010"@en ;
-      swc:hasLocation swc:Beijing ;
-      tl:atYear "2010"^^xsd:gYear .
-
-swc:Chiang_Mai
-      a       geo:SpatialThing .
-
-swc:SaLTMiL2014
-      a       swc:WorkshopEvent ;
-      rdfs:label "SaLTMiL 2014"@en ;
-      swc:hasLocation swc:Reykjavik ;
-      swc:isSubEventOf swc:LREC2014 ;
-      tl:atYear "2014"^^xsd:gYear .
-
-swc:Reykjavik
-      a       geo:SpatialThing .
-
-swc:Atlanta
-      a       geo:SpatialThing .
-
-swc:isa-102014
-      a       swc:WorkshopEvent ;
-      rdfs:label "isa-10 2014"@en ;
-      swc:hasLocation swc:Reykjavik ;
-      swc:isSubEventOf swc:LREC2014 ;
-      tl:atYear "2014"^^xsd:gYear .
-
-swc:DIMPLE2014
-      a       swc:WorkshopEvent ;
-      rdfs:label "DIMPLE 2014"@en ;
-      swc:hasLocation swc:Reykjavik ;
-      swc:isSubEventOf swc:LREC2014 ;
-      tl:atYear "2014"^^xsd:gYear .
-
-swc:MMC2014
-      a       swc:WorkshopEvent ;
-      rdfs:label "MMC 2014"@en ;
-      swc:hasLocation swc:Reykjavik ;
-      swc:isSubEventOf swc:LREC2014 ;
-      tl:atYear "2014"^^xsd:gYear .
-
-swc:MTE2014
-      a       swc:WorkshopEvent ;
-      rdfs:label "MTE 2014"@en ;
-      swc:hasLocation swc:Reykjavik ;
-      swc:isSubEventOf swc:LREC2014 ;
-      tl:atYear "2014"^^xsd:gYear .
-
-swc:OpeNER2014
-      a       swc:WorkshopEvent ;
-      rdfs:label "OpeNER 2014"@en ;
-      swc:hasLocation swc:Reykjavik ;
-      swc:isSubEventOf swc:LREC2014 ;
-      tl:atYear "2014"^^xsd:gYear .
-
-swc:CCURL2014
-      a       swc:WorkshopEvent ;
-      rdfs:label "CCURL 2014"@en ;
-      swc:hasLocation swc:Reykjavik ;
-      swc:isSubEventOf swc:LREC2014 ;
-      tl:atYear "2014"^^xsd:gYear .
-
-swc:CMLC-22014
-      a       swc:WorkshopEvent ;
-      rdfs:label "CMLC-2 2014"@en ;
-      swc:hasLocation swc:Reykjavik ;
-      swc:isSubEventOf swc:LREC2014 ;
-      tl:atYear "2014"^^xsd:gYear .
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:conf="http://www.resourcebook.eu/lremap/owl/lremap_conf#"
+    xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:tl="http://purl.org/NET/c4dm/timeline.owl#"
+    xmlns:base="http://www.resourcebook.eu/lremap/owl/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:swc="http://data.semanticweb.org/ns/swc/ontology#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
+  <rdf:Description rdf:about="http://data.semanticweb.org/ns/swc/ontology#VisLR2014">
+    <tl:atYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2014</tl:atYear>
+    <rdfs:label xml:lang="en">VisLR 2014</rdfs:label>
+    <swc:hasLocation rdf:resource="http://data.semanticweb.org/ns/swc/ontology#Reykjavik"/>
+    <swc:isSubEventOf rdf:resource="http://data.semanticweb.org/ns/swc/ontology#LREC2014"/>
+    <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.semanticweb.org/ns/swc/ontology#Istambul">
+    <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.semanticweb.org/ns/swc/ontology#LRT4HDA2014">
+    <tl:atYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2014</tl:atYear>
+    <rdfs:label xml:lang="en">LRT4HDA 2014</rdfs:label>
+    <swc:hasLocation rdf:resource="http://data.semanticweb.org/ns/swc/ontology#Reykjavik"/>
+    <swc:isSubEventOf rdf:resource="http://data.semanticweb.org/ns/swc/ontology#LREC2014"/>
+    <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.semanticweb.org/ns/swc/ontology#NAACL2013">
+    <tl:atYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2013</tl:atYear>
+    <rdfs:label xml:lang="en">NAACL 2013</rdfs:label>
+    <swc:hasLocation rdf:resource="http://data.semanticweb.org/ns/swc/ontology#Atlanta"/>
+    <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ConferenceEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.semanticweb.org/ns/swc/ontology#Hsinchu">
+    <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.semanticweb.org/ns/swc/ontology#LTC2011">
+    <tl:atYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2011</tl:atYear>
+    <rdfs:label xml:lang="en">LTC2011 2011</rdfs:label>
+    <swc:hasLocation rdf:resource="http://data.semanticweb.org/ns/swc/ontology#Poznan"/>
+    <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ConferenceEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.semanticweb.org/ns/swc/ontology#ES3LOD2014">
+    <tl:atYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2014</tl:atYear>
+    <rdfs:label xml:lang="en">ES3LOD 2014</rdfs:label>
+    <swc:hasLocation rdf:resource="http://data.semanticweb.org/ns/swc/ontology#Reykjavik"/>
+    <swc:isSubEventOf rdf:resource="http://data.semanticweb.org/ns/swc/ontology#LREC2014"/>
+    <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.semanticweb.org/ns/swc/ontology#OSACT2014">
+    <tl:atYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2014</tl:atYear>
+    <rdfs:label xml:lang="en">OSACT 2014</rdfs:label>
+    <swc:hasLocation rdf:resource="http://data.semanticweb.org/ns/swc/ontology#Reykjavik"/>
+    <swc:isSubEventOf rdf:resource="http://data.semanticweb.org/ns/swc/ontology#LREC2014"/>
+    <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.semanticweb.org/ns/swc/ontology#BioTxtM2014">
+    <tl:atYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2014</tl:atYear>
+    <rdfs:label xml:lang="en">BioTxtM 2014</rdfs:label>
+    <swc:hasLocation rdf:resource="http://data.semanticweb.org/ns/swc/ontology#Reykjavik"/>
+    <swc:isSubEventOf rdf:resource="http://data.semanticweb.org/ns/swc/ontology#LREC2014"/>
+    <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.semanticweb.org/ns/swc/ontology#BUCC20142014">
+    <tl:atYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2014</tl:atYear>
+    <rdfs:label xml:lang="en">BUCC2014 2014</rdfs:label>
+    <swc:hasLocation rdf:resource="http://data.semanticweb.org/ns/swc/ontology#Reykjavik"/>
+    <swc:isSubEventOf rdf:resource="http://data.semanticweb.org/ns/swc/ontology#LREC2014"/>
+    <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.semanticweb.org/ns/swc/ontology#SPLET2014">
+    <tl:atYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2014</tl:atYear>
+    <rdfs:label xml:lang="en">SPLET 2014</rdfs:label>
+    <swc:hasLocation rdf:resource="http://data.semanticweb.org/ns/swc/ontology#Reykjavik"/>
+    <swc:isSubEventOf rdf:resource="http://data.semanticweb.org/ns/swc/ontology#LREC2014"/>
+    <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.semanticweb.org/ns/swc/ontology#Portland">
+    <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.semanticweb.org/ns/swc/ontology#IJCNLP2011">
+    <tl:atYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2011</tl:atYear>
+    <rdfs:label xml:lang="en">IJCNLP2011 2011</rdfs:label>
+    <swc:hasLocation rdf:resource="http://data.semanticweb.org/ns/swc/ontology#Chiang_Mai"/>
+    <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ConferenceEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.semanticweb.org/ns/swc/ontology#LRE-Rel22014">
+    <tl:atYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2014</tl:atYear>
+    <rdfs:label xml:lang="en">LRE-Rel2 2014</rdfs:label>
+    <swc:hasLocation rdf:resource="http://data.semanticweb.org/ns/swc/ontology#Reykjavik"/>
+    <swc:isSubEventOf rdf:resource="http://data.semanticweb.org/ns/swc/ontology#LREC2014"/>
+    <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.semanticweb.org/ns/swc/ontology#CNL2014">
+    <tl:atYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2014</tl:atYear>
+    <rdfs:label xml:lang="en">CNL 2014</rdfs:label>
+    <swc:hasLocation rdf:resource="http://data.semanticweb.org/ns/swc/ontology#Reykjavik"/>
+    <swc:isSubEventOf rdf:resource="http://data.semanticweb.org/ns/swc/ontology#LREC2014"/>
+    <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.semanticweb.org/ns/swc/ontology#RANLP2011">
+    <tl:atYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2011</tl:atYear>
+    <rdfs:label xml:lang="en">RANLP2011 2011</rdfs:label>
+    <swc:hasLocation rdf:resource="http://data.semanticweb.org/ns/swc/ontology#Hissar"/>
+    <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ConferenceEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.semanticweb.org/ns/swc/ontology#IS2013">
+    <tl:atYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2013</tl:atYear>
+    <rdfs:label xml:lang="en">IS 2013</rdfs:label>
+    <swc:hasLocation rdf:resource="http://data.semanticweb.org/ns/swc/ontology#Lyon"/>
+    <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ConferenceEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.semanticweb.org/ns/swc/ontology#LDL2014">
+    <tl:atYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2014</tl:atYear>
+    <rdfs:label xml:lang="en">LDL 2014</rdfs:label>
+    <swc:hasLocation rdf:resource="http://data.semanticweb.org/ns/swc/ontology#Reykjavik"/>
+    <swc:isSubEventOf rdf:resource="http://data.semanticweb.org/ns/swc/ontology#LREC2014"/>
+    <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.semanticweb.org/ns/swc/ontology#Hissar">
+    <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.resourcebook.eu/lremap/owl/lremap_conf#">
+    <rdfs:comment>This ontology models the conferences managed in LREMAP (So far -32-) according to the SWC ontology</rdfs:comment>
+    <owl:versionInfo>http://www.resourcebook.eu/lremap/owl/lremap_conf#/1.0.0</owl:versionInfo>
+    <owl:imports rdf:resource="http://data.semanticweb.org/ns/swc/ontology#"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.semanticweb.org/ns/swc/ontology#La_Valletta">
+    <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.semanticweb.org/ns/swc/ontology#Poznan">
+    <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.semanticweb.org/ns/swc/ontology#Florence">
+    <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.semanticweb.org/ns/swc/ontology#Lyon">
+    <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.semanticweb.org/ns/swc/ontology#WILDRE2014">
+    <tl:atYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2014</tl:atYear>
+    <rdfs:label xml:lang="en">WILDRE 2014</rdfs:label>
+    <swc:hasLocation rdf:resource="http://data.semanticweb.org/ns/swc/ontology#Reykjavik"/>
+    <swc:isSubEventOf rdf:resource="http://data.semanticweb.org/ns/swc/ontology#LREC2014"/>
+    <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.semanticweb.org/ns/swc/ontology#LREC2014">
+    <tl:atYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2014</tl:atYear>
+    <rdfs:label xml:lang="en">LREC 2014</rdfs:label>
+    <swc:hasLocation rdf:resource="http://data.semanticweb.org/ns/swc/ontology#Reykjavik"/>
+    <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ConferenceEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.semanticweb.org/ns/swc/ontology#Beijing">
+    <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.semanticweb.org/ns/swc/ontology#LREC2012">
+    <tl:atYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2012</tl:atYear>
+    <rdfs:label xml:lang="en">LREC2012 2012</rdfs:label>
+    <swc:hasLocation rdf:resource="http://data.semanticweb.org/ns/swc/ontology#Istambul"/>
+    <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ConferenceEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.semanticweb.org/ns/swc/ontology#ACLHT2011">
+    <tl:atYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2011</tl:atYear>
+    <rdfs:label xml:lang="en">ACLHT2011 2011</rdfs:label>
+    <swc:hasLocation rdf:resource="http://data.semanticweb.org/ns/swc/ontology#Portland"/>
+    <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ConferenceEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.semanticweb.org/ns/swc/ontology#O-COCOSDA2011">
+    <tl:atYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2011</tl:atYear>
+    <rdfs:label xml:lang="en">O-COCOSDA2011 2011</rdfs:label>
+    <swc:hasLocation rdf:resource="http://data.semanticweb.org/ns/swc/ontology#Hsinchu"/>
+    <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ConferenceEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.semanticweb.org/ns/swc/ontology#LREC2010">
+    <tl:atYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2010</tl:atYear>
+    <rdfs:label xml:lang="en">LREC2010 2010</rdfs:label>
+    <swc:hasLocation rdf:resource="http://data.semanticweb.org/ns/swc/ontology#La_Valletta"/>
+    <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ConferenceEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.semanticweb.org/ns/swc/ontology#SignLanguage2014">
+    <tl:atYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2014</tl:atYear>
+    <rdfs:label xml:lang="en">SignLanguage 2014</rdfs:label>
+    <swc:hasLocation rdf:resource="http://data.semanticweb.org/ns/swc/ontology#Reykjavik"/>
+    <swc:isSubEventOf rdf:resource="http://data.semanticweb.org/ns/swc/ontology#LREC2014"/>
+    <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.semanticweb.org/ns/swc/ontology#IS2011">
+    <tl:atYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2011</tl:atYear>
+    <rdfs:label xml:lang="en">IS2011 2011</rdfs:label>
+    <swc:hasLocation rdf:resource="http://data.semanticweb.org/ns/swc/ontology#Florence"/>
+    <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ConferenceEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.semanticweb.org/ns/swc/ontology#COLING2010">
+    <tl:atYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2010</tl:atYear>
+    <rdfs:label xml:lang="en">COLING2010 2010</rdfs:label>
+    <swc:hasLocation rdf:resource="http://data.semanticweb.org/ns/swc/ontology#Beijing"/>
+    <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ConferenceEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.semanticweb.org/ns/swc/ontology#Chiang_Mai">
+    <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.semanticweb.org/ns/swc/ontology#SaLTMiL2014">
+    <tl:atYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2014</tl:atYear>
+    <rdfs:label xml:lang="en">SaLTMiL 2014</rdfs:label>
+    <swc:hasLocation rdf:resource="http://data.semanticweb.org/ns/swc/ontology#Reykjavik"/>
+    <swc:isSubEventOf rdf:resource="http://data.semanticweb.org/ns/swc/ontology#LREC2014"/>
+    <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.semanticweb.org/ns/swc/ontology#Reykjavik">
+    <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.semanticweb.org/ns/swc/ontology#Atlanta">
+    <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.semanticweb.org/ns/swc/ontology#isa-102014">
+    <tl:atYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2014</tl:atYear>
+    <rdfs:label xml:lang="en">isa-10 2014</rdfs:label>
+    <swc:hasLocation rdf:resource="http://data.semanticweb.org/ns/swc/ontology#Reykjavik"/>
+    <swc:isSubEventOf rdf:resource="http://data.semanticweb.org/ns/swc/ontology#LREC2014"/>
+    <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.semanticweb.org/ns/swc/ontology#DIMPLE2014">
+    <tl:atYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2014</tl:atYear>
+    <rdfs:label xml:lang="en">DIMPLE 2014</rdfs:label>
+    <swc:hasLocation rdf:resource="http://data.semanticweb.org/ns/swc/ontology#Reykjavik"/>
+    <swc:isSubEventOf rdf:resource="http://data.semanticweb.org/ns/swc/ontology#LREC2014"/>
+    <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.semanticweb.org/ns/swc/ontology#MMC2014">
+    <tl:atYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2014</tl:atYear>
+    <rdfs:label xml:lang="en">MMC 2014</rdfs:label>
+    <swc:hasLocation rdf:resource="http://data.semanticweb.org/ns/swc/ontology#Reykjavik"/>
+    <swc:isSubEventOf rdf:resource="http://data.semanticweb.org/ns/swc/ontology#LREC2014"/>
+    <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.semanticweb.org/ns/swc/ontology#MTE2014">
+    <tl:atYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2014</tl:atYear>
+    <rdfs:label xml:lang="en">MTE 2014</rdfs:label>
+    <swc:hasLocation rdf:resource="http://data.semanticweb.org/ns/swc/ontology#Reykjavik"/>
+    <swc:isSubEventOf rdf:resource="http://data.semanticweb.org/ns/swc/ontology#LREC2014"/>
+    <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.semanticweb.org/ns/swc/ontology#OpeNER2014">
+    <tl:atYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2014</tl:atYear>
+    <rdfs:label xml:lang="en">OpeNER 2014</rdfs:label>
+    <swc:hasLocation rdf:resource="http://data.semanticweb.org/ns/swc/ontology#Reykjavik"/>
+    <swc:isSubEventOf rdf:resource="http://data.semanticweb.org/ns/swc/ontology#LREC2014"/>
+    <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.semanticweb.org/ns/swc/ontology#CCURL2014">
+    <tl:atYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2014</tl:atYear>
+    <rdfs:label xml:lang="en">CCURL 2014</rdfs:label>
+    <swc:hasLocation rdf:resource="http://data.semanticweb.org/ns/swc/ontology#Reykjavik"/>
+    <swc:isSubEventOf rdf:resource="http://data.semanticweb.org/ns/swc/ontology#LREC2014"/>
+    <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.semanticweb.org/ns/swc/ontology#CMLC-22014">
+    <tl:atYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2014</tl:atYear>
+    <rdfs:label xml:lang="en">CMLC-2 2014</rdfs:label>
+    <swc:hasLocation rdf:resource="http://data.semanticweb.org/ns/swc/ontology#Reykjavik"/>
+    <swc:isSubEventOf rdf:resource="http://data.semanticweb.org/ns/swc/ontology#LREC2014"/>
+    <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent"/>
+  </rdf:Description>
+</rdf:RDF>

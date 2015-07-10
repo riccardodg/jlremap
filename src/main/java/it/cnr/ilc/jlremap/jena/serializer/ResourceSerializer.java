@@ -6,13 +6,17 @@
 package it.cnr.ilc.jlremap.jena.serializer;
 
 import com.hp.hpl.jena.ontology.Individual;
+import com.hp.hpl.jena.ontology.OntClass;
 import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.ontology.OntModelSpec;
 import com.hp.hpl.jena.ontology.Ontology;
 import com.hp.hpl.jena.rdf.model.Literal;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
+import com.hp.hpl.jena.rdf.model.Property;
 import com.hp.hpl.jena.rdf.model.Resource;
+import com.hp.hpl.jena.util.iterator.ExtendedIterator;
+import it.cnr.ilc.jlremap.Utils;
 import it.cnr.ilc.jlremap.controllers.LremapSideTableResmetadataJpaController;
 import it.cnr.ilc.jlremap.entities.LremapResource;
 import it.cnr.ilc.jlremap.entities.LremapSideTableResmetadata;
@@ -51,6 +55,8 @@ public class ResourceSerializer {
     private List<String> avails = new ArrayList<String>();
     private List<String> prods = new ArrayList<String>();
     LremapSideTableResmetadataJpaController controller;// = new LremapSideTableResmetadataJpaController(emf);
+    private static final String __NA__ = "__NOT_PROVIDED__";
+    private static final String __NI__ = "Not_Inserted";
 
     /**
      * Constructor to be used when mode=1
@@ -107,13 +113,31 @@ public class ResourceSerializer {
         List<String> prods = getProds();
         /* resource metadata*/
         String TYPE = "type", LT = "lan_type", PROD = "status", MOD = "mod", AVAIL = "avail", USE = "use";
-        String attribute="",value="";
+        String attribute = "", value = "";
+
         for (LremapSideTableResmetadata md : metadata) {
-            System.err.println("md " + md.getLremapSideTableResmetadataPK());
-            attribute=md.getLremapSideTableResmetadataPK().getAttribute();
-            value=md.getLremapSideTableResmetadataPK().getValue();
-            if (value.equals(TYPE))
-                types.add(attribute);
+
+            attribute = md.getLremapSideTableResmetadataPK().getAttribute();
+
+            /*clean the value*/
+            value = md.getLremapSideTableResmetadataPK().getValue();
+            value = Utils.cleanAgivenStringInInput(value, "_", "/", "-");
+            if (attribute.equals(TYPE)) {
+                types.add(value);
+            }
+            if (attribute.equals(PROD)) {
+                prods.add(value);
+            }
+            if (attribute.equals(AVAIL)) {
+                avails.add(value);
+            }
+            if (attribute.equals(MOD)) {
+                mods.add(value);
+            }
+            if (attribute.equals(USE)) {
+                uses.add(value);
+            }
+
         }
     }
 
@@ -170,6 +194,7 @@ public class ResourceSerializer {
          */
         String label = "";
         Literal lbl = null;
+        int i=1;
         for (LremapResource resource : resources) {
             String id, first, second, path;
             id = resource.getResourceid();
@@ -184,9 +209,9 @@ public class ResourceSerializer {
             label = String.format("Conference -%s- and Year -%s- and Passcode -%s- and Type -%s- and Name -%s-", resource.getConf(), resource.getYear(), resource.getPasscode(), resource.getType(), resource.getName());
             lbl = m.createLiteral(label);
             y0.addLabel(lbl);
-            //System.err.println("resource " + path + " " + id);
+            System.err.println("resource "  + id+ " # "+i);
             write(resource);
-
+            i++;
         }
         model.write(ps, getFormat());
     }
@@ -195,17 +220,29 @@ public class ResourceSerializer {
         String routine = className + "/write";
         String logmess;
         logmess = String.format("INFO CREATING RESOURCE FILE FOR ID -%s- in routine -%s-", resource.getResourceid(), routine);
-        log.info(logmess);
+        //log.info(logmess);
         String __RESOURCE__ = "resources";
 
         String id, first, second, path;
 
         /* resource metadata*/
         String TYPE = "", NAME = "", STATUS = "", MOD = "", AVAIL = "", USE = "";
+        /* resource metadata*/
+        String LNAME = "";
+        String NAMECLASS = "ResourceName";
+        String TYPECLASS = "ResourceType";
 
         OutputStream out = null;
         PrintStream ps = null;
         String filePath = "", dirPath = "";
+        Resource l, r = null;
+        Individual y0, i0 = null;
+        Literal lbl = null;
+        Literal comment = null;
+        OntClass c = null;
+        OntClass sc = null;
+        Property p = null;
+        String label = "";
 
         /* namespaces*/
         String DC = "http://purl.org/dc/elements/1.1/";
@@ -218,6 +255,7 @@ public class ResourceSerializer {
 
         String RI = "http://www.resourcebook.eu/lremap/owl/instances";
         String LREMAP = "http://www.resourcebook.eu/lremap/owl/lremap_resource.owl#";
+        String LREMAP_IMP = "http://www.resourcebook.eu/lremap/owl/lremap_resource.owl";
 
         id = resource.getResourceid();
 
@@ -249,20 +287,108 @@ public class ResourceSerializer {
                         OntModelSpec.OWL_MEM_RULE_INF,
                         model);
 
-        Ontology ont = m.createOntology(path);
+        Ontology ont = m.createOntology(RI);
         String cmt = String.format("This file describes the LR with id -%s-", id);
-        Literal comment = m.createLiteral(cmt);
+        comment = m.createLiteral(cmt);
         ont.addVersionInfo(path + "/1.0.0");
         ont.addComment(comment);
         ont.addImport(model.createResource(MERGED));
 
         m.setNsPrefix("mer", MERGED);
         m.setNsPrefix("dcterms", DCTERMS);
-        m.setNsPrefix("lre", LREMAP);
+        m.setNsPrefix("lremap", LREMAP);
         m.setNsPrefix("dc", DC);
         m.setNsPrefix("lvont", LVONT);
         m.setNsPrefix("sub", SUB);
         m.setNsPrefix("ri", RI);
+
+//        /*fill metadata */
+        
+        LNAME = resource.getName();
+       // LNAME="The Weka workbench[1] contains a collection of visualization tools and algorithms for data analysis and predictive modelling";
+        if (LNAME.equals(__NA__)) {
+            NAMECLASS = "NoName";
+        }
+
+        TYPE = resource.getType();
+        //TYPE = __NA__;
+        if (TYPE.equals(__NA__) || TYPE.equals(__NI__)) {
+            TYPECLASS = "NoType";
+        }
+
+        NAME = Utils.cleanAgivenStringInInput(LNAME, "_", "/", "-");
+        TYPE = Utils.cleanAgivenStringInInput(TYPE, "_", "/", "-");
+        //System.err.println("label resname=" + LNAME + " " + NAME);
+
+        /*let's create the instance of the resource
+        
+         <owl:NamedIndividual rdf:about="http://www.resourcebook.eu/lremap/owl/instancesresources/4/48a/48a42a2c2938759c17ce9c0f80b4c624149dc4da">
+         <rdf:type rdf:resource="http://www.resourcebook.eu/lremap/owl/lremap_resource.owl#Annotation_Tool"/>
+         <lremap:hasResourceAvailability rdf:resource="http://www.resourcebook.eu/lremap/owl/lremap_resource.owl#From_Owner"/>
+         <lremap:hasResourceStatus rdf:resource="http://www.resourcebook.eu/lremap/owl/lremap_resource.owl#Newly_created-in_progress"/>
+         <lremap:hasResourceModality rdf:resource="http://www.resourcebook.eu/lremap/owl/lremap_resource.owl#Written"/>
+         <lremap:hasResourceName rdf:resource="http://www.resourcebook.eu/lremap/owl/instancesresources/4/48a/Simplify_Data_For_Parsers_Cz"/>
+         <dcterms:references rdf:resource="http://www.resourcebook.eu/lremap/owl/lremap_sub#LREC2014-228X-A3C2H6B7F2"/>
+         </owl:NamedIndividual>
+         */
+        if (TYPECLASS.equalsIgnoreCase("NoType")) {
+            r = m.createResource(LREMAP + TYPECLASS);
+        } else {
+            r = m.createResource(LREMAP + TYPE);
+        }
+        i0 = m.createIndividual(path, r);
+
+        /* let's create the resource name instance */
+        //System.err.println("NAME "+NAMECLASS);
+        
+        if (NAMECLASS.equalsIgnoreCase("NoName")) {
+            r = m.createResource(LREMAP + NAMECLASS);
+        } else {
+            r = m.createResource(LREMAP + NAME);
+        }
+        l = m.createResource(LREMAP + NAMECLASS);
+        y0 = m.createIndividual(path + "#" + NAME, l);
+
+        /* add the HasName property*/
+        p = m.createProperty(LREMAP + "hasResourceName");
+        i0.addProperty(p, y0);
+
+        label = String.format("Original name -%s-", LNAME);
+        lbl = m.createLiteral(label);
+        y0.addLabel(lbl);
+
+        /* read classes from LREMAP */
+        OntModel inf = ModelFactory.createOntologyModel();
+
+        inf.read(LREMAP_IMP);
+        ExtendedIterator classes = inf.listClasses();
+
+        /*look for resourcetype */
+        while (classes.hasNext()) {
+            OntClass essaClasse = (OntClass) classes.next();
+            if (essaClasse != null) {
+                String vClasse = essaClasse.getLocalName().toString();
+                if (vClasse.contains(TYPECLASS)) {
+                    c = essaClasse;
+                    //System.err.println("vClasse "+vClasse);
+                    break;
+                }
+                //
+            }
+        }
+        /* let's create the new restype class*/
+        if (!types.contains(TYPE)) {
+            /* in this case a new subclass of resourcetype is created */
+            //System.err.println("NO " + TYPE);
+
+            //c = m.createClass(LREMAP + "ResourceType");
+            
+            if (!TYPECLASS.equalsIgnoreCase("NoType")) {
+                sc = m.createClass(LREMAP + TYPE);
+                c.addSubClass(sc);
+            }
+
+        }
         model.write(ps, getFormat());
 
     }
