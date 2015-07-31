@@ -45,7 +45,7 @@ public class CsvReader {
 
             int i = 0, l = 0;
             for (String file : files) {
-                stm = String.format("LOAD DATA LOCAL INFILE  '%s' INTO TABLE %s FIELDS terminated by '\\t';", file, tables.get(i));
+                stm = String.format("LOAD DATA LOCAL INFILE  '%s' INTO TABLE %s CHARACTER SET utf8 FIELDS  terminated by '\\t' OPTIONALLY ENCLOSED BY '\"';", file, tables.get(i));
                 System.out.println(stm);
                 connect.execStm(conn, stm);
                 i++;
@@ -59,7 +59,7 @@ public class CsvReader {
 
             int i = 0, l = 0;
             for (String file : files) {
-                stm = String.format("LOAD DATA LOCAL INFILE  '%s' INTO TABLE %s FIELDS terminated by '\\t';", file, langs.get(i));
+                stm = String.format("LOAD DATA LOCAL INFILE  '%s' INTO TABLE %s CHARACTER SET utf8 FIELDS  terminated by '\\t' OPTIONALLY ENCLOSED BY '\"';", file, langs.get(i));
                 System.out.println(stm);
                 connect.execStm(conn, stm);
                 i++;

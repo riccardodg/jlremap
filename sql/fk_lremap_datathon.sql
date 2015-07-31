@@ -59,3 +59,5 @@ ADD CONSTRAINT `fk_lremap_papersnorm2authorsnorm`
   REFERENCES `lremap_datathon`.`lremap_papers_norm` (`resourceid`)
   ON DELETE NO ACTION
   ON UPDATE NO ACTION;
+
+SET FOREIGN_KEY_CHECKS=1;
