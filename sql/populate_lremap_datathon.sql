@@ -1,3 +1,5 @@
+SET FOREIGN_KEY_CHECKS=0;
+
 --- ODS auth --
 REPLACE INTO ods_lremap_resource_keys SELECT 
 MD5(concat(CONF,'#',YEAR,'#',PASSCODE,'#',resourceid,'#',type,'#',name,'#',prodstatus)) as resourceid,
@@ -47,7 +49,7 @@ lastname,
 email,
 affiliation,
 country
-from ods_lremap_resource_keys K , START_DB.START_authors A where A.passcode=K.passcode
+from ods_lremap_resource_keys K , NEWSTARTDB.START_authors A where A.passcode=K.passcode
 and  A.conf=K.conf  and A.YEAR=K.YEAR and K.resid=1;
 
 REPLACE INTO lremap_authors_norm SELECT
@@ -59,7 +61,7 @@ lastname,
 email,
 affiliation,
 country
-from ods_lremap_resource_norm_keys K , START_DB.START_authors A where A.passcode=K.passcode
+from ods_lremap_resource_norm_keys K , NEWSTARTDB.START_authors A where A.passcode=K.passcode
 and  A.conf=K.conf  and A.YEAR=K.YEAR and K.resid=1;
 
 
@@ -68,12 +70,12 @@ and  A.conf=K.conf  and A.YEAR=K.YEAR and K.resid=1;
 
 REPLACE INTO lremap_papers 
 select K.resourceid, A.paperid, A.status, A.title, A.category1
-from ods_lremap_resource_keys K , START_DB.START_papers A where A.passcode=K.passcode
+from ods_lremap_resource_keys K , NEWSTARTDB.START_papers A where A.passcode=K.passcode
 and  A.conf=K.conf  and A.YEAR=K.YEAR and K.resid=1;
 
 REPLACE INTO lremap_papers_norm 
 select K.resourceid, A.paperid, A.status, A.title, A.category1
-from ods_lremap_resource_norm_keys K , START_DB.START_papers A where A.passcode=K.passcode
+from ods_lremap_resource_norm_keys K , NEWSTARTDB.START_papers A where A.passcode=K.passcode
 and  A.conf=K.conf  and A.YEAR=K.YEAR and K.resid=1;
 
 ---subs---
@@ -83,8 +85,50 @@ SELECT resourceid, conf, year, passcode FROM lremap_datathon.ods_lremap_resource
 REPLACE INTO lremap_subs_norm
 SELECT  resourceid, conf, year, passcode FROM lremap_datathon.ods_lremap_resource_norm_keys;
 
+-- pivot languages --
+INSERT INTO lremap_datathon.lremap_resource_pivoted_lang
+SELECT resourceid, lang1 FROM lremap_datathon.lremap_resource_lang where lang1 <> ''
+UNION
+SELECT resourceid, lang2 FROM lremap_datathon.lremap_resource_lang where lang2 <> ''
+UNION
+SELECT resourceid, lang3 FROM lremap_datathon.lremap_resource_lang where lang3 <> ''
+UNION
+SELECT resourceid, lang4 FROM lremap_datathon.lremap_resource_lang where lang4 <> ''
+UNION
+SELECT resourceid, lang5 FROM lremap_datathon.lremap_resource_lang where lang5 <> '';
+
+INSERT INTO lremap_datathon.lremap_resource_pivoted_lang_norm
+SELECT resourceid, lang1 FROM lremap_datathon.lremap_resource_lang_norm where lang1 <> ''
+UNION
+SELECT resourceid, lang2 FROM lremap_datathon.lremap_resource_lang_norm where lang2 <> ''
+UNION
+SELECT resourceid, lang3 FROM lremap_datathon.lremap_resource_lang_norm where lang3 <> ''
+UNION
+SELECT resourceid, lang4 FROM lremap_datathon.lremap_resource_lang_norm where lang4 <> ''
+UNION
+SELECT resourceid, lang5 FROM lremap_datathon.lremap_resource_lang_norm where lang5 <> '';
+
+INSERT INTO lremap_resource_other_lang_norm
+SELECT resourceid, langother FROM lremap_datathon.lremap_resource_lang_norm where langother <> '';
+
+INSERT INTO lremap_resource_other_lang
+SELECT resourceid, langother FROM lremap_datathon.lremap_resource_lang where langother <> '';
+
+REPLACE INTO lremap_resource_lang_dim
+SELECT 
+MD5(concat(CONF,'#',YEAR,'#',PASSCODE,'#',resourceid,'#',type,'#',name,'#',prodstatus)) as resourceid,
+langdim
+FROM lremap_datathon.stage_lremap_resource_lang A;
+
+REPLACE INTO lremap_resource_norm_lang_dim
+SELECT 
+MD5(concat(CONF,'#',YEAR,'#',PASSCODE,'#',resourceid,'#',type,'#',name,'#',prodstatus)) as resourceid,
+langdim
+FROM lremap_datathon.stage_lremap_resource_lang_norm A;
+
+
 -- additional tables --
-REPLACE INTO lremap_conferences SELECT distinct conf, year,type, subeventof, location FROM START_DB.START_conferences;
+REPLACE INTO lremap_conferences SELECT distinct conf, year,type, subeventof, location FROM NEWSTARTDB.START_conferences;
 
 REPLACE INTO lremap_years select distinct year from lremap_resource order by 1;
 

@@ -10,7 +10,7 @@
                 <goal>org.codehaus.mojo:exec-maven-plugin:1.2.1:exec</goal>
             </goals>
             <properties>
-                <exec.args>-classpath %classpath it.cnr.ilc.jlremap.CsvReader -l /home/riccardo/Dropbox/LREMap/310715/MAPDBJPA_LANG.csv</exec.args>
+                <exec.args>-classpath %classpath it.cnr.ilc.jlremap.CsvReader -d /home/riccardo/Dropbox/LREMap/310715/IS2013_MD.csv</exec.args>
                 <exec.executable>java</exec.executable>
             </properties>
         </action>
@@ -24,7 +24,7 @@
                 <goal>org.codehaus.mojo:exec-maven-plugin:1.2.1:exec</goal>
             </goals>
             <properties>
-                <exec.args>-Xdebug -Xrunjdwp:transport=dt_socket,server=n,address=${jpda.address} -classpath %classpath it.cnr.ilc.jlremap.CsvReader -l /home/riccardo/Dropbox/LREMap/310715/MAPDBJPA_LANG.csv</exec.args>
+                <exec.args>-Xdebug -Xrunjdwp:transport=dt_socket,server=n,address=${jpda.address} -classpath %classpath it.cnr.ilc.jlremap.CsvReader -l /home/riccardo/Dropbox/LREMap/310715/LREC2014_LANG.csv</exec.args>
                 <exec.executable>java</exec.executable>
                 <jpda.listen>true</jpda.listen>
             </properties>
@@ -39,7 +39,7 @@
                 <goal>org.codehaus.mojo:exec-maven-plugin:1.2.1:exec</goal>
             </goals>
             <properties>
-                <exec.args>-classpath %classpath it.cnr.ilc.jlremap.CsvReader -l /home/riccardo/Dropbox/LREMap/310715/MAPDBJPA_LANG.csv</exec.args>
+                <exec.args>-classpath %classpath it.cnr.ilc.jlremap.CsvReader -l /home/riccardo/Dropbox/LREMap/310715/LREC2014_LANG.csv</exec.args>
                 <exec.executable>java</exec.executable>
             </properties>
         </action>

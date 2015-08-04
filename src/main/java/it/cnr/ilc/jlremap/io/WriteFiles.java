@@ -126,7 +126,7 @@ public class WriteFiles {
         bwauth = new BufferedWriter(fwauth);
         bwnorm = new BufferedWriter(fwnorm);
         int i = 0;
-        int num=0;
+        int num = 0;
         for (List<String> items : table) {
             /*init fields*/
             //System.err.println(items + " " + items);
@@ -206,7 +206,7 @@ public class WriteFiles {
             }
 
             /*check resid*/
-           // System.err.println("resid -"+__RESID__+"-");
+            // System.err.println("resid -"+__RESID__+"-");
             if (__RESID__.equals("")) {
                 if (__PASSCODE__.equals(passChk)) {
                     resid = resid + 1;
@@ -311,7 +311,7 @@ public class WriteFiles {
         bwkeys.close();
         bwauth.close();
         bwnorm.close();
-        System.out.println("Write # "+num+ " lines!");
+        System.out.println("Write # " + num + " lines!");
         return files;
     }
 
@@ -385,28 +385,27 @@ public class WriteFiles {
             __RESOURCEPRODSTATUS_CLEAN__ = items.get(9);
             __RESOURCELANG_1__ = items.get(10);
             __RESOURCELANG_1_CLEAN__ = items.get(11);
-            
+
             __RESOURCELANG_2__ = items.get(12);
             __RESOURCELANG_2_CLEAN__ = items.get(13);
-            
+
             __RESOURCELANG_3__ = items.get(14);
             __RESOURCELANG_3_CLEAN__ = items.get(15);
-            
+
             __RESOURCELANG_4__ = items.get(16);
             __RESOURCELANG_4_CLEAN__ = items.get(17);
-            
+
             __RESOURCELANG_5__ = items.get(18);
             __RESOURCELANG_5_CLEAN__ = items.get(19);
-            
+
             __RESOURCELANG_O__ = items.get(20);
             __RESOURCELANG_O_CLEAN__ = items.get(21);
             __RESOURCELANGDIM__ = items.get(22);
-            
+
             /*write file keys
              fields contained in file keys 0,1,2,3,4,6,8,5,7,9
              */
             /*check auth nk values*/
-
             if (__PASSCODE__.equals("")) {
                 goahead = false;
             }
@@ -460,10 +459,14 @@ public class WriteFiles {
             if (__RESID__.equals("")) {
                 if (__PASSCODE__.equals(passChk)) {
                     resid = resid + 1;
+                    //System.err.println("resid1 chk pc -" + __RESID__ + "-");
                 } else {
                     resid = 1;
                 }
                 __RESID__ = new Integer(resid).toString();
+                //System.err.println("resid1 -" + __RESID__ + "-");
+            } else {
+                //System.err.println("resid1 ELSE -" + __RESID__ + "-");
             }
 
             /*check langs fields */
@@ -474,7 +477,7 @@ public class WriteFiles {
                     __RESOURCELANG_1_CLEAN__ = __RESOURCELANG_1__;
                 }
             }
-            
+
             if (__RESOURCELANG_2_CLEAN__.equals("")) {
                 if (__RESOURCELANG_2__.equals(__NA__)) {
                     __RESOURCELANG_2_CLEAN__ = __NA__;
@@ -482,7 +485,7 @@ public class WriteFiles {
                     __RESOURCELANG_2_CLEAN__ = __RESOURCELANG_2__;
                 }
             }
-            
+
             if (__RESOURCELANG_3_CLEAN__.equals("")) {
                 if (__RESOURCELANG_3__.equals(__NA__)) {
                     __RESOURCELANG_3_CLEAN__ = __NA__;
@@ -490,15 +493,15 @@ public class WriteFiles {
                     __RESOURCELANG_3_CLEAN__ = __RESOURCELANG_3__;
                 }
             }
-            
-           if (__RESOURCELANG_4_CLEAN__.equals("")) {
+
+            if (__RESOURCELANG_4_CLEAN__.equals("")) {
                 if (__RESOURCELANG_4__.equals(__NA__)) {
                     __RESOURCELANG_4_CLEAN__ = __NA__;
                 } else {
                     __RESOURCELANG_4_CLEAN__ = __RESOURCELANG_4__;
                 }
             }
-            
+
             if (__RESOURCELANG_5_CLEAN__.equals("")) {
                 if (__RESOURCELANG_5__.equals(__NA__)) {
                     __RESOURCELANG_5_CLEAN__ = __NA__;
@@ -506,7 +509,7 @@ public class WriteFiles {
                     __RESOURCELANG_5_CLEAN__ = __RESOURCELANG_5__;
                 }
             }
-            
+
             if (__RESOURCELANG_O_CLEAN__.equals("")) {
                 if (__RESOURCELANG_O__.equals(__NA__)) {
                     __RESOURCELANG_O_CLEAN__ = __NA__;
@@ -514,14 +517,13 @@ public class WriteFiles {
                     __RESOURCELANG_O_CLEAN__ = __RESOURCELANG_O__;
                 }
             }
-            
+
             if (__RESOURCELANGDIM__.equals("")) {
                 __RESOURCELANGDIM__ = __NA__;
             }
 
-            
             if (goahead) {
-                
+
 
                 /*write auth 0,1,2,3,4,6,8,10,12,14,16,18,20*/
                 bwauth.write(__CONF__ + sep); //0
@@ -538,9 +540,9 @@ public class WriteFiles {
                 bwauth.write(__RESOURCELANG_3__ + sep); //14
 
                 bwauth.write(__RESOURCELANG_4__ + sep); //16
-               
+
                 bwauth.write(__RESOURCELANG_5__ + sep); //18
-               
+
                 bwauth.write(__RESOURCELANG_O__ + sep); //19
                 bwauth.write(__RESOURCELANGDIM__ + sep); //22
                 bwauth.write("\n");
@@ -560,14 +562,14 @@ public class WriteFiles {
                 bwnorm.write(__RESOURCELANG_3_CLEAN__ + sep); //14
 
                 bwnorm.write(__RESOURCELANG_4_CLEAN__ + sep); //16
-               
+
                 bwnorm.write(__RESOURCELANG_5_CLEAN__ + sep); //18
-               
+
                 bwnorm.write(__RESOURCELANG_O_CLEAN__ + sep); //20
                 bwnorm.write(__RESOURCELANGDIM__ + sep); //21
                 bwnorm.write("\n");
                 if (i == 0) {
-                   
+
                     files.add(fileauthor.getAbsolutePath());
                     files.add(filenorm.getAbsolutePath());
                 }
@@ -576,7 +578,6 @@ public class WriteFiles {
             passChk = __PASSCODE__;
         } // end for
 
-       
         bwauth.close();
         bwnorm.close();
         return files;
