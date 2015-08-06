@@ -16,12 +16,7 @@ ADD CONSTRAINT `fk_keys2subs_norm`
   ON DELETE NO ACTION
   ON UPDATE NO ACTION;
 -- resource --
-ALTER TABLE `lremap_datathon`.`lremap_resource` 
-ADD CONSTRAINT `fk_lremap_resource2subs`
-  FOREIGN KEY (`resourceid`)
-  REFERENCES `lremap_datathon`.`lremap_subs` (`resourceid`)
-  ON DELETE NO ACTION
-  ON UPDATE NO ACTION;
+
 
 
 ALTER TABLE `lremap_datathon`.`lremap_resource` 
@@ -32,12 +27,7 @@ ADD CONSTRAINT `fk_lremap_resource_2rkey`
   ON UPDATE NO ACTION;
 
 -- resource_norm --
-ALTER TABLE `lremap_datathon`.`lremap_resource_norm` 
-ADD CONSTRAINT `fk_lremap_resourcenorm2subsnorm`
-  FOREIGN KEY (`resourceid`)
-  REFERENCES `lremap_datathon`.`lremap_subs_norm` (`resourceid`)
-  ON DELETE NO ACTION
-  ON UPDATE NO ACTION;
+
 
 ALTER TABLE `lremap_datathon`.`lremap_resource_norm` 
 ADD CONSTRAINT `fk_lremap_resource_2rnkey`

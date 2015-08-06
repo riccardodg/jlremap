@@ -78,7 +78,7 @@ select K.resourceid, A.paperid, A.status, A.title, A.category1
 from ods_lremap_resource_norm_keys K , NEWSTARTDB.START_papers A where A.passcode=K.passcode
 and  A.conf=K.conf  and A.YEAR=K.YEAR and K.resid=1;
 
----subs---
+--- subs---
 REPLACE INTO lremap_subs
 SELECT resourceid, conf, year, passcode FROM lremap_datathon.ods_lremap_resource_keys;
 
@@ -86,7 +86,7 @@ REPLACE INTO lremap_subs_norm
 SELECT  resourceid, conf, year, passcode FROM lremap_datathon.ods_lremap_resource_norm_keys;
 
 -- pivot languages --
-INSERT INTO lremap_datathon.lremap_resource_pivoted_lang
+REPLACE INTO lremap_datathon.lremap_resource_pivoted_lang
 SELECT resourceid, lang1 FROM lremap_datathon.lremap_resource_lang where lang1 <> ''
 UNION
 SELECT resourceid, lang2 FROM lremap_datathon.lremap_resource_lang where lang2 <> ''
@@ -97,7 +97,7 @@ SELECT resourceid, lang4 FROM lremap_datathon.lremap_resource_lang where lang4 <
 UNION
 SELECT resourceid, lang5 FROM lremap_datathon.lremap_resource_lang where lang5 <> '';
 
-INSERT INTO lremap_datathon.lremap_resource_pivoted_lang_norm
+REPLACE INTO lremap_datathon.lremap_resource_pivoted_lang_norm
 SELECT resourceid, lang1 FROM lremap_datathon.lremap_resource_lang_norm where lang1 <> ''
 UNION
 SELECT resourceid, lang2 FROM lremap_datathon.lremap_resource_lang_norm where lang2 <> ''
@@ -108,10 +108,10 @@ SELECT resourceid, lang4 FROM lremap_datathon.lremap_resource_lang_norm where la
 UNION
 SELECT resourceid, lang5 FROM lremap_datathon.lremap_resource_lang_norm where lang5 <> '';
 
-INSERT INTO lremap_resource_other_lang_norm
+REPLACE INTO lremap_resource_other_lang_norm
 SELECT resourceid, langother FROM lremap_datathon.lremap_resource_lang_norm where langother <> '';
 
-INSERT INTO lremap_resource_other_lang
+REPLACE INTO lremap_resource_other_lang
 SELECT resourceid, langother FROM lremap_datathon.lremap_resource_lang where langother <> '';
 
 REPLACE INTO lremap_resource_lang_dim
@@ -134,7 +134,7 @@ REPLACE INTO lremap_years select distinct year from lremap_resource order by 1;
 
 REPLACE INTO lremap_conference_years select distinct conf,year from lremap_resource order by 1;
 
---add old conferences to the list --
+--- add old conferences to the list --
 -- 2010 --
 REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('LREC2010', '2010','MAIN', '', 'La_Valletta');
 REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('COLING2010', '2010','MAIN', '', 'Beijing');

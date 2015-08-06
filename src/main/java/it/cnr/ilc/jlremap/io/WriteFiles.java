@@ -219,7 +219,7 @@ public class WriteFiles {
 
             /*check other fields */
             if (__RESOURCEAVAIL_CLEAN__.equals("")) {
-                if (__RESOURCEAVAIL__.equals(__NA__)) {
+                if (__RESOURCEAVAIL__.equals(__NA__) || __RESOURCEAVAIL__.equals("") ) {
                     __RESOURCEAVAIL_CLEAN__ = __NA__;
                 } else {
                     __RESOURCEAVAIL_CLEAN__ = __RESOURCEAVAIL__;
@@ -227,7 +227,7 @@ public class WriteFiles {
             }
 
             if (__RESOURCEMODALITY_CLEAN__.equals("")) {
-                if (__RESOURCEMODALITY__.equals(__NA__)) {
+                if (__RESOURCEMODALITY__.equals(__NA__) ||__RESOURCEMODALITY__.equals("")) {
                     __RESOURCEMODALITY_CLEAN__ = __NA__;
                 } else {
                     __RESOURCEMODALITY_CLEAN__ = __RESOURCEMODALITY__;
@@ -235,7 +235,7 @@ public class WriteFiles {
             }
 
             if (__RESOURCEUSE_CLEAN__.equals("")) {
-                if (__RESOURCEUSE__.equals(__NA__)) {
+                if (__RESOURCEUSE__.equals(__NA__) || __RESOURCEUSE__.equals("")) {
                     __RESOURCEUSE_CLEAN__ = __NA__;
                 } else {
                     __RESOURCEUSE_CLEAN__ = __RESOURCEUSE__;
