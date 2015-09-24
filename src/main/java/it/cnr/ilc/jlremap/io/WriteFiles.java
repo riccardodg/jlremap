@@ -61,6 +61,11 @@ public class WriteFiles {
     private String __RESOURCESIZE_1__;
     private String __RESOURCELIC__;
     private String __RESOURCEDOC__;
+    private String __TOT__;
+    private String __ORIG__;
+    private String __LP_AP__;
+    private String __CLEAN__;
+    private String __AUTHUPD__;
 
     public WriteFiles(List<List<String>> table) {
         this.table = table;
@@ -219,7 +224,7 @@ public class WriteFiles {
 
             /*check other fields */
             if (__RESOURCEAVAIL_CLEAN__.equals("")) {
-                if (__RESOURCEAVAIL__.equals(__NA__) || __RESOURCEAVAIL__.equals("") ) {
+                if (__RESOURCEAVAIL__.equals(__NA__) || __RESOURCEAVAIL__.equals("")) {
                     __RESOURCEAVAIL_CLEAN__ = __NA__;
                 } else {
                     __RESOURCEAVAIL_CLEAN__ = __RESOURCEAVAIL__;
@@ -227,7 +232,7 @@ public class WriteFiles {
             }
 
             if (__RESOURCEMODALITY_CLEAN__.equals("")) {
-                if (__RESOURCEMODALITY__.equals(__NA__) ||__RESOURCEMODALITY__.equals("")) {
+                if (__RESOURCEMODALITY__.equals(__NA__) || __RESOURCEMODALITY__.equals("")) {
                     __RESOURCEMODALITY_CLEAN__ = __NA__;
                 } else {
                     __RESOURCEMODALITY_CLEAN__ = __RESOURCEMODALITY__;
@@ -581,6 +586,82 @@ public class WriteFiles {
         bwauth.close();
         bwnorm.close();
         return files;
+    }
+
+    /**
+     * the structure of the file is
+     * <ul>
+     * <li>0 tot
+     * <li>1 original value
+     * <li>2 value for clean field (<>_norm)
+     * <li>3 lp_ap
+     * <li>4 value to update orig value <>)
+     * </ul>
+     *
+     *
+     * @throws Exception
+     */
+    public List writeUpdateSqlfiles(String md) throws Exception {
+        boolean goahead = true;
+        String passChk = "";
+        int resid = 1;
+        List updates = new ArrayList<>();
+        List<String> authupd = new ArrayList<String>();
+        List<String> clean = new ArrayList<String>();
+        File filenorm = new File(this.inFile + ".norm");
+        File fileauthor = new File(this.inFile + ".auth");
+        String updateOrig = " ", updateClean = "";
+
+//        fwauth = new FileWriter(fileauthor.getAbsoluteFile());
+//        fwnorm = new FileWriter(filenorm.getAbsoluteFile());
+//
+//        bwauth = new BufferedWriter(fwauth);
+//        bwnorm = new BufferedWriter(fwnorm);
+        int i = 0,a=0,c=0;
+        for (List<String> items : table) {
+            /*init fields*/
+            //System.err.println(items + " " + items);
+            __TOT__ = items.get(0);
+            __ORIG__ = items.get(1);
+            __LP_AP__ = items.get(2);
+            __CLEAN__ = items.get(3);
+            __AUTHUPD__ = items.get(4);
+
+            /*write file keys
+             fields contained in file keys 0,1,2,3,4,6,8,5,7,9
+             */
+            /*check auth nk values*/
+            if (!__CLEAN__.equals("")) {
+                //System.err.println("__CLEAN__ " + __CLEAN__);
+                updateClean = String.format("SET   %s = '%s' WHERE LOWER(%s)='%s';", md, __CLEAN__.trim(), md, __ORIG__.toLowerCase());
+                clean.add(updateClean);
+                c++;
+
+            }
+
+            if (!__AUTHUPD__.equals("")) {
+                //System.err.println("__AUTHUPD__ " + __AUTHUPD__);
+                updateOrig = String.format("SET   %s = '%s' WHERE LOWER(%s)='%s';", md, __AUTHUPD__.trim(), md, __ORIG__.toLowerCase());
+                authupd.add(updateOrig);
+                a++;
+                if (__CLEAN__.equals("")) {
+                System.err.println("__CLEAN__FROM_ORIG " + __ORIG__);
+                updateClean = String.format("SET   %s = '%s' WHERE LOWER(%s)='%s';", md, __AUTHUPD__.trim(), md, __ORIG__.toLowerCase());
+                clean.add(updateClean);
+                c++;
+
+            }
+
+            }
+
+        }
+        System.err.println("__CLEAN__ " +c);
+        try{System.err.println("__AUTHOR__ " +a);}
+        catch(Exception e){}
+        updates.add(clean);
+        updates.add(authupd);
+        return updates;
+
     }
 
 }

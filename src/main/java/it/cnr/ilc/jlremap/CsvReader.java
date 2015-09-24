@@ -8,6 +8,9 @@ package it.cnr.ilc.jlremap;
 import it.cnr.ilc.jlremap.db.DbConnect;
 import it.cnr.ilc.jlremap.io.ParseInFile;
 import it.cnr.ilc.jlremap.io.WriteFiles;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.List;
@@ -20,13 +23,24 @@ public class CsvReader {
 
     public static void main(String[] args) throws Exception {
         List<List<String>> records;
+        List<List<String>> updates=new ArrayList();
         List<String> files;
         List<String> tables = new ArrayList<String>();
+        List<String> updtables = new ArrayList<String>();
+        
         List<String> langs = new ArrayList<String>();
+        
+        BufferedWriter bwupd;
+        File fileupd;
+        FileWriter fwupd;
+        
 
         tables.add("stage_lremap_resource_keys");
         tables.add("stage_lremap_resource");
         tables.add("stage_lremap_resource_norm");
+        
+        updtables.add("stage_lremap_resource_norm");
+        updtables.add("stage_lremap_resource");
 
         langs.add("stage_lremap_resource_lang");
         langs.add("stage_lremap_resource_lang_norm");
@@ -64,6 +78,34 @@ public class CsvReader {
                 connect.execStm(conn, stm);
                 i++;
             }
+        }
+        
+        // update
+
+        if (args[0].equals("-u")) {
+            if (args[2] !="")
+                
+            updates = writefiles.writeUpdateSqlfiles(args[3]);
+            System.out.println(updates.get(0));
+            fileupd = new File(args[1]+ ".sql");
+            fwupd = new FileWriter(fileupd);
+            bwupd = new BufferedWriter(fwupd);
+            
+            //System.out.println(args[1]);
+
+            int i = 0, l = 0;
+            for (List<String> items : updates) {
+                for (String item:items){
+                    stm = String.format("UPDATE  %s %s ",  updtables.get(i), item);
+                    System.out.println(stm);
+                    bwupd.write(stm);
+                    bwupd.write("\n");
+                }
+                
+                //connect.execStm(conn, stm);
+                i++;
+            }
+            bwupd.close();
         }
 
     }
