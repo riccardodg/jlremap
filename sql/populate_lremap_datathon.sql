@@ -279,4 +279,64 @@ REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("use","Tex
 
 -- load iso 639-3
 
-A
+-- for GUI --
+CREATE TABLE `lremap_side_table_groupedtype` (
+  `value` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `grouping` varchar(255) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`value`,`grouping`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+REPLACE INTO lremap_side_table_groupedtype (value,grouping) VALUES ("Corpus","Resource-Dataset");
+REPLACE INTO lremap_side_table_groupedtype (value,grouping) VALUES ("Lexicon","Resource-Dataset");
+REPLACE INTO lremap_side_table_groupedtype (value,grouping) VALUES ("Grammar/Language Model","Resource-Dataset");
+REPLACE INTO lremap_side_table_groupedtype (value,grouping) VALUES ("Ontology","Resource-Dataset");
+REPLACE INTO lremap_side_table_groupedtype (value,grouping) VALUES ("Terminology","Resource-Dataset");
+REPLACE INTO lremap_side_table_groupedtype (value,grouping) VALUES ("Treebank","Resource-Dataset");
+REPLACE INTO lremap_side_table_groupedtype (value,grouping) VALUES ("Corpus Tool","Resource-Tool");
+REPLACE INTO lremap_side_table_groupedtype (value,grouping) VALUES ("Aligner","Resource-Tool");
+REPLACE INTO lremap_side_table_groupedtype (value,grouping) VALUES ("Annotation Tool","Resource-Tool");
+REPLACE INTO lremap_side_table_groupedtype (value,grouping) VALUES ("Language Identifier","Resource-Tool");
+REPLACE INTO lremap_side_table_groupedtype (value,grouping) VALUES ("Language Modeling Tool","Resource-Tool");
+REPLACE INTO lremap_side_table_groupedtype (value,grouping) VALUES ("Machine Learning Tool","Resource-Tool");
+REPLACE INTO lremap_side_table_groupedtype (value,grouping) VALUES ("Machine Translation Tool","Resource-Tool");
+REPLACE INTO lremap_side_table_groupedtype (value,grouping) VALUES ("Named Entity Recognizer","Resource-Tool");
+REPLACE INTO lremap_side_table_groupedtype (value,grouping) VALUES ("Sentiment Analysis Tool","Resource-Tool");
+REPLACE INTO lremap_side_table_groupedtype (value,grouping) VALUES ("Software Toolkit","Resource-Tool");
+REPLACE INTO lremap_side_table_groupedtype (value,grouping) VALUES ("Tagger/Parser","Resource-Tool");
+REPLACE INTO lremap_side_table_groupedtype (value,grouping) VALUES ("Tokenizer","Resource-Tool");
+REPLACE INTO lremap_side_table_groupedtype (value,grouping) VALUES ("Web Service","Resource-Tool");
+REPLACE INTO lremap_side_table_groupedtype (value,grouping) VALUES ("Word Sense Disambiguator","Resource-Tool");
+REPLACE INTO lremap_side_table_groupedtype (value,grouping) VALUES ("Prosodic Analyzer","Resource-Tool");
+REPLACE INTO lremap_side_table_groupedtype (value,grouping) VALUES ("Signal Processing/Features Extraction","Resource-Tool");
+REPLACE INTO lremap_side_table_groupedtype (value,grouping) VALUES ("Speaker Recognizer","Resource-Tool");
+REPLACE INTO lremap_side_table_groupedtype (value,grouping) VALUES ("Speech Recognizer/Transcriber","Resource-Tool");
+REPLACE INTO lremap_side_table_groupedtype (value,grouping) VALUES ("Spoken Dialogue Tool","Resource-Tool");
+REPLACE INTO lremap_side_table_groupedtype (value,grouping) VALUES ("Text-to-Speech Synthesizer","Resource-Tool");
+REPLACE INTO lremap_side_table_groupedtype (value,grouping) VALUES ("Image Analyzer","Resource-Tool");
+REPLACE INTO lremap_side_table_groupedtype (value,grouping) VALUES ("Metadata","Resource-Guidelines");
+REPLACE INTO lremap_side_table_groupedtype (value,grouping) VALUES ("Representation-Annotation Formalism/Guidelines","Resource-Guidelines");
+REPLACE INTO lremap_side_table_groupedtype (value,grouping) VALUES ("Representation-Annotation Standards/Best Practices","Resource-Guidelines");
+REPLACE INTO lremap_side_table_groupedtype (value,grouping) VALUES ("Language Resources/Technologies Infrastructure","Resource-Guidelines");
+REPLACE INTO lremap_side_table_groupedtype (value,grouping) VALUES ("Evaluation Data","Evaluation");
+REPLACE INTO lremap_side_table_groupedtype (value,grouping) VALUES ("Evaluation Tool","Evaluation");
+REPLACE INTO lremap_side_table_groupedtype (value,grouping) VALUES ("Evaluation Package","Evaluation");
+REPLACE INTO lremap_side_table_groupedtype (value,grouping) VALUES ("Evaluation Methodology/Standards/Guidelines","Evaluation");
+
+REPLACE  INTO lremap_side_table_groupedtype SELECT DISTINCT B.type, 'Other' FROM lremap_side_table_groupedtype A RIGHT OUTER JOIN  lremap_resource_norm B ON ( A.value=B.type) where A.value is null;
+
+
+CREATE TABLE `lremap_side_table_avail` (
+  `value` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `grouping` varchar(255) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`value`,`grouping`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+REPLACE INTO lremap_side_table_avail (value,grouping) VALUES ("Freely Available","Lrec");
+REPLACE INTO lremap_side_table_avail (value,grouping) VALUES ("From Data Center(s)","Lrec");
+REPLACE INTO lremap_side_table_avail (value,grouping) VALUES ("From Owner","Lrec");
+REPLACE INTO lremap_side_table_avail (value,grouping) VALUES ("Not Applicable","Lrec");
+REPLACE INTO lremap_side_table_avail (value,grouping) VALUES ("Not Available","Lrec");
+REPLACE INTO lremap_side_table_avail (value,grouping) VALUES ("Not Relevant","Lrec");
+
+REPLACE INTO lremap_side_table_avail SELECT DISTINCT B.avail, 'Other' FROM lremap_datathon.lremap_side_table_avail A RIGHT OUTER JOIN  lremap_resource_norm B ON ( A.value=B.avail) where A.value is null order by 1
+-- END GUI --
