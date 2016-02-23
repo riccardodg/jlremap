@@ -339,4 +339,90 @@ REPLACE INTO lremap_side_table_avail (value,grouping) VALUES ("Not Available","L
 REPLACE INTO lremap_side_table_avail (value,grouping) VALUES ("Not Relevant","Lrec");
 
 REPLACE INTO lremap_side_table_avail SELECT DISTINCT B.avail, 'Other' FROM lremap_datathon.lremap_side_table_avail A RIGHT OUTER JOIN  lremap_resource_norm B ON ( A.value=B.avail) where A.value is null order by 1
+
+DROP TABLE IF EXISTS `lremap_side_table_status`;
+CREATE TABLE `lremap_side_table_status` (
+  `value` varchar(370) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `grouping` char(15) COLLATE utf8_bin NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+REPLACE INTO lremap_side_table_status (value,grouping) VALUES ("Newly created-finished","Lrec");
+REPLACE INTO lremap_side_table_status (value,grouping) VALUES ("Newly created-in progress","Lrec");
+REPLACE INTO lremap_side_table_status (value,grouping) VALUES ("Existing-used","Lrec");
+REPLACE INTO lremap_side_table_status (value,grouping) VALUES ("Existing-updated","Lrec");
+REPLACE INTO lremap_side_table_status (value,grouping) VALUES ("Not Applicable","Lrec");
+
+
+REPLACE INTO lremap_side_table_status SELECT DISTINCT B.prodstatus, 'Other' FROM lremap_datathon.lremap_side_table_status A RIGHT OUTER JOIN  lremap_resource_norm B ON ( A.value=B.prodstatus) where A.value is null order by 1
+
+DROP TABLE IF EXISTS `lremap_side_table_modality`;
+CREATE TABLE `lremap_side_table_modality` (
+  `value` varchar(300) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `grouping` char(15) COLLATE utf8_bin NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+REPLACE INTO lremap_side_table_modality (value,grouping) VALUES ("Speech","Lrec");
+REPLACE INTO lremap_side_table_modality (value,grouping) VALUES ("Written","Lrec");
+REPLACE INTO lremap_side_table_modality (value,grouping) VALUES ("Speech/Written","Lrec");
+REPLACE INTO lremap_side_table_modality (value,grouping) VALUES ("Multimodal/Multimedia","Lrec");
+REPLACE INTO lremap_side_table_modality (value,grouping) VALUES ("Sign Language","Lrec");
+REPLACE INTO lremap_side_table_modality (value,grouping) VALUES ("Modality Independent","Lrec");
+REPLACE INTO lremap_side_table_modality (value,grouping) VALUES ("Not Applicable","Lrec");
+
+
+REPLACE INTO lremap_side_table_modality SELECT DISTINCT B.modality, 'Other' FROM lremap_datathon.lremap_side_table_modality A RIGHT OUTER JOIN  lremap_resource_norm B ON ( A.value=B.modality) where A.value is null order by 1
+
+DROP TABLE IF EXISTS `lremap_side_table_use`;
+CREATE TABLE `lremap_side_table_use` (
+  `value` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `grouping` varchar(255) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`value`,`grouping`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+REPLACE INTO lremap_side_table_use (value,grouping) VALUES ("Acquisition","Lrec");
+REPLACE INTO lremap_side_table_use (value,grouping) VALUES ("Anaphora, Coreference","Lrec");
+REPLACE INTO lremap_side_table_use (value,grouping) VALUES ("Corpus Creation/Annotation","Lrec");
+REPLACE INTO lremap_side_table_use (value,grouping) VALUES ("Dialogue","Lrec");
+REPLACE INTO lremap_side_table_use (value,grouping) VALUES ("Discourse","Lrec");
+REPLACE INTO lremap_side_table_use (value,grouping) VALUES ("Document Classification, Text categorisation","Lrec");
+REPLACE INTO lremap_side_table_use (value,grouping) VALUES ("Emotion Recognition/Generation","Lrec");
+REPLACE INTO lremap_side_table_use (value,grouping) VALUES ("Evaluation/Validation","Lrec");
+REPLACE INTO lremap_side_table_use (value,grouping) VALUES ("Information Extraction, Information Retrieval","Lrec");
+REPLACE INTO lremap_side_table_use (value,grouping) VALUES ("Knowledge Discovery/Representation","Lrec");
+REPLACE INTO lremap_side_table_use (value,grouping) VALUES ("Language Identification","Lrec");
+REPLACE INTO lremap_side_table_use (value,grouping) VALUES ("Language Modelling","Lrec");
+REPLACE INTO lremap_side_table_use (value,grouping) VALUES ("Lexicon Creation/Annotation","Lrec");
+REPLACE INTO lremap_side_table_use (value,grouping) VALUES ("Machine Learning","Lrec");
+REPLACE INTO lremap_side_table_use (value,grouping) VALUES ("Machine Translation, SpeechToSpeech Translation","Lrec");
+REPLACE INTO lremap_side_table_use (value,grouping) VALUES ("Morphological Analysis","Lrec");
+REPLACE INTO lremap_side_table_use (value,grouping) VALUES ("Multimedia Document Processing","Lrec");
+REPLACE INTO lremap_side_table_use (value,grouping) VALUES ("Named Entity Recognition","Lrec");
+REPLACE INTO lremap_side_table_use (value,grouping) VALUES ("Natural Language Generation","Lrec");
+REPLACE INTO lremap_side_table_use (value,grouping) VALUES ("Opinion Mining/Sentiment Analysis","Lrec");
+REPLACE INTO lremap_side_table_use (value,grouping) VALUES ("Parsing and Tagging","Lrec");
+REPLACE INTO lremap_side_table_use (value,grouping) VALUES ("Person Identification","Lrec");
+REPLACE INTO lremap_side_table_use (value,grouping) VALUES ("Question Answering","Lrec");
+REPLACE INTO lremap_side_table_use (value,grouping) VALUES ("Semantic Role Labeling","Lrec");
+REPLACE INTO lremap_side_table_use (value,grouping) VALUES ("Semantic Web","Lrec");
+REPLACE INTO lremap_side_table_use (value,grouping) VALUES ("Sign Language Recognition/Generation","Lrec");
+REPLACE INTO lremap_side_table_use (value,grouping) VALUES ("Speech Recognition/Understanding","Lrec");
+REPLACE INTO lremap_side_table_use (value,grouping) VALUES ("Speech Synthesis","Lrec");
+REPLACE INTO lremap_side_table_use (value,grouping) VALUES ("Summarisation","Lrec");
+REPLACE INTO lremap_side_table_use (value,grouping) VALUES ("Text Mining","Lrec");
+REPLACE INTO lremap_side_table_use (value,grouping) VALUES ("Textual Entailment and Paraphrasing","Lrec");
+REPLACE INTO lremap_side_table_use (value,grouping) VALUES ("Topic Detection and Tracking","Lrec");
+REPLACE INTO lremap_side_table_use (value,grouping) VALUES ("Voice Control","Lrec");
+REPLACE INTO lremap_side_table_use (value,grouping) VALUES ("Web Services","Lrec");
+REPLACE INTO lremap_side_table_use (value,grouping) VALUES ("Word Sense Disambiguation","Lrec");
+
+
+
+
+REPLACE INTO lremap_side_table_use SELECT DISTINCT B.resourceusage, 'Other' FROM lremap_datathon.lremap_side_table_use A RIGHT OUTER JOIN  lremap_resource_norm B ON ( A.value=B.resourceusage) where A.value is null order by 1
+
+
 -- END GUI --
