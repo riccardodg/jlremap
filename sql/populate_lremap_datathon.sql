@@ -39,7 +39,8 @@ REPLACE INTO lremap_resource_lang_norm SELECT
 MD5(concat(CONF,'#',YEAR,'#',PASSCODE,'#',resourceid,'#',type,'#',name,'#',prodstatus)) as resourceid,
 A.lang1,A.lang2,A.lang3,A.lang4,A.lang5,A.langother from stage_lremap_resource_lang_norm A;
 
---- authors ---
+
+-- authors ---
 REPLACE INTO lremap_authors SELECT
 K.resourceid,
 authornumber,
@@ -50,7 +51,34 @@ email,
 affiliation,
 country
 from ods_lremap_resource_keys K , NEWSTARTDB.START_authors A where A.passcode=K.passcode
-and  A.conf=K.conf  and A.YEAR=K.YEAR and K.resid=1;
+and  A.conf=K.conf  and A.YEAR=K.YEAR; -- and K.resid=1;
+
+-- recover 2012 ---
+
+REPLACE INTO lremap_authors  SELECT
+K.resourceid,
+authornumber,
+username,
+firstname,
+lastname,
+email,
+affiliation,
+country
+from ods_lremap_resource_keys K , START_DB_2012.START_authors A where substr(A.passcode, 1,instr(A.passcode,"X")-1)=K.passcode
+and  K.conf='LREC2012'  and K.YEAR='2012'; -- and K.resid=1;
+
+-- recover 2010 ---
+REPLACE INTO lremap_authors SELECT
+K.resourceid,
+authornumber,
+username,
+firstname,
+lastname,
+email,
+affiliation,
+country
+from ods_lremap_resource_keys K , START_DB_2010.START_authors A where A.passcode=K.passcode
+and  K.conf='LREC2010'  and K.YEAR='2010'; -- and K.resid=1;
 
 REPLACE INTO lremap_authors_norm SELECT
 K.resourceid,
@@ -62,21 +90,71 @@ email,
 affiliation,
 country
 from ods_lremap_resource_norm_keys K , NEWSTARTDB.START_authors A where A.passcode=K.passcode
-and  A.conf=K.conf  and A.YEAR=K.YEAR and K.resid=1;
+and  A.conf=K.conf  and A.YEAR=K.YEAR; -- and K.resid=1;
 
+-- recover 2012 ---
+
+REPLACE INTO lremap_authors_norm  SELECT
+K.resourceid,
+authornumber,
+username,
+firstname,
+lastname,
+email,
+affiliation,
+country
+from ods_lremap_resource_norm_keys K , START_DB_2012.START_authors A where substr(A.passcode, 1,instr(A.passcode,"X")-1)=K.passcode
+and  K.conf='LREC2012'  and K.YEAR='2012' ;-- and K.resid=1;
+
+-- recover 2010 ---
+REPLACE INTO lremap_authors_norm SELECT
+K.resourceid,
+authornumber,
+username,
+firstname,
+lastname,
+email,
+affiliation,
+country
+from ods_lremap_resource_norm_keys K , START_DB_2010.START_authors A where A.passcode=K.passcode
+and  K.conf='LREC2010'  and K.YEAR='2010';-- and K.resid=1;
 
 --- papers---
-
+REPLACE INTO lremap_papers_norm 
+select K.resourceid, A.paperid, A.status, A.title, A.category1
+from ods_lremap_resource_norm_keys K , NEWSTARTDB.START_papers A where A.passcode=K.passcode
+and  A.conf=K.conf  and A.YEAR=K.YEAR; -- and K.resid=1;
 
 REPLACE INTO lremap_papers 
 select K.resourceid, A.paperid, A.status, A.title, A.category1
 from ods_lremap_resource_keys K , NEWSTARTDB.START_papers A where A.passcode=K.passcode
-and  A.conf=K.conf  and A.YEAR=K.YEAR and K.resid=1;
+and  A.conf=K.conf  and A.YEAR=K.YEAR; -- and K.resid=1;
 
-REPLACE INTO lremap_papers_norm 
+-- recover 2012 ---
+REPLACE INTO lremap_papers  
 select K.resourceid, A.paperid, A.status, A.title, A.category1
-from ods_lremap_resource_norm_keys K , NEWSTARTDB.START_papers A where A.passcode=K.passcode
-and  A.conf=K.conf  and A.YEAR=K.YEAR and K.resid=1;
+from ods_lremap_resource_keys K , START_DB_2012.START_papers A where substr(A.passcode, 1,instr(A.passcode,"X")-1)=K.passcode
+and  K.conf='LREC2012'  and K.YEAR='2012'; -- and K.resid=1;
+
+-- recover 2010 ---
+REPLACE INTO lremap_papers  
+select K.resourceid, A.paperid, A.status, A.title, A.category1
+from ods_lremap_resource_keys K , START_DB_2010.START_papers A where A.passcode=K.passcode
+and  K.conf='LREC2010'  and K.YEAR='2010'; -- and K.resid=1;
+
+
+
+-- recover 2012 ---
+REPLACE INTO lremap_papers_norm  
+select K.resourceid, A.paperid, A.status, A.title, A.category1
+from ods_lremap_resource_norm_keys K , START_DB_2012.START_papers A where substr(A.passcode, 1,instr(A.passcode,"X")-1)=K.passcode
+and  K.conf='LREC2012'  and K.YEAR='2012'; -- and K.resid=1;
+
+-- recover 2010 ---
+REPLACE INTO lremap_papers_norm  
+select K.resourceid, A.paperid, A.status, A.title, A.category1
+from ods_lremap_resource_norm_keys K , START_DB_2010.START_papers A where A.passcode=K.passcode
+and  K.conf='LREC2010'  and K.YEAR='2010'; -- and K.resid=1;
 
 --- subs---
 REPLACE INTO lremap_subs
@@ -132,7 +210,7 @@ REPLACE INTO lremap_conferences SELECT distinct conf, year,type, subeventof, loc
 
 REPLACE INTO lremap_years select distinct year from lremap_resource order by 1;
 
-REPLACE INTO lremap_conference_years select distinct conf,year from lremap_resource order by 1;
+REPLACE INTO lremap_conference_years (conf,year) select distinct conf,year from lremap_resource order by 2 desc, 1 asc;
 
 --- add old conferences to the list --
 -- 2010 --
