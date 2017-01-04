@@ -159,7 +159,7 @@ public class WriteFiles {
             /*write file keys
              fields contained in file keys 0,1,2,3,4,6,8,5,7,9
              */
-            /*check auth nk values*/
+ /*check auth nk values*/
 
             if (__PASSCODE__.equals("")) {
                 goahead = false;
@@ -173,20 +173,23 @@ public class WriteFiles {
                 goahead = false;
             }
 
-            if (__RESOURCETYPE__.equals("")) {
+            if (__RESOURCETYPE__.equals("") || __RESOURCETYPE__.equalsIgnoreCase("NULL") || __RESOURCETYPE__==null) {
                 __RESOURCETYPE__ = __NA__;
+                
             }
 
-            if (__RESOURCENAME__.equals("")) {
+            if (__RESOURCENAME__.equals("") || __RESOURCENAME__.equals("NULL") || __RESOURCENAME__==null) {
                 __RESOURCENAME__ = __NA__;
+                System.err.println("NULL "+__RESOURCENAME__);
             }
 
-            if (__RESOURCEPRODSTATUS__.equals("")) {
+            if (__RESOURCEPRODSTATUS__.equals("")|| __RESOURCEPRODSTATUS__.equals("NULL") || __RESOURCEPRODSTATUS__==null) {
                 __RESOURCEPRODSTATUS__ = __NA__;
+                
             }
 
             /*check norm nk values*/
-            if (__RESOURCETYPE_CLEAN__.equals("")) {
+            if (__RESOURCETYPE_CLEAN__.equals("") ) {
                 if (__RESOURCETYPE__.equals(__NA__)) {
                     __RESOURCETYPE_CLEAN__ = __NA__;
                 } else {
@@ -377,40 +380,44 @@ public class WriteFiles {
         int i = 0;
         for (List<String> items : table) {
             /*init fields*/
-            //System.err.println(items + " " + items);
-            __CONF__ = items.get(0);
-            __YEAR__ = items.get(1);
-            __PASSCODE__ = items.get(2);
-            __RESID__ = items.get(3);
-            __RESOURCETYPE__ = items.get(4);
-            __RESOURCETYPE_CLEAN__ = items.get(5);
-            __RESOURCENAME__ = items.get(6);
-            __RESOURCENAME_CLEAN__ = items.get(7);
-            __RESOURCEPRODSTATUS__ = items.get(8);
-            __RESOURCEPRODSTATUS_CLEAN__ = items.get(9);
-            __RESOURCELANG_1__ = items.get(10);
-            __RESOURCELANG_1_CLEAN__ = items.get(11);
+            //System.err.println("items  at " + i + ":  " + items);
+            try {
+                __CONF__ = items.get(0);
+                __YEAR__ = items.get(1);
+                __PASSCODE__ = items.get(2);
+                __RESID__ = items.get(3);
+                __RESOURCETYPE__ = items.get(4);
+                __RESOURCETYPE_CLEAN__ = items.get(5);
+                __RESOURCENAME__ = items.get(6);
+                __RESOURCENAME_CLEAN__ = items.get(7);
+                __RESOURCEPRODSTATUS__ = items.get(8);
+                __RESOURCEPRODSTATUS_CLEAN__ = items.get(9);
+                __RESOURCELANG_1__ = items.get(10);
+                __RESOURCELANG_1_CLEAN__ = items.get(11);
 
-            __RESOURCELANG_2__ = items.get(12);
-            __RESOURCELANG_2_CLEAN__ = items.get(13);
+                __RESOURCELANG_2__ = items.get(12);
+                __RESOURCELANG_2_CLEAN__ = items.get(13);
 
-            __RESOURCELANG_3__ = items.get(14);
-            __RESOURCELANG_3_CLEAN__ = items.get(15);
+                __RESOURCELANG_3__ = items.get(14);
+                __RESOURCELANG_3_CLEAN__ = items.get(15);
 
-            __RESOURCELANG_4__ = items.get(16);
-            __RESOURCELANG_4_CLEAN__ = items.get(17);
+                __RESOURCELANG_4__ = items.get(16);
+                __RESOURCELANG_4_CLEAN__ = items.get(17);
 
-            __RESOURCELANG_5__ = items.get(18);
-            __RESOURCELANG_5_CLEAN__ = items.get(19);
+                __RESOURCELANG_5__ = items.get(18);
+                __RESOURCELANG_5_CLEAN__ = items.get(19);
 
-            __RESOURCELANG_O__ = items.get(20);
-            __RESOURCELANG_O_CLEAN__ = items.get(21);
-            __RESOURCELANGDIM__ = items.get(22);
+                __RESOURCELANG_O__ = items.get(20);
+                __RESOURCELANG_O_CLEAN__ = items.get(21);
+                __RESOURCELANGDIM__ = items.get(22);
+            } catch (Exception e) {
+                System.err.println("WRONG item  at " + i + ":  " + items);
+            } 
 
             /*write file keys
              fields contained in file keys 0,1,2,3,4,6,8,5,7,9
              */
-            /*check auth nk values*/
+ /*check auth nk values*/
             if (__PASSCODE__.equals("")) {
                 goahead = false;
             }
@@ -423,17 +430,22 @@ public class WriteFiles {
                 goahead = false;
             }
 
-            if (__RESOURCETYPE__.equals("")) {
+            if (__RESOURCETYPE__.equals("") || __RESOURCETYPE__.equalsIgnoreCase("NULL") || __RESOURCETYPE__==null) {
                 __RESOURCETYPE__ = __NA__;
+                
             }
 
-            if (__RESOURCENAME__.equals("")) {
+            if (__RESOURCENAME__.equals("") || __RESOURCENAME__.equals("NULL") || __RESOURCENAME__==null) {
                 __RESOURCENAME__ = __NA__;
+                
             }
 
-            if (__RESOURCEPRODSTATUS__.equals("")) {
+            if (__RESOURCEPRODSTATUS__.equals("")|| __RESOURCEPRODSTATUS__.equals("NULL") || __RESOURCEPRODSTATUS__==null) {
                 __RESOURCEPRODSTATUS__ = __NA__;
+                System.err.println("NULL "+__RESOURCEPRODSTATUS__);
+                
             }
+
 
             /*check norm nk values*/
             if (__RESOURCETYPE_CLEAN__.equals("")) {
@@ -617,7 +629,7 @@ public class WriteFiles {
 //
 //        bwauth = new BufferedWriter(fwauth);
 //        bwnorm = new BufferedWriter(fwnorm);
-        int i = 0,a=0,c=0;
+        int i = 0, a = 0, c = 0;
         for (List<String> items : table) {
             /*init fields*/
             //System.err.println(items + " " + items);
@@ -630,7 +642,7 @@ public class WriteFiles {
             /*write file keys
              fields contained in file keys 0,1,2,3,4,6,8,5,7,9
              */
-            /*check auth nk values*/
+ /*check auth nk values*/
             if (!__CLEAN__.equals("")) {
                 //System.err.println("__CLEAN__ " + __CLEAN__);
                 updateClean = String.format("SET   %s = '%s' WHERE LOWER(%s)='%s';", md, __CLEAN__.trim(), md, __ORIG__.toLowerCase());
@@ -645,19 +657,21 @@ public class WriteFiles {
                 authupd.add(updateOrig);
                 a++;
                 if (__CLEAN__.equals("")) {
-                System.err.println("__CLEAN__FROM_ORIG " + __ORIG__);
-                updateClean = String.format("SET   %s = '%s' WHERE LOWER(%s)='%s';", md, __AUTHUPD__.trim(), md, __ORIG__.toLowerCase());
-                clean.add(updateClean);
-                c++;
+                    System.err.println("__CLEAN__FROM_ORIG " + __ORIG__);
+                    updateClean = String.format("SET   %s = '%s' WHERE LOWER(%s)='%s';", md, __AUTHUPD__.trim(), md, __ORIG__.toLowerCase());
+                    clean.add(updateClean);
+                    c++;
 
-            }
+                }
 
             }
 
         }
-        System.err.println("__CLEAN__ " +c);
-        try{System.err.println("__AUTHOR__ " +a);}
-        catch(Exception e){}
+        System.err.println("__CLEAN__ " + c);
+        try {
+            System.err.println("__AUTHOR__ " + a);
+        } catch (Exception e) {
+        }
         updates.add(clean);
         updates.add(authupd);
         return updates;

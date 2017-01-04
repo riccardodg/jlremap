@@ -119,6 +119,34 @@ country
 from ods_lremap_resource_norm_keys K , START_DB_2010.START_authors A where A.passcode=K.passcode
 and  K.conf='LREC2010'  and K.YEAR='2010';-- and K.resid=1;
 
+-- recover 2016 
+
+-- recover 2016 
+REPLACE INTO lremap_authors  SELECT
+K.resourceid,
+authornumber,
+username,
+firstname,
+lastname,
+email,
+affiliation,
+country
+from ods_lremap_resource_keys K , START_DB_2016.START_authors A where A.passcode=K.passcode
+and  K.conf='LREC'  and K.YEAR='2016' ; 
+
+
+REPLACE INTO lremap_authors_norm  SELECT
+K.resourceid,
+authornumber,
+username,
+firstname,
+lastname,
+email,
+affiliation,
+country
+from ods_lremap_resource_norm_keys K , START_DB_2016.START_authors A where A.passcode=K.passcode
+and  K.conf='LREC'  and K.YEAR='2016' ;
+
 --- papers---
 REPLACE INTO lremap_papers_norm 
 select K.resourceid, A.paperid, A.status, A.title, A.category1
@@ -142,6 +170,12 @@ select K.resourceid, A.paperid, A.status, A.title, A.category1
 from ods_lremap_resource_keys K , START_DB_2010.START_papers A where A.passcode=K.passcode
 and  K.conf='LREC2010'  and K.YEAR='2010'; -- and K.resid=1;
 
+-- recover 2016
+REPLACE INTO lremap_papers_norm select  K.resourceid, A.paperid, A.status, A.title, A.category1
+from ods_lremap_resource_norm_keys K , START_DB_2016.START_papers A where A.passcode=K.passcode and K.conf='LREC' and K.year=2016;
+
+REPLACE INTO lremap_papers select  K.resourceid, A.paperid, A.status, A.title, A.category1
+from ods_lremap_resource_keys K , START_DB_2016.START_papers A where A.passcode=K.passcode and K.conf='LREC' and K.year=2016;
 
 
 -- recover 2012 ---
@@ -233,6 +267,8 @@ REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES (
 REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('IS', '2013','MAIN', '', 'Lyon');
 REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('NAACL', '2013','MAIN', '', 'Atlanta');
 
+-- 2016 --
+REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('LREC', '2016','MAIN', '', 'Portorož'); 
 
 -- add default values up to 2014--
 REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("type","Annotation_Tool");
@@ -353,8 +389,8 @@ REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("use","Mor
 REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("use","Opinion_Mining-Sentiment_Analysis");
 REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("use","Parsing_and_Tagging");
 REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("use","Semantic_Role_Labeling");
-REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("use","Textual_Entailment_and_Paraphrasing");
-
+REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("use","Textual_Entailment_and_Paraphrasing");                                         
+    
 -- load iso 639-3
 
 -- for GUI --
