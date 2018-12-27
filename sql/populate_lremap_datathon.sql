@@ -280,6 +280,77 @@ select K.resourceid, A.paperid, A.status, A.title, A.category1
 from ods_lremap_resource_keys K , NEWSTARTDB.START_papers A where A.passcode=K.passcode
 and  A.conf=K.conf  and A.YEAR=K.YEAR; -- and K.resid=1;
 
+-- recover COLING2018  ---
+REPLACE INTO lremap_authors 
+SELECT 
+    K.resourceid,
+    authornumber,
+    username,
+    firstname,
+    lastname,
+    email,
+    affiliation,
+    country
+FROM
+    ods_lremap_resource_keys K,
+    COLING_2018_FULL.START_authors A
+WHERE
+    A.passcode = K.passcode;
+    
+REPLACE INTO lremap_authors_norm 
+SELECT 
+	K.resourceid, 
+	authornumber, 
+    username, 
+    firstname, 
+    lastname, 
+    email, 
+    affiliation, 
+    country 
+FROM 
+	ods_lremap_resource_norm_keys K , 
+	COLING_2018_FULL.START_authors A 
+WHERE A.passcode=K.passcode;
+
+
+
+
+REPLACE INTO lremap_papers 
+SELECT 
+	K.resourceid,
+    A.paperid, 
+    A.status, 
+    A.title, 
+    A.category1
+FROM
+    ods_lremap_resource_keys K,
+    COLING_2018_FULL.START_papers A
+WHERE
+    A.passcode = K.passcode;
+    
+REPLACE INTO lremap_papers_norm 
+SELECT 
+	K.resourceid,
+    A.paperid, 
+    A.status, 
+    A.title, 
+    A.category1
+FROM 
+	ods_lremap_resource_norm_keys K , 
+	COLING_2018_FULL.START_papers A 
+WHERE A.passcode=K.passcode;
+
+--- papers---
+---REPLACE INTO lremap_papers_norm 
+---select K.resourceid, A.paperid, A.status, A.title, A.category1
+---from ods_lremap_resource_norm_keys K , NEWSTARTDB.START_papers A where A.passcode=K.passcode
+---and  A.conf=K.conf  and A.YEAR=K.YEAR; -- and K.resid=1;
+
+---REPLACE INTO lremap_papers 
+---select K.resourceid, A.paperid, A.status, A.title, A.category1
+---from ods_lremap_resource_keys K , NEWSTARTDB.START_papers A where A.passcode=K.passcode
+---and  A.conf=K.conf  and A.YEAR=K.YEAR; -- and K.resid=1;
+
 -- recover 2012 ---
 REPLACE INTO lremap_papers  
 select K.resourceid, A.paperid, A.status, A.title, A.category1
@@ -396,6 +467,10 @@ REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES (
 -- 2016 --
 REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('LREC', '2016','MAIN', '', 'Portorož'); 
 REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('COLING', '2016','MAIN', '', 'Osaka'); 
+
+-- 2018 --
+REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('LREC', '2018','MAIN', '', 'Miyazaki'); 
+REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('COLING', '2018','MAIN', '', 'Santa Fe'); 
 
 -- add default values up to 2014--
 REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("type","Annotation_Tool");
@@ -579,11 +654,11 @@ REPLACE INTO lremap_side_table_avail (value,grouping) VALUES ("Not Applicable","
 REPLACE INTO lremap_side_table_avail (value,grouping) VALUES ("Not Available","Lrec");
 REPLACE INTO lremap_side_table_avail (value,grouping) VALUES ("Not Relevant","Lrec");
 
-REPLACE INTO lremap_side_table_avail SELECT DISTINCT B.avail, 'Other' FROM lremap_datathon.lremap_side_table_avail A RIGHT OUTER JOIN  lremap_resource_norm B ON ( A.value=B.avail) where A.value is null order by 1
+REPLACE INTO lremap_side_table_avail SELECT DISTINCT B.avail, 'Other' FROM lremap_datathon.lremap_side_table_avail A RIGHT OUTER JOIN  lremap_resource_norm B ON ( A.value=B.avail) where A.value is null order by 1;
 
 DROP TABLE IF EXISTS `lremap_side_table_status`;
 CREATE TABLE `lremap_side_table_status` (
-  `value` varchar(370) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `value` varchar(370) COLLATE utf8_bin NOISO_639-3T NULL DEFAULT '',
   `grouping` char(15) COLLATE utf8_bin NOT NULL,
   `id` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`)
@@ -596,7 +671,7 @@ REPLACE INTO lremap_side_table_status (value,grouping) VALUES ("Existing-updated
 REPLACE INTO lremap_side_table_status (value,grouping) VALUES ("Not Applicable","Lrec");
 
 
-REPLACE INTO lremap_side_table_status SELECT DISTINCT B.prodstatus, 'Other' FROM lremap_datathon.lremap_side_table_status A RIGHT OUTER JOIN  lremap_resource_norm B ON ( A.value=B.prodstatus) where A.value is null order by 1
+REPLACE INTO lremap_side_table_status SELECT DISTINCT B.prodstatus, 'Other' FROM lremap_datathon.lremap_side_table_status A RIGHT OUTER JOIN  lremap_resource_norm B ON ( A.value=B.prodstatus) where A.value is null order by 1;
 
 DROP TABLE IF EXISTS `lremap_side_table_modality`;
 CREATE TABLE `lremap_side_table_modality` (
@@ -615,7 +690,7 @@ REPLACE INTO lremap_side_table_modality (value,grouping) VALUES ("Modality Indep
 REPLACE INTO lremap_side_table_modality (value,grouping) VALUES ("Not Applicable","Lrec");
 
 
-REPLACE INTO lremap_side_table_modality SELECT DISTINCT B.modality, 'Other' FROM lremap_datathon.lremap_side_table_modality A RIGHT OUTER JOIN  lremap_resource_norm B ON ( A.value=B.modality) where A.value is null order by 1
+REPLACE INTO lremap_side_table_modality SELECT DISTINCT B.modality, 'Other' FROM lremap_datathon.lremap_side_table_modality A RIGHT OUTER JOIN  lremap_resource_norm B ON ( A.value=B.modality) where A.value is null order by 1;
 
 DROP TABLE IF EXISTS `lremap_side_table_use`;
 CREATE TABLE `lremap_side_table_use` (
@@ -663,7 +738,7 @@ REPLACE INTO lremap_side_table_use (value,grouping) VALUES ("Word Sense Disambig
 
 
 
-REPLACE INTO lremap_side_table_use SELECT DISTINCT B.resourceusage, 'Other' FROM lremap_datathon.lremap_side_table_use A RIGHT OUTER JOIN  lremap_resource_norm B ON ( A.value=B.resourceusage) where A.value is null order by 1
+REPLACE INTO lremap_side_table_use SELECT DISTINCT B.resourceusage, 'Other' FROM lremap_datathon.lremap_side_table_use A RIGHT OUTER JOIN  lremap_resource_norm B ON ( A.value=B.resourceusage) where A.value is null order by 1;
 
 
 -- END GUI --

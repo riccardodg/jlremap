@@ -173,23 +173,23 @@ public class WriteFiles {
                 goahead = false;
             }
 
-            if (__RESOURCETYPE__.equals("") || __RESOURCETYPE__.equalsIgnoreCase("NULL") || __RESOURCETYPE__==null) {
+            if (__RESOURCETYPE__.equals("") || __RESOURCETYPE__.equalsIgnoreCase("NULL") || __RESOURCETYPE__ == null) {
                 __RESOURCETYPE__ = __NA__;
-                
+
             }
 
-            if (__RESOURCENAME__.equals("") || __RESOURCENAME__.equals("NULL") || __RESOURCENAME__==null) {
+            if (__RESOURCENAME__.equals("") || __RESOURCENAME__.equals("NULL") || __RESOURCENAME__ == null) {
                 __RESOURCENAME__ = __NA__;
-                System.err.println("NULL "+__RESOURCENAME__);
+                System.err.println("NULL " + __RESOURCENAME__);
             }
 
-            if (__RESOURCEPRODSTATUS__.equals("")|| __RESOURCEPRODSTATUS__.equals("NULL") || __RESOURCEPRODSTATUS__==null) {
+            if (__RESOURCEPRODSTATUS__.equals("") || __RESOURCEPRODSTATUS__.equals("NULL") || __RESOURCEPRODSTATUS__ == null) {
                 __RESOURCEPRODSTATUS__ = __NA__;
-                
+
             }
 
             /*check norm nk values*/
-            if (__RESOURCETYPE_CLEAN__.equals("") ) {
+            if (__RESOURCETYPE_CLEAN__.equals("")) {
                 if (__RESOURCETYPE__.equals(__NA__)) {
                     __RESOURCETYPE_CLEAN__ = __NA__;
                 } else {
@@ -249,6 +249,33 @@ public class WriteFiles {
                     __RESOURCEUSE_CLEAN__ = __RESOURCEUSE__;
                 }
             }
+            /* replace quotes and \quotes */
+
+            __RESOURCETYPE__ = __RESOURCETYPE__.replaceAll("\\\\\"\"", "").replaceAll("\"", "'");
+            __RESOURCETYPE_CLEAN__ = __RESOURCETYPE_CLEAN__.replaceAll("\\\\\"\"", "").replaceAll("\"", "'");
+
+            __RESOURCENAME__ = __RESOURCENAME__.replaceAll("\\\\\"\"", "").replaceAll("\"", "'");
+            __RESOURCENAME_CLEAN__ = __RESOURCENAME_CLEAN__.replaceAll("\\\\\"\"", "").replaceAll("\"", "'");
+
+            __RESOURCEPRODSTATUS__ = __RESOURCEPRODSTATUS__.replaceAll("\\\\\"\"", "").replaceAll("\"", "'");
+            __RESOURCEPRODSTATUS_CLEAN__ = __RESOURCEPRODSTATUS_CLEAN__.replaceAll("\\\\\"\"", "").replaceAll("\"", "'");
+
+            __RESOURCEMODALITY__ = __RESOURCEMODALITY__.replaceAll("\\\\\"\"", "").replaceAll("\"", "'");
+            __RESOURCEMODALITY_CLEAN__ = __RESOURCEMODALITY_CLEAN__.replaceAll("\\\\\"\"", "").replaceAll("\"", "'");
+
+            __RESOURCEUSE__ = __RESOURCEUSE__.replaceAll("\\\\\"\"", "").replaceAll("\"", "'");
+            __RESOURCEUSE_CLEAN__ = __RESOURCEUSE_CLEAN__.replaceAll("\\\\\"\"", "").replaceAll("\"", "'");
+
+            __RESOURCEAVAIL__ = __RESOURCEAVAIL__.replaceAll("\\\\\"\"", "").replaceAll("\"", "'");
+            __RESOURCEAVAIL_CLEAN__ = __RESOURCEAVAIL_CLEAN__.replaceAll("\\\\\"\"", "").replaceAll("\"", "'");
+
+            __RESOURCEURL__ = __RESOURCEURL__.replaceAll("\\\\\"\"", "").replaceAll("\"", "'");
+            __RESOURCESIZE__ = __RESOURCESIZE__.replaceAll("\\\\\"\"", "").replaceAll("\"", "'");
+            __RESOURCESIZE_1__ = __RESOURCESIZE_1__.replaceAll("\\\\\"\"", "").replaceAll("\"", "'");
+            __RESOURCELIC__ = __RESOURCELIC__.replaceAll("\\\\\"\"", "").replaceAll("\"", "'");
+            __RESOURCEDOC__ = __RESOURCEDOC__.replaceAll("\\\\\"\"", "").replaceAll("\"", "'");
+
+            /* */
             if (goahead) {
                 /*write keys 0,1,2,3,4,6,8,5,7,9 */
                 bwkeys.write(__CONF__ + sep); //0
@@ -412,7 +439,7 @@ public class WriteFiles {
                 __RESOURCELANGDIM__ = items.get(22);
             } catch (Exception e) {
                 System.err.println("WRONG item  at " + i + ":  " + items);
-            } 
+            }
 
             /*write file keys
              fields contained in file keys 0,1,2,3,4,6,8,5,7,9
@@ -430,20 +457,20 @@ public class WriteFiles {
                 goahead = false;
             }
 
-            if (__RESOURCETYPE__.equals("") || __RESOURCETYPE__.equalsIgnoreCase("NULL") || __RESOURCETYPE__==null) {
+            if (__RESOURCETYPE__.equals("") || __RESOURCETYPE__.equalsIgnoreCase("NULL") || __RESOURCETYPE__ == null) {
                 __RESOURCETYPE__ = __NA__;
-                
+
             }
 
-            if (__RESOURCENAME__.equals("") || __RESOURCENAME__.equals("NULL") || __RESOURCENAME__==null) {
+            if (__RESOURCENAME__.equals("") || __RESOURCENAME__.equals("NULL") || __RESOURCENAME__ == null) {
                 __RESOURCENAME__ = __NA__;
-                
+
             }
 
-            if (__RESOURCEPRODSTATUS__.equals("")|| __RESOURCEPRODSTATUS__.equals("NULL") || __RESOURCEPRODSTATUS__==null) {
+            if (__RESOURCEPRODSTATUS__.equals("") || __RESOURCEPRODSTATUS__.equals("NULL") || __RESOURCEPRODSTATUS__ == null) {
                 __RESOURCEPRODSTATUS__ = __NA__;
-                System.err.println("NULL "+__RESOURCEPRODSTATUS__);
-                
+                System.err.println("NULL " + __RESOURCEPRODSTATUS__);
+
             }
 
 
@@ -538,6 +565,15 @@ public class WriteFiles {
             if (__RESOURCELANGDIM__.equals("")) {
                 __RESOURCELANGDIM__ = __NA__;
             }
+
+            __RESOURCETYPE__ = __RESOURCETYPE__.replaceAll("\\\\\"\"", "").replaceAll("\"", "'");
+            __RESOURCETYPE_CLEAN__ = __RESOURCETYPE_CLEAN__.replaceAll("\\\\\"\"", "").replaceAll("\"", "'");
+
+            __RESOURCENAME__ = __RESOURCENAME__.replaceAll("\\\\\"\"", "").replaceAll("\"", "'");
+            __RESOURCENAME_CLEAN__ = __RESOURCENAME_CLEAN__.replaceAll("\\\\\"\"", "").replaceAll("\"", "'");
+
+            __RESOURCEPRODSTATUS__ = __RESOURCEPRODSTATUS__.replaceAll("\\\\\"\"", "").replaceAll("\"", "'");
+            __RESOURCEPRODSTATUS_CLEAN__ = __RESOURCEPRODSTATUS_CLEAN__.replaceAll("\\\\\"\"", "").replaceAll("\"", "'");
 
             if (goahead) {
 
