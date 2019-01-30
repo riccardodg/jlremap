@@ -340,6 +340,78 @@ FROM
 	COLING_2018_FULL.START_papers A 
 WHERE A.passcode=K.passcode;
 
+-- recover LREC 2018 WS
+REPLACE INTO lremap_authors
+SELECT 
+    K.resourceid,
+    authornumber,
+    username,
+    firstname,
+    lastname,
+    email,
+    affiliation,
+    country
+FROM
+    ods_lremap_resource_keys K,
+    LREC2018_FULL_DB.START_authors A,
+    LREC2018_FULL_DB.START_resource R
+WHERE
+    A.conf = R.conf AND R.YEAR = A.YEAR
+        AND A.passcode = R.passcode
+        AND R.conf NOT LIKE 'LREC%' and A.passcode = K.passcode and K.conf=A.conf and K.year=A.year and K.resid=1;
+
+REPLACE INTO lremap_authors_norm 
+SELECT 
+    K.resourceid,
+    authornumber,
+    username,
+    firstname,
+    lastname,
+    email,
+    affiliation,
+    country
+FROM
+    ods_lremap_resource_norm_keys K,
+    LREC2018_FULL_DB.START_authors A,
+    LREC2018_FULL_DB.START_resource R
+WHERE
+    A.conf = R.conf AND R.YEAR = A.YEAR
+        AND A.passcode = R.passcode
+        AND R.conf NOT LIKE 'LREC%' and A.passcode = K.passcode and K.conf=A.conf and K.year=A.year and K.resid=1;
+
+
+ -- papers
+REPLACE INTO lremap_papers
+SELECT 
+    K.resourceid,
+    A.paperid, 
+    A.status, 
+    A.title, 
+    A.category1
+FROM
+    ods_lremap_resource_keys K,
+    LREC2018_FULL_DB.START_papers A,
+    LREC2018_FULL_DB.START_resource R
+WHERE
+    A.conf = R.conf AND R.YEAR = A.YEAR
+        AND A.passcode = R.passcode
+        AND R.conf NOT LIKE 'LREC%' and A.passcode = K.passcode and K.conf=A.conf and K.year=A.year and K.resid=1;
+
+REPLACE INTO lremap_papers_norm
+SELECT 
+    K.resourceid,
+    A.paperid, 
+    A.status, 
+    A.title, 
+    A.category1
+FROM
+    ods_lremap_resource_norm_keys K,
+    LREC2018_FULL_DB.START_papers A,
+    LREC2018_FULL_DB.START_resource R
+WHERE
+    A.conf = R.conf AND R.YEAR = A.YEAR
+        AND A.passcode = R.passcode
+        AND R.conf NOT LIKE 'LREC%' and A.passcode = K.passcode and K.conf=A.conf and K.year=A.year and K.resid=1;
 --- papers---
 ---REPLACE INTO lremap_papers_norm 
 ---select K.resourceid, A.paperid, A.status, A.title, A.category1
@@ -443,6 +515,7 @@ REPLACE INTO lremap_conference_years (conf,year) select distinct conf,year from 
 -- 2010 --
 REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('LREC2010', '2010','MAIN', '', 'La_Valletta');
 REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('COLING2010', '2010','MAIN', '', 'Beijing');
+REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('EMNLP', '2010','MAIN', '', 'Boston');
 
 -- 2011 --
 REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('O-COCOSDA2011', '2011','MAIN', '', 'Hsinchu');
@@ -471,6 +544,32 @@ REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES (
 -- 2018 --
 REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('LREC', '2018','MAIN', '', 'Miyazaki'); 
 REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('COLING', '2018','MAIN', '', 'Santa Fe'); 
+
+-- WS LREC 2018 --
+REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('4REAL', '2018','WS', 'LREC2018', 'Miyazaki'); 
+REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('AREA2018', '2018','WS', 'LREC2018', 'Miyazaki'); 
+REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('AsianLang', '2018','WS', 'LREC2018', 'Miyazaki'); 
+REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('BR-LRE', '2018','WS', 'LREC2018', 'Miyazaki'); 
+REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('BUCC2018', '2018','WS', 'LREC2018', 'Miyazaki'); 
+REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('CCURL', '2018','WS', 'LREC2018', 'Miyazaki'); 
+REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('CIDTD2018', '2018','WS', 'LREC2018', 'Miyazaki'); 
+REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('CMLC-6', '2018','WS', 'LREC2018', 'Miyazaki'); 
+REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('FNP2018', '2018','WS', 'LREC2018', 'Miyazaki'); 
+REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('Games4NLP', '2018','WS', 'LREC2018', 'Miyazaki'); 
+REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('GLOBALEX', '2018','WS', 'LREC2018', 'Miyazaki'); 
+REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('IndustryTrack', '2018','WS', 'LREC2018', 'Miyazaki'); 
+REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('ISINLP2', '2018','WS', 'LREC2018', 'Miyazaki'); 
+REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('LB-IRL', '2018','WS', 'LREC2018', 'Miyazaki'); 
+REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('LDL', '2018','WS', 'LREC2018', 'Miyazaki'); 
+REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('LiNCR', '2018','WS', 'LREC2018', 'Miyazaki'); 
+REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('MMC2018', '2018','WS', 'LREC2018', 'Miyazaki'); 
+REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('MomenT', '2018','WS', 'LREC2018', 'Miyazaki'); 
+REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('MultilingualBIO', '2018','WS', 'LREC2018', 'Miyazaki'); 
+REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('OCOCOSDA18', '2018','WS', 'LREC2018', 'Miyazaki'); 
+REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('OSACT3', '2018','WS', 'LREC2018', 'Miyazaki'); 
+REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('ParlaCLARIN2018', '2018','WS', 'LREC2018', 'Miyazaki'); 
+REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('TA-COS2018', '2018','WS', 'LREC2018', 'Miyazaki'); 
+REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('WILDRE', '2018','WS', 'LREC2018', 'Miyazaki'); 
 
 -- add default values up to 2014--
 REPLACE INTO  lremap_side_table_resmetadata(attribute, value) VALUES ("type","Annotation_Tool");
