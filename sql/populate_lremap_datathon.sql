@@ -54,7 +54,7 @@ from ods_lremap_resource_keys K , NEWSTARTDB.START_authors A where A.passcode=K.
 and  A.conf=K.conf  and A.YEAR=K.YEAR; -- and K.resid=1;
 
 -- recover 2012 ---
-
+-- authors --
 REPLACE INTO lremap_authors  SELECT
 K.resourceid,
 authornumber,
@@ -122,6 +122,7 @@ and  K.conf='LREC2010'  and K.YEAR='2010';-- and K.resid=1;
 -- recover 2016 
 
 -- recover 2016 
+-- authors
 REPLACE INTO lremap_authors  SELECT
 K.resourceid,
 authornumber,
@@ -146,6 +147,26 @@ affiliation,
 country
 from ods_lremap_resource_norm_keys K , START_DB_2016.START_authors A where A.passcode=K.passcode
 and  K.conf='LREC'  and K.YEAR='2016' ;
+
+-- papers
+REPLACE INTO lremap_papers_norm select  K.resourceid, A.paperid, A.status, A.title, A.category1
+from ods_lremap_resource_norm_keys K , START_DB_2016.START_papers A where A.passcode=K.passcode and K.conf='LREC' and K.year=2016;
+
+REPLACE INTO lremap_papers select  K.resourceid, A.paperid, A.status, A.title, A.category1
+from ods_lremap_resource_keys K , START_DB_2016.START_papers A where A.passcode=K.passcode and K.conf='LREC' and K.year=2016;
+
+-- ISLRN
+REPLACE INTO lremap_resource_ISLRN SELECT
+K.resourceid,
+K.conf,K.year,K.passcode,K.resid,K.type,K.prodstatus, A.ISLRNStatus, A.ISLRNCode
+from ods_lremap_resource_keys K ,  START_DB_2016.START_ISLRN A WHERE  A.passcode = K.passcode AND
+	A.resourceid = K.resid;
+
+REPLACE INTO lremap_resource_ISLRN_norm SELECT
+K.resourceid,
+K.conf,K.year,K.passcode,K.resid,K.type,K.prodstatus,  A.ISLRNStatus, A.ISLRNCode
+from ods_lremap_resource_norm_keys K ,  START_DB_2016.START_ISLRN A WHERE  A.passcode = K.passcode AND
+	A.resourceid = K.resid;
 
 -- recover COLING2014  ---
 REPLACE INTO lremap_authors 
@@ -224,7 +245,7 @@ FROM
     ods_lremap_resource_keys K,
     START_DB_COLING2016.START_authors A
 WHERE
-    A.passcode = K.passcode;
+    A.passcode = K.passcode ;
     
 REPLACE INTO lremap_authors_norm 
 SELECT 
@@ -239,7 +260,7 @@ SELECT
 FROM 
 	ods_lremap_resource_norm_keys K , 
 	START_DB_COLING2016.START_authors A 
-WHERE A.passcode=K.passcode;
+WHERE A.passcode=K.passcode ;
 
 
 
@@ -269,6 +290,18 @@ FROM
 	START_DB_COLING2016.START_papers A 
 WHERE A.passcode=K.passcode;
 
+REPLACE INTO lremap_resource_ISLRN SELECT
+K.resourceid,
+K.conf,K.year,K.passcode,K.resid,K.type,K.prodstatus, A.ISLRNStatus, A.ISLRNCode
+from ods_lremap_resource_keys K ,  START_DB_COLING2016.START_ISLRN A WHERE  A.passcode = K.passcode AND
+	A.resourceid = K.resid ;
+
+REPLACE INTO lremap_resource_ISLRN_norm SELECT
+K.resourceid,
+K.conf,K.year,K.passcode,K.resid,K.type,K.prodstatus,  A.ISLRNStatus, A.ISLRNCode
+from ods_lremap_resource_norm_keys K ,  START_DB_COLING2016.START_ISLRN A WHERE  A.passcode = K.passcode AND
+	A.resourceid = K.resid  ;
+
 --- papers---
 REPLACE INTO lremap_papers_norm 
 select K.resourceid, A.paperid, A.status, A.title, A.category1
@@ -280,6 +313,77 @@ select K.resourceid, A.paperid, A.status, A.title, A.category1
 from ods_lremap_resource_keys K , NEWSTARTDB.START_papers A where A.passcode=K.passcode
 and  A.conf=K.conf  and A.YEAR=K.YEAR; -- and K.resid=1;
 
+-- RECOVER ACL2016
+REPLACE INTO lremap_authors 
+SELECT 
+    K.resourceid,
+    authornumber,
+    username,
+    firstname,
+    lastname,
+    email,
+    affiliation,
+    country
+FROM
+    ods_lremap_resource_keys K,
+    START_DB_ACL2016.START_authors A
+WHERE
+    A.passcode = K.passcode ;
+    
+REPLACE INTO lremap_authors_norm 
+SELECT 
+	K.resourceid, 
+	authornumber, 
+    username, 
+    firstname, 
+    lastname, 
+    email, 
+    affiliation, 
+    country 
+FROM 
+	ods_lremap_resource_norm_keys K , 
+	START_DB_ACL2016.START_authors A 
+WHERE A.passcode=K.passcode ;
+
+
+
+
+REPLACE INTO lremap_papers 
+SELECT 
+	K.resourceid,
+    A.paperid, 
+    A.status, 
+    A.title, 
+    A.category1
+FROM
+    ods_lremap_resource_keys K,
+    START_DB_ACL2016.START_papers A
+WHERE
+    A.passcode = K.passcode ;
+    
+REPLACE INTO lremap_papers_norm 
+SELECT 
+	K.resourceid,
+    A.paperid, 
+    A.status, 
+    A.title, 
+    A.category1
+FROM 
+	ods_lremap_resource_norm_keys K , 
+	START_DB_ACL2016.START_papers A 
+WHERE A.passcode=K.passcode A.passcode = K.passcode ;
+
+REPLACE INTO lremap_resource_ISLRN SELECT
+K.resourceid,
+K.conf,K.year,K.passcode,K.resid,K.type,K.prodstatus, A.ISLRNStatus, A.ISLRNCode
+from ods_lremap_resource_keys K ,  START_DB_ACL2016.START_ISLRN A WHERE  A.passcode = K.passcode AND
+	A.resourceid = K.resid ;
+
+REPLACE INTO lremap_resource_ISLRN_norm SELECT
+K.resourceid,
+K.conf,K.year,K.passcode,K.resid,K.type,K.prodstatus,  A.ISLRNStatus, A.ISLRNCode
+from ods_lremap_resource_norm_keys K ,  START_DB_ACL2016.START_ISLRN A WHERE  A.passcode = K.passcode AND
+	A.resourceid = K.resid  ;
 -- recover COLING2018  ---
 REPLACE INTO lremap_authors 
 SELECT 
@@ -339,6 +443,18 @@ FROM
 	ods_lremap_resource_norm_keys K , 
 	COLING_2018_FULL.START_papers A 
 WHERE A.passcode=K.passcode;
+
+REPLACE INTO lremap_resource_ISLRN SELECT
+K.resourceid,
+K.conf,K.year,K.passcode,K.resid,K.type,K.prodstatus, A.ISLRNStatus, A.ISLRNCode
+from ods_lremap_resource_keys K ,  COLING_2018_FULL.START_ISLRN A WHERE  A.passcode = K.passcode AND
+	A.resourceid = K.resid ;
+
+REPLACE INTO lremap_resource_ISLRN_norm SELECT
+K.resourceid,
+K.conf,K.year,K.passcode,K.resid,K.type,K.prodstatus,  A.ISLRNStatus, A.ISLRNCode
+from ods_lremap_resource_norm_keys K ,  COLING_2018_FULL.START_ISLRN A WHERE  A.passcode = K.passcode AND
+	A.resourceid = K.resid  ;
 
 -- recover LREC 2018 WS
 REPLACE INTO lremap_authors
@@ -412,6 +528,103 @@ WHERE
     A.conf = R.conf AND R.YEAR = A.YEAR
         AND A.passcode = R.passcode
         AND R.conf NOT LIKE 'LREC%' and A.passcode = K.passcode and K.conf=A.conf and K.year=A.year and K.resid=1;
+
+REPLACE INTO lremap_resource_ISLRN SELECT
+K.resourceid,
+K.conf,K.year,K.passcode,K.resid,K.type,K.prodstatus, A.ISLRNStatus, A.ISLRNCode
+from ods_lremap_resource_keys K ,  LREC2018_FULL_DB.START_ISLRN A WHERE  A.passcode = K.passcode AND
+	A.resourceid = K.resid and K.conf <>'LREC';
+
+REPLACE INTO lremap_resource_ISLRN_norm SELECT
+K.resourceid,
+K.conf,K.year,K.passcode,K.resid,K.type,K.prodstatus,  A.ISLRNStatus, A.ISLRNCode
+from ods_lremap_resource_norm_keys K ,  LREC2018_FULL_DB.START_ISLRN A WHERE  A.passcode = K.passcode AND
+	A.resourceid = K.resid and K.conf <>'LREC';
+
+-- recover LREC 2018 
+REPLACE INTO lremap_authors
+SELECT 
+    K.resourceid,
+    authornumber,
+    username,
+    firstname,
+    lastname,
+    email,
+    affiliation,
+    country
+FROM
+    ods_lremap_resource_keys K,
+    LREC2018_FULL_DB.START_authors A,
+    LREC2018_FULL_DB.START_resource R
+WHERE
+    A.conf = R.conf AND R.YEAR = A.YEAR
+        AND A.passcode = R.passcode
+        AND R.conf  LIKE 'LREC%' and A.passcode = K.passcode and K.conf=A.conf and K.year=A.year and K.resid=1;
+
+REPLACE INTO lremap_authors_norm 
+SELECT 
+    K.resourceid,
+    authornumber,
+    username,
+    firstname,
+    lastname,
+    email,
+    affiliation,
+    country
+FROM
+    ods_lremap_resource_norm_keys K,
+    LREC2018_FULL_DB.START_authors A,
+    LREC2018_FULL_DB.START_resource R
+WHERE
+    A.conf = R.conf AND R.YEAR = A.YEAR
+        AND A.passcode = R.passcode
+        AND R.conf  LIKE 'LREC%' and A.passcode = K.passcode and K.conf=A.conf and K.year=A.year and K.resid=1;
+
+
+ -- papers
+REPLACE INTO lremap_papers
+SELECT 
+    K.resourceid,
+    A.paperid, 
+    A.status, 
+    A.title, 
+    A.category1
+FROM
+    ods_lremap_resource_keys K,
+    LREC2018_FULL_DB.START_papers A,
+    LREC2018_FULL_DB.START_resource R
+WHERE
+    A.conf = R.conf AND R.YEAR = A.YEAR
+        AND A.passcode = R.passcode
+        AND R.conf  LIKE 'LREC%' and A.passcode = K.passcode and K.conf=A.conf and K.year=A.year and K.resid=1;
+
+REPLACE INTO lremap_papers_norm
+SELECT 
+    K.resourceid,
+    A.paperid, 
+    A.status, 
+    A.title, 
+    A.category1
+FROM
+    ods_lremap_resource_norm_keys K,
+    LREC2018_FULL_DB.START_papers A,
+    LREC2018_FULL_DB.START_resource R
+WHERE
+    A.conf = R.conf AND R.YEAR = A.YEAR
+        AND A.passcode = R.passcode
+        AND R.conf  LIKE 'LREC%' and A.passcode = K.passcode and K.conf=A.conf and K.year=A.year and K.resid=1;
+
+REPLACE INTO lremap_resource_ISLRN SELECT
+K.resourceid,
+K.conf,K.year,K.passcode,K.resid,K.type,K.prodstatus, A.ISLRNStatus, A.ISLRNCode
+from ods_lremap_resource_keys K ,  LREC2018_FULL_DB.START_ISLRN A WHERE  A.passcode = K.passcode AND
+	A.resourceid = K.resid and K.conf='LREC';
+
+REPLACE INTO lremap_resource_ISLRN_norm SELECT
+K.resourceid,
+K.conf,K.year,K.passcode,K.resid,K.type,K.prodstatus,  A.ISLRNStatus, A.ISLRNCode
+from ods_lremap_resource_norm_keys K ,  LREC2018_FULL_DB.START_ISLRN A WHERE  A.passcode = K.passcode AND
+	A.resourceid = K.resid and K.conf='LREC';
 --- papers---
 ---REPLACE INTO lremap_papers_norm 
 ---select K.resourceid, A.paperid, A.status, A.title, A.category1
@@ -436,11 +649,7 @@ from ods_lremap_resource_keys K , START_DB_2010.START_papers A where A.passcode=
 and  K.conf='LREC2010'  and K.YEAR='2010'; -- and K.resid=1;
 
 -- recover 2016
-REPLACE INTO lremap_papers_norm select  K.resourceid, A.paperid, A.status, A.title, A.category1
-from ods_lremap_resource_norm_keys K , START_DB_2016.START_papers A where A.passcode=K.passcode and K.conf='LREC' and K.year=2016;
 
-REPLACE INTO lremap_papers select  K.resourceid, A.paperid, A.status, A.title, A.category1
-from ods_lremap_resource_keys K , START_DB_2016.START_papers A where A.passcode=K.passcode and K.conf='LREC' and K.year=2016;
 
 
 -- recover 2012 ---
@@ -540,6 +749,7 @@ REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES (
 -- 2016 --
 REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('LREC', '2016','MAIN', '', 'Portorož'); 
 REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('COLING', '2016','MAIN', '', 'Osaka'); 
+REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('ACL', '2016','MAIN', '', 'Berlin'); 
 
 -- 2018 --
 REPLACE INTO lremap_conferences (conf, year,type, subeventof, location) VALUES ('LREC', '2018','MAIN', '', 'Miyazaki'); 
