@@ -19,7 +19,7 @@ public class DbConnect {
     public final String host = "localhost";
     public final String user = "mystart";
     public final String passwd = "mystart";
-    public final String database = "lremap_datathon";
+    public final String database = "lremap_new";
     private Connection conn = null;
     
 

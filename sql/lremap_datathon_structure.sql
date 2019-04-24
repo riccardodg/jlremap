@@ -491,6 +491,38 @@ CREATE TABLE `stage_lremap_resource_norm` (
   `doc` text COLLATE utf8_bin,
   PRIMARY KEY (`passcode`,`resourceid`,`CONF`,`YEAR`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+DROP TABLE IF EXISTS `lremap_resource_ISLRN`;
+CREATE TABLE `lremap_resource_ISLRN` (
+  `resourceid` varchar(32) COLLATE utf8_bin NOT NULL DEFAULT 'fa53b91ccc1b78668d5af58e1ed3a485',
+  `CONF` varchar(50) COLLATE utf8_bin NOT NULL,
+  `YEAR` char(4) COLLATE utf8_bin NOT NULL,
+  `passcode` varchar(20) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `resid` int(11) NOT NULL DEFAULT '0',
+  `type` text COLLATE utf8_bin,
+  `prodstatus` text COLLATE utf8_bin,
+  `ISLRNstatus` text COLLATE utf8_bin,
+  `ISLRNcode` text COLLATE utf8_bin,
+  PRIMARY KEY (`resourceid`),
+  CONSTRAINT `fk_lremap_resource_islrn2rkey` FOREIGN KEY (`resourceid`) REFERENCES `lremap_resource` (`resourceid`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+DROP TABLE IF EXISTS `lremap_resource_ISLRN_norm`;
+CREATE TABLE `lremap_resource_ISLRN_norm` (
+  `resourceid` varchar(32) COLLATE utf8_bin NOT NULL DEFAULT '589275fdd4e5908f18310b56beaf439b',
+  `CONF` varchar(50) COLLATE utf8_bin NOT NULL,
+  `YEAR` char(4) COLLATE utf8_bin NOT NULL,
+  `passcode` varchar(20) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `resid` int(11) NOT NULL DEFAULT '0',
+  `type` text COLLATE utf8_bin,
+  `prodstatus` text COLLATE utf8_bin,
+  `ISLRNstatus` text COLLATE utf8_bin,
+  `ISLRNcode` text COLLATE utf8_bin,
+  PRIMARY KEY (`resourceid`),
+  CONSTRAINT `fk_lremap_resource_islrn_n2rkey` FOREIGN KEY (`resourceid`) REFERENCES `lremap_resource_norm` (`resourceid`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
