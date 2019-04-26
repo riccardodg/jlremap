@@ -457,17 +457,18 @@ public class WriteFiles {
                 goahead = false;
             }
 
-            if (__RESOURCETYPE__.equals("") || __RESOURCETYPE__.equalsIgnoreCase("NULL") || __RESOURCETYPE__ == null) {
+            if (__RESOURCETYPE__.equals("") || __RESOURCETYPE__.equalsIgnoreCase("NULL") || __RESOURCETYPE__ == null || __RESOURCETYPE__.contains("NULL")) {
                 __RESOURCETYPE__ = __NA__;
 
-            }
+            } //else{ System.out.println("it.cnr.ilc.jlremap.io.WriteFiles.writeLangfile() TYPE -"+__RESOURCETYPE__+"-");}
+            
 
-            if (__RESOURCENAME__.equals("") || __RESOURCENAME__.equals("NULL") || __RESOURCENAME__ == null) {
+            if (__RESOURCENAME__.equals("") || __RESOURCENAME__.equalsIgnoreCase("NULL") || __RESOURCENAME__ == null || __RESOURCENAME__.contains("NULL")) {
                 __RESOURCENAME__ = __NA__;
 
             }
 
-            if (__RESOURCEPRODSTATUS__.equals("") || __RESOURCEPRODSTATUS__.equals("NULL") || __RESOURCEPRODSTATUS__ == null) {
+            if (__RESOURCEPRODSTATUS__.equals("") || __RESOURCEPRODSTATUS__.equalsIgnoreCase("NULL") || __RESOURCEPRODSTATUS__ == null || __RESOURCEPRODSTATUS__.contains("NULL")) {
                 __RESOURCEPRODSTATUS__ = __NA__;
                 System.err.println("NULL " + __RESOURCEPRODSTATUS__);
 

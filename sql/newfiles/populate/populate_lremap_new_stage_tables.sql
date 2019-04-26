@@ -10,4 +10,6 @@ LOAD DATA LOCAL INFILE  'PATH/NAME_MD.csv.norm' INTO TABLE stage_lremap_resource
 
 
 -- languages
+LOAD DATA LOCAL INFILE  'PATH/NAME_LANG.csv.auth' INTO TABLE stage_lremap_resource_lang CHARACTER SET utf8 FIELDS  terminated by '\t' OPTIONALLY ENCLOSED BY '"';
+LOAD DATA LOCAL INFILE  'PATH/NAME_LANG.csv.norm' INTO TABLE stage_lremap_resource_lang_norm CHARACTER SET utf8 FIELDS  terminated by '\t' OPTIONALLY ENCLOSED BY '"';
 

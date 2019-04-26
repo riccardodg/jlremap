@@ -1,4 +1,4 @@
--- SET FOREIGN_KEY_CHECKS=0;
+ SET FOREIGN_KEY_CHECKS=0;
 
 --
 -- Table structure for table `lremap_subs`
@@ -80,7 +80,7 @@ CREATE TABLE `lremap_resources` (
   `license` text COLLATE utf8_bin,
   `doc` text COLLATE utf8_bin,
   PRIMARY KEY (`resourceid`),
-  CONSTRAINT `fk_lremap_resource_1` FOREIGN KEY (`resourceid`) REFERENCES `lremap_resource_keys` (`resourceid`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_lremap_resource_1` FOREIGN KEY (`resourceid`) REFERENCES `lremap_resource_keys` (`resourceid`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -103,7 +103,7 @@ CREATE TABLE `lremap_authors` (
   `country` text COLLATE utf8_bin,
   PRIMARY KEY (`resourceid`,`authornumber`),
   KEY `AIDX` (`authornumber`),
-  CONSTRAINT `fk_authors2papers` FOREIGN KEY (`resourceid`) REFERENCES `lremap_papers` (`resourceid`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_authors2papers` FOREIGN KEY (`resourceid`) REFERENCES `lremap_papers` (`resourceid`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -123,7 +123,7 @@ CREATE TABLE `lremap_papers` (
   `category1` text COLLATE utf8_bin,
   PRIMARY KEY (`resourceid`),
   KEY `PIDX` (`paperid`),
-  CONSTRAINT `fk_papers2resources` FOREIGN KEY (`resourceid`) REFERENCES `lremap_resources` (`resourceid`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_papers2resources` FOREIGN KEY (`resourceid`) REFERENCES `lremap_resources` (`resourceid`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -144,7 +144,7 @@ CREATE TABLE `lremap_resource_langs` (
   `lang5` text COLLATE utf8_bin,
   `langother` text COLLATE utf8_bin,
   PRIMARY KEY (`resourceid`),
-  CONSTRAINT `fk_lremap_resource_lang_2_r` FOREIGN KEY (`resourceid`) REFERENCES `lremap_resources` (`resourceid`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_lremap_resource_lang_2_r` FOREIGN KEY (`resourceid`) REFERENCES `lremap_resources` (`resourceid`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -158,7 +158,7 @@ CREATE TABLE `lremap_resource_langs_dim` (
   `resourceid` varchar(32) COLLATE utf8_bin NOT NULL DEFAULT 'fa53b91ccc1b78668d5af58e1ed3a485',
   `lang_type` varchar(32) COLLATE utf8_bin NOT NULL DEFAULT '',
   PRIMARY KEY (`resourceid`,`lang_type`),
-  CONSTRAINT `fk_lremap_resource_norm_lang_dim_2_rl` FOREIGN KEY (`resourceid`) REFERENCES `lremap_resource_langs` (`resourceid`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_lremap_resource_norm_lang_dim_2_rl` FOREIGN KEY (`resourceid`) REFERENCES `lremap_resource_langs` (`resourceid`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 
@@ -171,7 +171,7 @@ CREATE TABLE `lremap_resource_other_langs` (
   `resourceid` varchar(32) COLLATE utf8_bin NOT NULL DEFAULT 'fa53b91ccc1b78668d5af58e1ed3a485',
   `language` text COLLATE utf8_bin,
   PRIMARY KEY (`resourceid`),
-  CONSTRAINT `fk_lremap_resource_other_lang_2_rl` FOREIGN KEY (`resourceid`) REFERENCES `lremap_resource_langs` (`resourceid`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_lremap_resource_other_lang_2_rl` FOREIGN KEY (`resourceid`) REFERENCES `lremap_resource_langs` (`resourceid`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
@@ -180,10 +180,12 @@ CREATE TABLE `lremap_resource_other_langs` (
 
 DROP TABLE IF EXISTS `lremap_resource_pivoted_langs`;
 CREATE TABLE `lremap_resource_pivoted_langs` (
+   `id` INT NOT NULL AUTO_INCREMENT,
   `resourceid` varchar(32) COLLATE utf8_bin NOT NULL DEFAULT 'fa53b91ccc1b78668d5af58e1ed3a485',
   `language` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT '',
-  PRIMARY KEY (`resourceid`,`language`),
-  CONSTRAINT `fk_lremap_resource_pvt_lang_2_rl` FOREIGN KEY (`resourceid`) REFERENCES `lremap_resource_langs` (`resourceid`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  PRIMARY KEY (`id`),
+   KEY (`resourceid`,`language`),
+  CONSTRAINT `fk_lremap_resource_pvt_lang_2_rl` FOREIGN KEY (`resourceid`) REFERENCES `lremap_resource_langs` (`resourceid`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 
@@ -203,7 +205,7 @@ CREATE TABLE `lremap_resources_ISLRN` (
   `ISLRNstatus` text COLLATE utf8_bin,
   `ISLRNcode` text COLLATE utf8_bin,
   PRIMARY KEY (`resourceid`),
-  CONSTRAINT `fk_lremap_resource_islrn2rkey` FOREIGN KEY (`resourceid`) REFERENCES `lremap_resources` (`resourceid`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_lremap_resource_islrn2rkey` FOREIGN KEY (`resourceid`) REFERENCES `lremap_resources` (`resourceid`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- -- -- -- --
@@ -237,7 +239,7 @@ CREATE TABLE `lremap_resources_norm` (
   `license` text COLLATE utf8_bin,
   `doc` text COLLATE utf8_bin,
   PRIMARY KEY (`resourceid`),
-  CONSTRAINT `fk_lremap_resource_norm_2_keys` FOREIGN KEY (`resourceid`) REFERENCES `lremap_resource_keys` (`resource_normid`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_lremap_resource_norm_2_keys` FOREIGN KEY (`resourceid`) REFERENCES `lremap_resource_keys` (`resource_normid`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -260,7 +262,7 @@ CREATE TABLE `lremap_authors_norm` (
   `country` text COLLATE utf8_bin,
   PRIMARY KEY (`resourceid`,`authornumber`),
   KEY `AIDXN` (`authornumber`),
-  CONSTRAINT `fk_authorsnorm2papersnorm` FOREIGN KEY (`resourceid`) REFERENCES `lremap_papers_norm` (`resourceid`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_authorsnorm2papersnorm` FOREIGN KEY (`resourceid`) REFERENCES `lremap_papers_norm` (`resourceid`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -280,7 +282,7 @@ CREATE TABLE `lremap_papers_norm` (
   `category1` text COLLATE utf8_bin,
   PRIMARY KEY (`resourceid`),
   KEY `index2` (`paperid`),
-  CONSTRAINT `fk_papersnorm2resourcesnorm` FOREIGN KEY (`resourceid`) REFERENCES `lremap_resource_norm` (`resourceid`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_papersnorm2resourcesnorm` FOREIGN KEY (`resourceid`) REFERENCES `lremap_resources_norm` (`resourceid`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -299,7 +301,7 @@ CREATE TABLE `lremap_resource_langs_norm` (
   `lang5` text COLLATE utf8_bin,
   `langother` text COLLATE utf8_bin,
   PRIMARY KEY (`resourceid`),
-  CONSTRAINT `fk_lremap_resource_lang_2_rn` FOREIGN KEY (`resourceid`) REFERENCES `lremap_resources_norm` (`resourceid`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_lremap_resource_lang_2_rn` FOREIGN KEY (`resourceid`) REFERENCES `lremap_resources_norm` (`resourceid`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
@@ -311,7 +313,7 @@ CREATE TABLE `lremap_resource_langs_dim_norm` (
   `resourceid` varchar(32) COLLATE utf8_bin NOT NULL DEFAULT '589275fdd4e5908f18310b56beaf439b',
   `lang_type` varchar(32) COLLATE utf8_bin NOT NULL DEFAULT '',
   PRIMARY KEY (`resourceid`,`lang_type`),
-  CONSTRAINT `fk_lremap_resource_norm_lang_dim_2_rln` FOREIGN KEY (`resourceid`) REFERENCES `lremap_resource_langs_norm` (`resourceid`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_lremap_resource_norm_lang_dim_2_rln` FOREIGN KEY (`resourceid`) REFERENCES `lremap_resource_langs_norm` (`resourceid`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
@@ -323,7 +325,7 @@ CREATE TABLE `lremap_resource_other_langs_norm` (
   `resourceid` varchar(32) COLLATE utf8_bin NOT NULL DEFAULT '589275fdd4e5908f18310b56beaf439b',
   `language` text COLLATE utf8_bin,
   PRIMARY KEY (`resourceid`),
-  CONSTRAINT `fk_lremap_resource_other_lang_norm_2_rln` FOREIGN KEY (`resourceid`) REFERENCES `lremap_resource_langs_norm` (`resourceid`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_lremap_resource_other_lang_norm_2_rln` FOREIGN KEY (`resourceid`) REFERENCES `lremap_resource_langs_norm` (`resourceid`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 
@@ -333,10 +335,12 @@ CREATE TABLE `lremap_resource_other_langs_norm` (
 
 DROP TABLE IF EXISTS `lremap_resource_pivoted_langs_norm`;
 CREATE TABLE `lremap_resource_pivoted_langs_norm` (
+ `id` INT NOT NULL AUTO_INCREMENT,
   `resourceid` varchar(32) COLLATE utf8_bin NOT NULL DEFAULT '589275fdd4e5908f18310b56beaf439b',
   `language` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT '',
-  PRIMARY KEY (`resourceid`,`language`),
-  CONSTRAINT `fk_lremap_resource_pvt_lang_norm_2_rln` FOREIGN KEY (`resourceid`) REFERENCES `lremap_resource_langs_norm` (`resourceid`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  PRIMARY KEY (`id`),
+   KEY (`resourceid`,`language`),
+  CONSTRAINT `fk_lremap_resource_pvt_lang_norm_2_rln` FOREIGN KEY (`resourceid`) REFERENCES `lremap_resource_langs_norm` (`resourceid`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- ISLRN
@@ -356,8 +360,8 @@ CREATE TABLE `lremap_resources_ISLRN_norm` (
   `ISLRNstatus` text COLLATE utf8_bin,
   `ISLRNcode` text COLLATE utf8_bin,
   PRIMARY KEY (`resourceid`),
-  CONSTRAINT `fk_lremap_resource_islrn_n2rkey` FOREIGN KEY (`resourceid`) REFERENCES `lremap_resources_norm` (`resourceid`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_lremap_resource_islrn_n2rkey` FOREIGN KEY (`resourceid`) REFERENCES `lremap_resources_norm` (`resourceid`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 
--- SET FOREIGN_KEY_CHECKS=1;
+ SET FOREIGN_KEY_CHECKS=1;

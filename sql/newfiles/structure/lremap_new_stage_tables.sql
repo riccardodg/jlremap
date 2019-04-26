@@ -56,22 +56,22 @@ CREATE TABLE `stage_lremap_resource_keys` (
 -- Table structure for table `stage_lremap_resource_keys_test`
 --
 
-DROP TABLE IF EXISTS `stage_lremap_resource_keys_test`;
+-- DROP TABLE IF EXISTS `stage_lremap_resource_keys_test`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `stage_lremap_resource_keys_test` (
-  `CONF` varchar(50) COLLATE utf8_bin NOT NULL,
-  `YEAR` char(4) COLLATE utf8_bin NOT NULL,
-  `passcode` varchar(20) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `resourceid` int(11) NOT NULL DEFAULT '0',
-  `type` text COLLATE utf8_bin,
-  `name` text COLLATE utf8_bin,
-  `prodstatus` text COLLATE utf8_bin,
-  `norm_type` text COLLATE utf8_bin,
-  `norm_name` text COLLATE utf8_bin,
-  `norm_prodstatus` text COLLATE utf8_bin
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
-/*!40101 SET character_set_client = @saved_cs_client */;
+-- CREATE TABLE `stage_lremap_resource_keys_test` (
+--   `CONF` varchar(50) COLLATE utf8_bin NOT NULL,
+--   `YEAR` char(4) COLLATE utf8_bin NOT NULL,
+--   `passcode` varchar(20) COLLATE utf8_bin NOT NULL DEFAULT '',
+--   `resourceid` int(11) NOT NULL DEFAULT '0',
+--   `type` text COLLATE utf8_bin,
+--   `name` text COLLATE utf8_bin,
+--   `prodstatus` text COLLATE utf8_bin,
+--   `norm_type` text COLLATE utf8_bin,
+-- `norm_name` text COLLATE utf8_bin,
+--   `norm_prodstatus` text COLLATE utf8_bin
+-- ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+--  /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `stage_lremap_resource_lang`
