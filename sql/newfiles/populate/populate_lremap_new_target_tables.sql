@@ -46,35 +46,35 @@ A.lang1,A.lang2,A.lang3,A.lang4,A.lang5,A.langother from stage_lremap_resource_l
 
 -- pivot languages --
 INSERT INTO lremap_resource_pivoted_langs (resourceid, language)
-SELECT resourceid, lang1 FROM lremap_resource_langs where lang1 is not  null
+SELECT l.resourceid, lang1 FROM lremap_resource_langs l, ods_lremap_resource_keys k WHERE l.resourceid = k.resourceid AND lang1 IS NOT NULL
 UNION ALL
-SELECT resourceid, lang2 FROM lremap_resource_langs where lang2 is not  null
+SELECT l.resourceid, lang2 FROM lremap_resource_langs l, ods_lremap_resource_keys k WHERE l.resourceid = k.resourceid AND lang2 is not  null
 UNION ALL
-SELECT resourceid, lang3 FROM lremap_resource_langs where lang3 is not  null
+SELECT l.resourceid, lang3 FROM lremap_resource_langs l, ods_lremap_resource_keys k WHERE l.resourceid = k.resourceid AND lang3 is not  null
 UNION ALL
-SELECT resourceid, lang4 FROM lremap_resource_langs where lang4 is not  null
+SELECT l.resourceid, lang4 FROM lremap_resource_langs l, ods_lremap_resource_keys k WHERE l.resourceid = k.resourceid AND lang4 is not  null
 UNION ALL
-SELECT resourceid, lang5 FROM lremap_resource_langs where lang5 is not  null
+SELECT l.resourceid, lang5 FROM lremap_resource_langs l, ods_lremap_resource_keys k WHERE l.resourceid = k.resourceid AND lang5 is not  null
 order by 1, 2 asc;
 
 INSERT INTO lremap_resource_pivoted_langs_norm (resourceid, language)
-SELECT resourceid, lang1 FROM lremap_resource_langs_norm where lang1 is not  null
+SELECT l.resourceid, lang1 FROM lremap_resource_langs_norm l, ods_lremap_resource_norm_keys k WHERE l.resourceid = k.resourceid AND lang1 is not  null
 UNION ALL
-SELECT resourceid, lang2 FROM lremap_resource_langs_norm where lang2 is not  null
+SELECT l.resourceid, lang2 FROM lremap_resource_langs_norm l, ods_lremap_resource_norm_keys k WHERE l.resourceid = k.resourceid AND  lang2 is not  null
 UNION ALL
-SELECT resourceid, lang3 FROM lremap_resource_langs_norm where lang3 is not  null
+SELECT l.resourceid, lang3 FROM lremap_resource_langs_norm l, ods_lremap_resource_norm_keys k WHERE l.resourceid = k.resourceid AND lang3 is not  null
 UNION ALL
-SELECT resourceid, lang4 FROM lremap_resource_langs_norm where lang4 is not  null
+SELECT l.resourceid, lang4 FROM lremap_resource_langs_norm l, ods_lremap_resource_norm_keys k WHERE l.resourceid = k.resourceid AND  lang4 is not  null
 UNION ALL
-SELECT resourceid, lang5 FROM lremap_resource_langs_norm where lang5 is not  null
+SELECT l.resourceid, lang5 FROM lremap_resource_langs_norm l, ods_lremap_resource_norm_keys k WHERE l.resourceid = k.resourceid AND  lang5 is not  null
 order by 1, 2 asc;
 
 -- other langs 
 REPLACE INTO lremap_resource_other_langs
-SELECT resourceid, langother FROM lremap_resource_langs where langother is not null;
+SELECT l.resourceid, langother FROM lremap_resource_langs l, ods_lremap_resource_keys k WHERE l.resourceid = k.resourceid AND langother is not null;
 
 REPLACE INTO lremap_resource_other_langs_norm
-SELECT resourceid, langother FROM lremap_resource_langs_norm where langother is not null;
+SELECT l.resourceid, langother FROM lremap_resource_langs_norm l, ods_lremap_resource_norm_keys k WHERE l.resourceid = k.resourceid AND langother is not null;
 
 -- lang dim
 REPLACE INTO lremap_resource_langs_dim

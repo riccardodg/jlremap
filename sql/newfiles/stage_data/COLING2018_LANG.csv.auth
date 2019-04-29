@@ -1,0 +1,449 @@
+COLING	2018	1008X-J3E7G3F7F5	1	Grammar/Language Model	DyC3G Extension	Existing-updated	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	1010X-J6C4D6J4A5	1	Corpus	First Monolingual Parallel Corpus of Arabic	Newly created-finished	Arabic	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	1012X-E3B8E9J7P2	1	Corpus	A Benchmark for Trend and Antitrend Detection	Newly created-finished	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	105X-C6A3D6H6A3	1	Corpus	CoNLL’2002&2003 shared task dataset	Existing-used	English	German	Spanish	Dutch (nld)	NULL	NULL	Multi	
+COLING	2018	106X-E3P4P7D6P3	1	Corpus	Japanese Visual Genome Freeform QA	Newly created-finished	Japanese (jpn)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	107X-J2D6B2J3E4	3	Corpus	MIMIC III	Existing-used	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	107X-J2D6B2J3E4	1	Tagger/Parser	Stanford POS Tagger	Existing-used	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	107X-J2D6B2J3E4	2	Corpus	THYME Corpus	Existing-used	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	107X-J2D6B2J3E4	4	Research Code	WLLTLinkClassificationCode	Newly created-finished	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	10X-F6A3P6E7D6	1	Named Entity Recognizer	LS NER	Newly created-in progress	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	114X-H5J9B2F9A7	1	Corpus	Amazon Reviews	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	114X-H5J9B2F9A7	3	Corpus	PubMed Abstracts	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	114X-H5J9B2F9A7	2	Corpus	Yelp Reviews	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	116X-D8B6P6C3P3	1	Named Entity Recognizer	FOFE-MuNER	Newly created-finished	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	117X-P3P7F7A6H5	1	__NOT_PROVIDED__	IXA Pipeline	__NOT_PROVIDED__	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	117X-P3P7F7A6H5	2	__NOT_PROVIDED__	OpeNER-sentiment-lexicons	__NOT_PROVIDED__	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	118X-C7D9J6J2J4	1	Corpus	PHEME dataset of rumours and non-rumours	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	119X-E8P6A6P3P2	1	Corpus	Aligned Datasets from Standard Wikipedia and Simple Wikipedia	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	119X-E8P6A6P3P2	7	Evaluation Data	Human evaluation benchmark for Text Simplification	Newly created-finished	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	119X-E8P6A6P3P2	5	Machine Translation Tool	Moses	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	119X-E8P6A6P3P2	4	Software Toolkit	NTS	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	119X-E8P6A6P3P2	2	Corpus	PWKP	Existing-used	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	119X-E8P6A6P3P2	6	Tagger/Parser	TUPA	Existing-used	English	French	German	NULL	NULL	NULL	Multi	
+COLING	2018	119X-E8P6A6P3P2	3	Corpus	Turkcorpus simplification dataset	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	120X-D6H9D4A5F3	1	Evaluation Data	AnlamVer	Newly created-finished	Turkish	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	120X-D6H9D4A5F3	2	Annotation Tool	WSQuest	Newly created-finished	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	123X-E9P5D3E4B5	1	Corpus	Webis-QSpell-17	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	123X-E9P5D3E4B5	2	Corpus	WikiText	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	125X-H5G6A9J3P4	3	__NOT_PROVIDED__	Microsoft Research Paraphrase Corpus (MSRP)	__NOT_PROVIDED__	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	125X-H5G6A9J3P4	1	__NOT_PROVIDED__	SICK	__NOT_PROVIDED__	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	125X-H5G6A9J3P4	2	__NOT_PROVIDED__	STSbenchmark	__NOT_PROVIDED__	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	131X-D7A3D9C2G8	1	Corpus	PerSciDo	Newly created-in progress	German (deu)	Swiss German (gsw)	German	NULL	NULL	NULL	Multi	
+COLING	2018	132X-G3D3A2B3A2	1	word embeddings	wordnet2vec	Newly created-finished	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	138X-G3C3C3P2J5	3	Lexicon	Affective ratings for nearly 14 thousand English words	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	138X-G3C3C3P2J5	2	Corpus	DailyDialog	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	138X-G3C3C3P2J5	1	Corpus	OpenSubtitles	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	13X-P9D6C6P7J3	1	Corpus	Ubuntu dataset	__NOT_PROVIDED__	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	142X-P9H8A2G8A3	1	Corpus	Mastodon dialogs	Newly created-in progress	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	143X-C9C3P6D8C5	1	Corpus	Enron Email Dataset	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	144X-D9A6B8G8J5	1	Corpus Tool	Hyperbase	Existing-used	French (fra)	English (eng)	Chinese (zho)	Spanish (spa)	Italian (ita)	NULL	Multi	
+COLING	2018	146X-A4J6C5A8J3	1	Corpus	Two datasets for summarization of scientific articles	Newly created-finished	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	147X-H3J3P3C7D4	1	Corpus	Bulgarian – English parallel corpus for the purposes of creating statistical translation model of the verb forms	Newly created-in progress	Bulgarian (bul)	English (eng)	NULL	NULL	NULL	NULL	Bi	
+COLING	2018	151X-J4E7D6H2E3	1	Corpus	NumCor	Newly created-finished	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	152X-E6D6G7C7C4	1	Language Modeling Tool	RedTyp	Newly created-in progress	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	156X-J6D6G5G2C9	1	Corpus	RuSentiment	Newly created-finished	Russian	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	158X-C9F7H8C6F4	1	Corpus	Yelp 2013	Existing-updated	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	158X-C9F7H8C6F4	2	Corpus	Yelp 2014	Existing-updated	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	158X-C9F7H8C6F4	3	Corpus	Yelp 2015	Existing-updated	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	15X-H5P3J4G6H4	1	Corpus Tool	HistoBankVis	Existing-updated	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	162X-B4A5G8F9E6	1	Lexicon	CzEngClass	Newly created-in progress	Czech (ces)	English (eng)	NULL	NULL	NULL	NULL	Bi	
+COLING	2018	163X-C5C7A5D9P6	1	Corpus	TED2013	Existing-used	English (eng)	Chinese (zho)	French (fra)	NULL	NULL	NULL	Multi	
+COLING	2018	166X-B2A4G5P8F9	1	Corpus	Hindi Songs	Existing-updated	Hindi	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	169X-B6D3P8E6P6	1	Corpus	DiaPT (Diachronic Portuguese Corpus)	Newly created-finished	Historical Portuguese	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	16X-H6A5C8A3B8	1	Corpus	ezDI Clinical Entity Corpus	Newly created-finished	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	171X-J3P8E6G3P2	2	Corpus	Context-free dataset	Newly created-finished	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	171X-J3P8E6G3P2	1	Corpus	Twitter Dataset	__NOT_PROVIDED__	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	175X-C3G4J3D6H2	1	Corpus	LCQMC	Newly created-finished	Chinese (zho)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	179X-D3P3D7C7P3	1	Corpus	Parallel Bible Corpus	__NOT_PROVIDED__	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	17X-H7H2A7H6G6	1	Corpus	Emotion Modifier Scope Corpus	Newly created-finished	en	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	184X-F3B6P8P6C3	1	Sentiment Analysis Tool	Bella	Newly created-in progress	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	186X-E3F3F3D2D8	1	Evaluation Data	GeoVirus.xml	Newly created-finished	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	190X-F9H4P2P6F4	4	Machine Translation Tool	Fairseq	Existing-used	English (eng)	Chinese (zho)	Arabic (ara)	French (fra)	Spanish (spa)	Russian	Multi	
+COLING	2018	190X-F9H4P2P6F4	5	Machine Translation Tool	Nematus	Existing-used	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	190X-F9H4P2P6F4	3	Machine Learning Tool	Theano	Existing-used	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	190X-F9H4P2P6F4	2	Machine Learning Tool	Torch	Existing-used	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	190X-F9H4P2P6F4	1	Corpus	United Nations Parallel Corpus	Existing-used	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	196X-G6C8P9J4G5	1	Corpus	Toronto Book Corpus	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	197X-F3E2F3E7P3	1	Language Modeling Tool	LinGO Grammar Matrix	Existing-updated	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	198X-F6J3C6E6P7	1	Corpus	SMP2017ECDT-DATA	Existing-used	Chinese (zho)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	199X-F9E8G3J5C3	1	Corpus	Airline Travel Information System	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	199X-F9E8G3J5C3	2	Corpus	SMP2017ECDT-Data	Existing-used	Chinese (zho)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	201X-P6C3J3F3P6	1	Corpus	Privacy Policy Vagueness Detection Dataset	Newly created-finished	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	202X-F3D6P8J6A6	3	__NOT_PROVIDED__	English Web Treebank	__NOT_PROVIDED__	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	202X-F3D6P8J6A6	1	__NOT_PROVIDED__	Konan-JIEM Learner Corpus	__NOT_PROVIDED__	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	202X-F3D6P8J6A6	2	__NOT_PROVIDED__	Treebank of Learner English	__NOT_PROVIDED__	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	210X-C8D2A6F6P5	1	Corpus	corpus	Newly created-finished	Chinese	English (eng)	NULL	NULL	NULL	NULL	Bi	
+COLING	2018	212X-E6A5A4C9A9	1	Corpus	Gutenberg Dataset for Genre Identification	Assembled from US available books on Project Gutenberg	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	213X-P3P3B6C6B6	1	Treebank	Chinese Treebank 5.0	Existing-used	Chinese	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	213X-P3P3B6C6B6	2	Treebank	Chinese Treebank 7.0	Existing-used	Chinese	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	215X-H7F6E3E8C3	1	Corpus	OSHUMED	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	215X-H7F6E3E8C3	2	Corpus	TREC-CHEM	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	21X-P3E8A9B5J2	1	Corpus	The RST Spanish-Chinese Treebank	Newly created-finished	Spanish (spa)	Chinese (zho)	NULL	NULL	NULL	NULL	Bi	
+COLING	2018	228X-P3A3H2C8A2	1	Corpus	bAbi	Newly created-finished	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	230X-D3E3J6F6A9	1	Lexicon	Wikipedia 2017-12-01 Link Anchors	Newly created-finished	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	234X-G9D9A9D6D4	2	Corpus	AMI corpus	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	234X-G9D9A9D6D4	5	Corpus	BT Oasis	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	234X-G9D9A9D6D4	7	Corpus	CAPC Dialogue Acts	Newly created-finished	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	234X-G9D9A9D6D4	6	Corpus	DialogBank	Existing-updated	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	234X-G9D9A9D6D4	3	Corpus	MapTask	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	234X-G9D9A9D6D4	8	Corpus	S-Logs	Newly created-in progress	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	234X-G9D9A9D6D4	9	Software Toolkit	scikit-learn	Existing-updated	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	234X-G9D9A9D6D4	1	Corpus	Switchboard corpus annotated with dialogue acts	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	234X-G9D9A9D6D4	4	Corpus	VerbMobil	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	238X-J2J6H7D5D5	1	Treebank	Universal Dependency Treebanks v2.0	Existing-used	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	239X-H7F7B3A8J4	1	Software Toolkit	FudanNLP	Existing-updated	Chinese (zho)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	240X-D7E8G4A6A6	1	Ontology	Freebase	Existing-used	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	244X-H7H8H8E4P9	1	Corpus	Large Movie Review Dataset	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	244X-H7H8H8E4P9	2	Machine Learning Tool	Reuters and Brown Corpora from Python\'s NLTK package	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	244X-H7H8H8E4P9	3	Corpus	Target Specific Sentiment Twitter Dataset	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	246X-B3P6F4D7J9	1	Corpus	10 Chinese Contemporary Novels	Existing-used	Chinese	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	246X-B3P6F4D7J9	2	Corpus	Sina News Dataset	Existing-used	Chinese	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	246X-B3P6F4D7J9	3	Corpus	Trec06 Email Dataset	Existing-used	Chinese	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	24X-G7B3C5G7B6	1	Corpus	Corpus of German Opinion Spam	Newly created-in progress	German (deu)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	252X-H5F7D2B5D6	1	Corpus	REMAN	Newly created-finished	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	258X-G8G6D8H6B2	3	Lexicon	IBM Debater (R) - Sentiment Composition Lexicons	Newly created-finished	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	258X-G8G6D8H6B2	2	Lexicon	Opinion Lexicon	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	258X-G8G6D8H6B2	1	Lexicon	WordNet	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	260X-P6A8C4H3A9	1	Corpus	Laptop Expert Reviews with Annotated Topics	Newly created-finished	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	273X-E3J9F4B7P6	1	Software Toolkit	MeasureDiversity	Newly created-finished	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	274X-G6J6B7B2P3	1	Reading Comprehension Tool, or Machine Reader	GTCR	Newly created-in progress	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	284X-J9H2E4E6P3	1	Corpus	ArtWalk Corpus	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	284X-J9H2E4E6P3	3	Corpus	MapTask	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	284X-J9H2E4E6P3	4	Corpus	Switchboard corpus annotated with dialogue acts	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	284X-J9H2E4E6P3	2	Corpus	Walking Around Corpus	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	287X-P5F3D8H8F6	1	Aligner	IBK-Aligner	Newly created-finished	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	288X-B8H3F2B6F4	1	Corpus	WikiParal	Newly created-in progress	English	German	French	Iranian Persian (pes)	NULL	NULL	Multi	
+COLING	2018	289X-J7H9D8F2P4	1	Corpus	Amazon Reviews	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	289X-J7H9D8F2P4	2	Corpus	semeval 2013 task 2	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	289X-J7H9D8F2P4	3	Corpus	semeval 2016 task 4	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	292X-E8H9D3G5G9	3	Corpus	CHILDES	Existing-used	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	292X-E8H9D3G5G9	1	Annotation Tool	Jubilee	Existing-updated	English (eng)	Hindi (hin)	Chinese (zho)	Arabic (ara)	Finnish (fin)	Portuguese, Basque, Turkish	__NOT_PROVIDED__	
+COLING	2018	292X-E8H9D3G5G9	4	Treebank	Penn Treebank	__NOT_PROVIDED__	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	292X-E8H9D3G5G9	2	semantic role labels	PropBank (Proposition Bank)	Existing-used	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	294X-F3C4A5C7P4	1	Corpus	Reuters RCV1 (CCAT-10 and CCAT-50)	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	297X-C3D4A8H7P9	1	Corpus	Question Answer Dataset (Insurance QA)	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	297X-C3D4A8H7P9	2	Corpus	Question Answering Dataset (TREC QA)	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	299X-G6B6C8C7F2	1	Corpus	Europarl	Existing-used	DE	ES	IT	EN	NULL	NULL	Multi	
+COLING	2018	29X-A4B8G8C2C6	1	Word Sense Disambiguator	DisDict 1.0	Newly created-finished	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	304X-H3F4P2G6E8	1	Lexicon	Lexicon of Verbal Polarity Shifters for German	Newly created-finished	German (deu)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	305X-H8C3H3E6P8	1	Grammar/Language Model	mweFTAG	Existing-updated	French	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	314X-E6G2E3C3A6	2	Corpus	answer selection dataset	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	314X-E6G2E3C3A6	1	Corpus	TREC QA questions	Existing-updated	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	316X-A9P4B3D4B7	2	Grammar/Language Model	ERG: LinGO English Resource Grammar	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	316X-A9P4B3D4B7	1	Ontology	MetaMap	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	318X-B6E3G7C4E4	1	Lexicon	Lexical-Semantic Classification of Metaphor	Newly created-in progress	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	322X-D3E2J3J2G8	3	__NOT_PROVIDED__	Kyoto University Case Frames	Existing-used	Japanese (jpn)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	322X-D3E2J3J2G8	1	Corpus	NAIST Text Corpus	Existing-used	Japanese (jpn)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	322X-D3E2J3J2G8	2	Corpus	The Balanced Corpus of Contemporary Written Japanese (BCCWJ)	Existing-used	Japanese (jpn)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	324X-F6E8C7G3J6	6	Corpus	CADEC	Existing-used	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	324X-F6E8C7G3J6	10	Corpus	CoNLL 2003 NER shared task corpus	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	324X-F6E8C7G3J6	1	Machine Learning Tool	CRF Suite	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	324X-F6E8C7G3J6	3	Corpus	GUM	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	324X-F6E8C7G3J6	8	Corpus	i2b2 2006 de-identification corpus	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	324X-F6E8C7G3J6	9	Corpus	i2b2 2014 de-identification corpus	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	324X-F6E8C7G3J6	2	Corpus	Message Understanding Conference (MUC) 6	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	324X-F6E8C7G3J6	4	Corpus	MIT Movie Corpus (MMC)	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	324X-F6E8C7G3J6	5	__NOT_PROVIDED__	MIT Restaurant Corpus	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	324X-F6E8C7G3J6	12	Corpus	NIST 1999 Information Extraction - Entity Recognition Evaluation (NIST IE-ER ) -- Newswire Dev Portion	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	324X-F6E8C7G3J6	11	Corpus	re3d (Relationship and Entity Extraction Evaluation Dataset)	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	324X-F6E8C7G3J6	7	Corpus	Ritter	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	325X-A6C2F7G3B9	1	Corpus	ISNotes	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	326X-C5J7F3P3C3	1	Corpus	Tagged Location Names in Targeted Social Media Streams	Newly created-finished	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	331X-B4H6G3J9A6	1	Corpus	MCDTB	Newly created-finished	Chinese	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	333X-A2A2D6G8D8	1	Corpus	Value-Motivated Groups - Arabic	Newly created-in progress	Arabic (ara)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	336X-G9A7C8D7F5	1	Corpus	Griko Grammar Corpus	Existing-used	Griko	Italian (ita)	NULL	NULL	NULL	NULL	Bi	
+COLING	2018	336X-G9A7C8D7F5	2	Corpus	Griko Narratives and Italian Tranlations	Newly created-in progress	Griko	Italian (ita)	NULL	NULL	NULL	NULL	Bi	
+COLING	2018	338X-G3D6F9P3J4	1	Tokenizer	ParaMA: Paradigm-based Morphological Analyzer	Newly created-finished	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	339X-A6D3B7C3A8	1	Corpus	Personage Stylistic Variation Corpus	Newly created-in progress	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	33X-P2D3C4J5P2	1	Corpus	English Wikipedia	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	33X-P2D3C4J5P2	3	Corpus	English Wiktionary	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	33X-P2D3C4J5P2	5	Word list by frequency	JACET 8000 word list	Newly created-finished	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	33X-P2D3C4J5P2	4	Lexicon	Princeton English WordNet	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	33X-P2D3C4J5P2	2	Corpus	Simple English Wikipedia	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	341X-G6J3B4H6P3	1	Corpus	Personalized bAbI dialog	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	342X-G8F3P8D2B3	1	Corpus	Images for Translation Dataset	Newly created-in progress	Afrikaans (afr)	aragonese	armenian	asturian	basque	belarusian,bishnupriya-manipuri,breton,catalan,central-bicolano,croatian,czech,danish,esperanto,finnish,frisian,galician,georgian,greek,haitian,hebrew,icelandic,ido,ilokano,irish,japanese,javanese,kannada,kapampangan,kazakh,korean,kurdish,lithuanian,low-saxon,luxembourgish,macedonian,malagasy,malay,malayalam,marathi,neapolitan,newar,norwegian-nynorsk,norwegian,pashto,piedmontese,polish,portuguese,punjabi,russian,serbo-croatian,sicilian,sindhi,slovenian,sundanese,swahili,swedish,turkish-august,waray,wolof	Multi	
+COLING	2018	352X-J7A3D2H5B4	1	__NOT_PROVIDED__	TEMT corpus	Newly created-in progress	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	35X-E2G9H3G3D2	1	Corpus	Google WAP196k Wikipedia Sub-article Matching Dataset	Newly created-finished	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	362X-B3B9F3C3D6	1	Corpus	Author Corpus	Newly created-finished	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	363X-E7G6D6E5J8	1	List of Resources and Research	List of research and engineering of NLP for American Native/Indigenous Languages.	Newly created-in progress	Indigenous Languages of the Americas	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	364X-D5G6G2B9F5	1	Corpus	NAIST Text Corpus	Existing-used	Japanese	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	369X-F9C3G3A7G3	1	Corpus	English Wikipedia	Existing-updated	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	372X-J2C3H6C4J3	1	Ontology	FB15k	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	372X-J2C3H6C4J3	2	Ontology	WN18	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	373X-G9C7E4P6A6	1	Ontology	FB15k	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	373X-G9C7E4P6A6	2	Ontology	WN18	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	37X-J3A6C9C3B3	1	Corpus	TriviaQA-NoP	Existing-updated	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	382X-B7B8P6B7C2	1	Corpus	Multi-Level Event Extraction (MLEE)	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	383X-C4B5C3J8D9	1	Corpus	TBQA	Newly created-finished	Chinese (zho)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	388X-H6C9G9B3C6	1	Corpus	TCM Entity Titles	Newly created-in progress	Chinese	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	392X-F6P7A6J2G6	1	Lexicon	Morphology Inflected Forms fro English-Hindi and Englsih-marathi	Newly created-in progress	English (eng)	Hindi (hin)	Marathi (mar)	NULL	NULL	NULL	Multi	
+COLING	2018	394X-P5D4C2P4C7	2	Corpus	InsuranceQA	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	394X-P5D4C2P4C7	4	Corpus	SQuAD-T	Existing-updated	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	394X-P5D4C2P4C7	1	Corpus	TREC QA questions	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	394X-P5D4C2P4C7	3	Corpus	Yahoo QA split	Existing-updated	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	39X-G3C6H4E3D8	1	Software Toolkit	iParaphrasing	Newly created-finished	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	409X-P5H3P8E6H3	2	Corpus	BTEC	Existing-used	English	Farsi	NULL	NULL	NULL	NULL	Bi	
+COLING	2018	409X-P5H3P8E6H3	3	Corpus	Europarl	Existing-used	English	Chinese	NULL	NULL	NULL	NULL	Bi	
+COLING	2018	409X-P5H3P8E6H3	1	Corpus	TEP Corpus	Existing-used	English	German	NULL	NULL	NULL	NULL	Bi	
+COLING	2018	40X-C4F3B4G4B7	2	Annotation Tool	Sentimentator	Pilot version online	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	40X-C4F3B4G4B7	1	Corpus	the open parallel corpus (OPUS)	__NOT_PROVIDED__	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	410X-G8D6B6F5P3	1	Corpus	Basilex	Existing-used	Dutch	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	410X-G8D6B6F5P3	2	Corpus	Sonar	Existing-used	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	411X-C3G9J2E4H6	1	Lexicon	cross-cultural differences of named entities  in social media (en-zh)	Newly created-finished	English	Chinese	NULL	NULL	NULL	NULL	Bi	
+COLING	2018	411X-C3G9J2E4H6	3	Lexicon	Empath	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	411X-C3G9J2E4H6	2	Lexicon	Opinion Finder Lexicons	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	411X-C3G9J2E4H6	4	Lexicon	TextMind	Existing-used	Chinese	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	418X-D5F9P2J9C3	1	Corpus	Urdu Word Segmentation	Newly created-finished	Urdu	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	41X-A7D9H4A9E8	2	Tagger/Parser	MinIE	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	41X-A7D9H4A9E8	1	Corpus	OA-STM-Corpus	Existing-used	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	41X-A7D9H4A9E8	3	Tagger/Parser	Open IE 4	Existing-used	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	41X-A7D9H4A9E8	4	Evaluation Data	Open Information Extraction Evaluation Dataset	Newly created-finished	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	421X-B7H4P6J2H6	2	Corpus	CNewsQA	Newly created-in progress	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	421X-B7H4P6J2H6	1	Corpus	Stanford Question Answering Dataset	Existing-used	Chinese (zho)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	428X-J6B4J6H8D4	1	Corpus	Royal Society Corpus	Newly created-in progress	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	433X-B8D9A3P4P3	4	Evaluation Data	SimLex-999	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	433X-B8D9A3P4P3	3	Evaluation Data	SimVerb-3500	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	433X-B8D9A3P4P3	5	Software Toolkit	Stanford Core NLP	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	433X-B8D9A3P4P3	1	Lexicon	VerbNet	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	433X-B8D9A3P4P3	2	Lexicon	WordNet	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	436X-D6P3J9B6E6	1	Web Service	Lexi	Newly created-in progress	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	437X-J4C5A7G9J6	1	Corpus	Chinese Essay Generation	Newly created-finished	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	438X-F2H3B3E6B7	2	Lexicon	global vector for word representation	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	438X-F2H3B3E6B7	1	Corpus	question generation data set on SQuAD	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	439X-H6G6D3G6B6	1	Corpus	CNN/Dailymail(DMQA)	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	43X-G7A7J8G4E9	1	Ontology	BigCilin11K	Newly created-finished	Chinese	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	445X-E3D5E8B2J4	1	Lexicon	Phrase Pair Mappings for Hindi-English	Newly created-in progress	English	Hindi	NULL	NULL	NULL	NULL	Bi	
+COLING	2018	447X-E5G3H9B5D4	1	Corpus	20Reddit-Road2Success	Newly created-finished	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	454X-F4C9F5A2E6	1	Corpus	Arabic UFSAC	Newly created-finished	Arabic	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	454X-F4C9F5A2E6	3	Machine Translation Tool	seq2seq	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	454X-F4C9F5A2E6	2	Corpus	UFSAC	Existing-used	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	45X-F4P7G2F5C5	1	Corpus	Europarl	Existing-used	Estonian (est)	English (eng)	NULL	NULL	NULL	NULL	Bi	
+COLING	2018	45X-F4P7G2F5C5	3	Corpus	News Commentary	Existing-used	French (fra)	English (eng)	NULL	NULL	NULL	NULL	Bi	
+COLING	2018	45X-F4P7G2F5C5	2	Corpus	WIT3	Existing-used	German (deu)	English (eng)	NULL	NULL	NULL	NULL	Bi	
+COLING	2018	463X-P6G6D3B5G9	1	Lexicon	German SentiWordNet Lexicon	Newly created-in progress	German (deu)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	463X-P6G6D3B5G9	2	Lexicon	Turkish SentiWordNet Lexicon	Newly created-in progress	Turkish (tur)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	469X-C7J5H3A2J6	1	Tagger/Parser	panda-parser	Newly created-in progress	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	485X-E5J6B6F3A4	1	Corpus	MS MARCO	__NOT_PROVIDED__	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	485X-E5J6B6F3A4	2	Tokenizer	Stanford Core NLP (NER)	__NOT_PROVIDED__	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	488X-J4B7E3G7A6	3	Corpus	Chilean constitution political arguments	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	488X-J4B7E3G7A6	2	Corpus	Churn Microblogs	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	488X-J4B7E3G7A6	1	Corpus	DBpedia	Existing-used	Spanish	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	490X-C6J2G8H7C8	1	Corpus	M-ARS (multilingual addressee and response selection)	Newly created-finished	English	Italian	Croatian	German	Portuguese	NULL	Multi	
+COLING	2018	492X-A6F4A6G9C8	2	Corpus	BLESS	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	492X-A6F4A6G9C8	1	Corpus	UKWaC	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	492X-A6F4A6G9C8	3	Evaluation Tool	www.wordvectors.org	__NOT_PROVIDED__	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	494X-D3P7B9A6G6	1	Corpus	Hebrew Sentiment Analysis Benchmark	Newly created-in progress	Hebrew (heb)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	4X-G2C5D6D9C9	1	Treebank	ezDI Clinical Constituency Treebank	Newly created-finished	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	502X-G6F5H3A6E4	1	Corpus	WIT3	Existing-used	Arabic	Czech	German	French	English	NULL	Multi	
+COLING	2018	511X-F4P5H9D2E8	1	Treebank	Japanese Constituents Treebank	Newly created-in progress	Japanese	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	520X-B6H9D5E3F6	2	Corpus	GEO/GEOlino Corpus	Newly created-finished	German	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	520X-B6H9D5E3F6	1	Corpus	Tagesschau/Logo Corpus	Newly created-finished	German	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	523X-C4A3G6H3D7	1	Evaluation Data	InsuranceQA	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	523X-C4A3G6H3D7	2	Evaluation Data	SE Datasets	Newly created-finished	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	524X-D6H6C9H3G6	5	Corpus	IULA Spanish Clinical Record	__NOT_PROVIDED__	Spanish	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	524X-D6H6C9H3G6	2	Corpus	IxaMed-GS	__NOT_PROVIDED__	Spanish	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	524X-D6H6C9H3G6	3	Corpus	SFU Review SP-NEG	__NOT_PROVIDED__	Spanish	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	524X-D6H6C9H3G6	1	Corpus	UAM Spanish Treebank	Existing-used	Spanish	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	524X-D6H6C9H3G6	4	Corpus	UHU-HUVR	__NOT_PROVIDED__	Spanish	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	525X-A8B3J6D6J2	1	Lexicon	Jibiki.fr Japanese-French dictionary	Newly created-in progress	Japanese (jpn)	French (fra)	NULL	NULL	NULL	NULL	Bi	
+COLING	2018	530X-B3D4B9H6A7	2	Evaluation Data	QALD-7	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	530X-B3D4B9H6A7	1	Evaluation Data	WebQSP	Existing-updated	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	531X-B3H5C6B4P6	1	Software Toolkit	koin	Newly created-in progress	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	532X-D8B4P3J3G6	1	Lexicon	Indowordnet lexical database	Newly created-in progress	NULL	NULL	NULL	NULL	NULL	11 Indian Langugaes	Mono	
+COLING	2018	535X-F3P9J6G4B3	1	Corpus	Universal Dependencies English Web Treebank	__NOT_PROVIDED__	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	535X-F3P9J6G4B3	2	Corpus	Universal Dependencies Polish LFG Treebank	__NOT_PROVIDED__	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	535X-F3P9J6G4B3	3	Corpus	Universal Dependencies Polish SZ Treebank	__NOT_PROVIDED__	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	540X-P3E7J8C7F6	4	Lexicon	French-English bilingual dictionary	Existing-used	English	French	German	Chinese	Spanish	Latvian, Russian	Multi	
+COLING	2018	540X-P3E7J8C7F6	3	Lexicon	Multi-word reference list for the wind energy corpus	Newly created-finished	English	French	NULL	NULL	NULL	NULL	Bi	
+COLING	2018	540X-P3E7J8C7F6	2	Lexicon	Single word reference list for the wind energy corpus	Existing-used	English	French	NULL	NULL	NULL	NULL	Bi	
+COLING	2018	540X-P3E7J8C7F6	1	Corpus	Wind energy corpus (WE)	Existing-used	English	French	NULL	NULL	NULL	NULL	Bi	
+COLING	2018	541X-D8H3C3C6G5	1	Corpus	WMT15	Existing-used	English (eng)	French (fra)	NULL	NULL	NULL	NULL	Bi	
+COLING	2018	542X-B3P6D2F3E3	1	Lexicon	Arabic WordNet	Existing-used	Arabic	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	545X-E6D8A2C8D6	2	Evaluation Data	GraphQuestions	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	545X-E6D8A2C8D6	1	Evaluation Data	WebQSP	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	547X-C6J3A3E6A4	1	Corpus	Indonesian Colloquial Corpus	Newly created-in progress	Indonesian (ind)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	548X-G6E7J9C7H5	1	Corpus	DEFT Event Sequencing After-Link and Parent-Child Annotation Training Data V4	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	551X-F4J5D6G6G9	1	Lexicon	ReSyf	Existing-updated	French	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	556X-C2A2B6G7P9	1	Tagger/Parser	Segmenter and Central Unit Detector for Basque	web demo	Basque (eus)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	562X-G5E4G3C7E9	1	Corpus	Ethiopian language resource	Existing-used	English	Amharic	Tigrigna	Afan-Oromo	Wolaytta (wal)	Ge\'ez	Multi	
+COLING	2018	563X-F6D6P2J7E7	1	Corpus	#MeTooAlexa Corpus	Newly created-in progress	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	564X-C8C7J6H3H6	3	Corpus	AQuARAT	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	564X-C8C7J6H3H6	2	Corpus	Multi-Genre Natural Language Inference	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	564X-C8C7J6H3H6	4	Corpus	NLI Stress Test Suite	Newly created-finished	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	564X-C8C7J6H3H6	1	Ontology	Wordnet 3.0	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	567X-B3F4B5H6E8	1	Lexicon	Marathr-Hindi-LexicalWords	Newly created-in progress	Marathi	Hindi	NULL	NULL	NULL	NULL	Bi	
+COLING	2018	569X-C2A5G3F8E5	1	Evaluation Data	V-SNLI	Existing-updated	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	570X-B2B2P5D7P6	1	Lexicon	Claim sentence lexicon	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	570X-B2B2P5D7P6	2	Evaluation Data	IBM Debater - Claim sentences search	Newly created-finished	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	570X-B2B2P5D7P6	3	Evaluation Data	UKP Sentential Argument Mining Corpus	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	573X-B7B3E6F6A4	2	__NOT_PROVIDED__	DBpedia	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	573X-B7B3E6F6A4	1	Corpus	Newsela corpus	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	575X-B6F7A3B5D6	1	Corpus	The E2E Challenge Dataset	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	579X-D3B3H2J8H6	1	Corpus	A Benchmark for Trend and Antitrend Detection.	Newly created-finished	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	584X-H6H4P8J2C5	1	Corpus	SQUAD question generation dataset	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	585X-C3F6F6E2C7	1	Evaluation Data	QuantifierClozeTest	Pre-processed sentences extracted from existing corpora	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	589X-C8D6D2C3D5	1	Lexicon	NorthEuraLex 0.9	Existing-used	NULL	NULL	NULL	NULL	NULL	Icelandic, Norwegian (Bokmål), Swedish, Danish, German, Dutch, English, Latin, Romanian, Italian, French, Catalan, Spanish, Portuguese, Russian, Ukrainian, Belarusian, Polish, Czech, Slovak, Slovene, Croatian, Bulgarian, Irish, Welsh, Breton, Latvian, Lithuanian, Persian, Kurdish, Pashto, Ossetian, Hindi, Bengali, Albanian, Modern Greek, East Armenian, Finnish, North Karelian, Olonets Karelian, Veps, Estonian, Livonian, Kildin Saami, Skolt Saami, Inari Saami, Northern Saami, Lule Saami, Southern Saami, Erzya, Moksha, Hill Mari, Meadow Mari, Komi-Zyrian, Komi-Permyak, Udmurt, Hungarian, Northern Khanty, Northern Mansi, Northern Selkup, Tundra Nenets, Forest Enets, Nganasan, Turkish, Azeri, Uzbek, Kazakh, Bashkir, Tatar, Sakha, Chuvash, Khalkha, Kalmyk, Buryat, Evenki, Nanai, Manchu, Korean, Japanese, Ainu, Nivkh, Chukchi, Itelmen, Kalaallisut, Siberian Yupik, Aleut, Tundra Yukaghir, Kolyma Yukaghir, Standard Arabic, Hebrew, Telugu, Tamil, Kannada, Malayalam, Georgian, Abkhaz, Adyghe, Chechen, Avar, Lezgian, Lak, Tsez, Dargwa, Ket, Basque, Burushaski, Mandarin Chinese	Mono	
+COLING	2018	590X-C6J8C6H6E6	5	Lexicon	GerAff	Newly created-finished	German (deu)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	590X-C6J8C6H6E6	1	Corpus	German Web Corpus (DeWaC)	Existing-used	German	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	590X-C6J8C6H6E6	2	Lexicon	GermaNet	Existing-updated	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	590X-C6J8C6H6E6	3	__NOT_PROVIDED__	NRC Emotion Lexicon German	__NOT_PROVIDED__	German	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	590X-C6J8C6H6E6	4	Lexicon	Sentimerge	Existing-used	German (deu)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	593X-C8B4G3G3J3	1	Corpus	Turkish Corpus with NER and MD labels	Newly created-finished	Turkish	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	598X-G5D6A4A8P8	1	Corpus	SimpleDBpediaQA	Newly created-finished	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	5X-J6D3E6G6A3	1	Corpus	Balanced Corpus of Contemporary Written Japanese (BCCWJ)	Existing-used	Japanese (jpn)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	5X-J6D3E6G6A3	2	Corpus	Second International Chinese Word Segmentation Bakeoff Data	Existing-used	Mandarin Chinese (cmn)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	600X-D6G3F3F4H4	1	Corpus	Twitter Dataset	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	600X-D6G3F3F4H4	2	Corpus	Wikipedia datasets	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	603X-B2H3E3C4C3	1	Corpus	DIDEC: The Dutch Image Description and Eye-tracking Corpus	Newly created-finished	Dutch (nld)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	614X-G4H3G6P6P6	1	Corpus	SMHD	Newly created-finished	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	617X-J8G6H3A3G6	1	Machine Learning Tool	DeepQuest – Framework for neural-based Quality Estimation	Newly created-in progress	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	617X-J8G6H3A3G6	2	Corpus	Resources for document-level Quality Estimation	Newly created-finished	NULL	NULL	NULL	NULL	NULL	English, German, French, Russian, Spanish	Mono	
+COLING	2018	61X-E7C5D3A4G3	1	Corpus	Amazon Product Data	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	622X-G8H6C8E9B7	1	Corpus	SemEval-2016 Task 3 Question Answering	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	624X-J8F3J3J4P2	1	Grammar/Language Model	Cross-Validated and Ablated Narrative Schemas	Newly created-finished	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	626X-E3F9F6E9J2	1	Corpus	20-NewsGroups	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	626X-E3F9F6E9J2	3	Corpus	Financial News Dataset	Existing-used	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	626X-E3F9F6E9J2	2	Corpus	Wikipedia	__NOT_PROVIDED__	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	629X-B9D6P2C4D2	2	Evaluation Data	Rhetorical Devices	Newly created-finished	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	629X-B9D6P2C4D2	1	__NOT_PROVIDED__	Rhetorical Devices Identification Tool	Newly created-finished	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	62X-B3A3C9A3J3	3	Lexicon	British National Corpus (BNC) most frequent words	Existing-updated	English	Spanish	NULL	NULL	NULL	NULL	Bi	
+COLING	2018	62X-B3A3C9A3J3	2	Corpus	Europarl v7	Existing-used	English	Dutch	NULL	NULL	NULL	NULL	Bi	
+COLING	2018	62X-B3A3C9A3J3	4	Corpus	Medical Wikipedia parellel corpus	Existing-used	English	Spanish	Dutch	NULL	NULL	NULL	Multi	
+COLING	2018	62X-B3A3C9A3J3	1	Corpus	OpenSubtitles	Existing-used	English	Dutch	NULL	NULL	NULL	NULL	Bi	
+COLING	2018	631X-G3J5P9P8D2	1	Corpus	 English Gold Standard	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	631X-G3J5P9P8D2	2	Corpus	Spanish Gold Standard	Existing-used	Spanish (spa)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	631X-G3J5P9P8D2	3	Corpus	Spanish Gold Standard	Existing-used	German (deu)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	634X-P3G3B8A2C3	1	Corpus	CWI 2018	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	634X-P3G3B8A2C3	2	Corpus	Par4SimData	Newly created-finished	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	634X-P3G3B8A2C3	3	Text Simplification tool	Par4SimTool	__NOT_PROVIDED__	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	637X-A6D3H6D3A6	1	Corpus	Code-Mixed Question Answering data	Newly created-finished	Hinglish (Hindi+English)	Tamlish (Tamil+English)	Tenglish (Telugu+English)	NULL	NULL	NULL	Multi	
+COLING	2018	638X-A8H9P3F5H3	1	Software Toolkit	Generic Pluralizer for Bantu Languages	Newly created-in progress	chiShona	isiXhosa	isiZulu	Kikuyu	Kinyarwanda	Luganda, Runyankore	Multi	
+COLING	2018	641X-P9C4F3G6D5	1	Machine Learning Tool	Ask-No-More: code	Newly created-finished	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	641X-P9C4F3G6D5	2	Corpus	GuessWhat?!	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	644X-E5D3E4A3F8	1	Code & Data	'Data and Code for A New Approach to Animacy Detection'	Newly created-finished	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	646X-E8F8H3F8A2	6	Lexicon	emolex	Existing-used	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	646X-E8F8H3F8A2	2	Evaluation Data	Emotion Blog Corpus	Existing-used	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	646X-E8F8H3F8A2	4	Evaluation Data	emotweet	Existing-used	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	646X-E8F8H3F8A2	1	Evaluation Data	Fairy tale corpus	Existing-used	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	646X-E8F8H3F8A2	3	Evaluation Data	isear	Existing-used	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	646X-E8F8H3F8A2	5	Lexicon	WordNet-Affect	Existing-used	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	648X-H2B6G3D3E9	1	Corpus	Wikipedia English version	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	655X-H6F9E4F3F8	1	Ontology	Ghazaleh Kazeminejad	Newly created-in progress	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	656X-F3D7H4E3A6	1	Corpus	Aggregated Emotion Corpora	Newly created-finished	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	659X-G2D3J5P9A8	1	Corpus	Irony detection in Hindi-English Code-Mixed Social Media Text	Newly created-in progress	Hindi (hin)	English (eng)	NULL	NULL	NULL	NULL	Bi	
+COLING	2018	661X-J6C6G2H2G3	1	Corpus	Webis-Clickbait-17	Newly created-finished	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	668X-E2E9D8A3P5	1	__NOT_PROVIDED__	NLTK for Python	__NOT_PROVIDED__	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	670X-G3J8F7F2G9	1	Corpus	Multi-sentence AMR corpus	Newly created-finished	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	671X-F8J8E4H3C5	2	We release our code (including code that replicates previous work), pre-trained models and the resources we used in the public domain.	Source code for abuse detection	Newly created-finished	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	671X-F8J8E4H3C5	1	Corpus	Twitter dataset for abuse detection	Existing-used	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	672X-F7E3A5G3B6	1	Corpus	MedQA	Newly created-finished	Chinese (zho)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	673X-D4H3G9G6G7	1	Corpus	Veritas Corpus	Newly created-in progress	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	675X-D7J6E4A3A3	1	Corpus	MedQA	Newly created-finished	Chinese (zho)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	676X-D6G7H6F9J3	1	Corpus	Brown Corpus	Not Applicable	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	677X-D7A9H6F6J6	1	Corpus	English Gigaword Fifth Edition (LDC2011T07)	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	678X-A3J9A6H8E2	1	Corpus	Corpus for Hate Speech Detection in Hindi-English Code-Mixed Social Media Text	Newly created-in progress	Hindi (hin)	English (eng)	NULL	NULL	NULL	NULL	Bi	
+COLING	2018	683X-E7E3P9B2E7	1	Corpus	Yahoo! Chiebukuro data	Existing-used	Japanese	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	684X-J6F6A3B9D4	2	Evaluation Data	CompEval classification datasets	Newly created-finished	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	684X-J6F6A3B9D4	1	Evaluation Tool	CompEval Generation System	Newly created-finished	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	688X-J9C4F5C6E3	1	Corpus	Annotated Edit Me Corpus	Existing-updated	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	689X-H3C3D6A4B6	1	vector space model	SeVeN	Newly created-in progress	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	696X-C4P3A6C8J4	5	__NOT_PROVIDED__	ADE corpus	__NOT_PROVIDED__	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	696X-C4P3A6C8J4	4	__NOT_PROVIDED__	EU-ADR	__NOT_PROVIDED__	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	696X-C4P3A6C8J4	2	__NOT_PROVIDED__	reACE	__NOT_PROVIDED__	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	696X-C4P3A6C8J4	1	Corpus	Semeval 2013 Task 9	__NOT_PROVIDED__	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	696X-C4P3A6C8J4	3	__NOT_PROVIDED__	SNPPhena	__NOT_PROVIDED__	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	6X-D3A6C3F4F4	1	Corpus	Konan-JIEM Learner Corpus Fifth Edition	Existing-updated	English (eng)	Learner English	NULL	NULL	NULL	NULL	Bi	
+COLING	2018	700X-C6G8P5F9D3	1	Sense embedding model	GenSense	Newly created-finished	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	706X-D2H6J9G9A8	5	Machine Learning Tool	scikit-learn AdaBoost	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	706X-D2H6J9G9A8	3	Machine Learning Tool	scikit-learn Linear Regression	Existing-used	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	706X-D2H6J9G9A8	2	Machine Learning Tool	scikit-learn Random Forest	Existing-used	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	706X-D2H6J9G9A8	4	Machine Learning Tool	scikit-learn Support Vector Machine	Existing-used	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	706X-D2H6J9G9A8	1	Evaluation Data	Stanford Question Answering Dataset	Existing-used	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	714X-G6C6G5P2F5	1	Corpus	Semeval 2014 aspect-based sentiment analysis task	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	714X-G6C6G5P2F5	2	Corpus	Semeval 2015 aspect-based sentiment analysis	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	714X-G6C6G5P2F5	3	Corpus	Semeval 2016 Aspect based sentiment analysis	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	718X-C4E2D4F3J4	1	Corpus	PorSimplesSent	Newly created-finished	Portuguese (por)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	71X-B8H9P3A6G3	1	Corpus	Multi-Level Event Extraction (MLEE)	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	720X-E6F3H6J8H6	1	Corpus	Corpus on Debate and Deliberation	Existing-updated	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	721X-C3J3A6H2E5	1	Corpus of Hindi-English Code-Mixed Social Media Text for Emotion Prediction	Corpus of Hindi-English Code-Mixed Social Media Text for Emotion Prediction	Newly created-in progress	Hindi (hin)	English (eng)	NULL	NULL	NULL	NULL	Bi	
+COLING	2018	735X-G8B4C2A9E3	1	Ontology	ConceptNet 5.5	Existing-used	English	French	Italian	German	Spanish	Russian,Portuguese,Dutch,Chinese,Japanese	Multi	
+COLING	2018	739X-G3D7E6A6B7	1	Corpus	A Parallel Corpus of Thesis and Dissertations Abstracts	Newly created-in progress	English (eng)	Portuguese (por)	NULL	NULL	NULL	NULL	Bi	
+COLING	2018	741X-B4D9F3C9J3	1	Corpus	NYT10: Relation Extraction Corpus	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	746X-P6H3B4P8F8	1	Treebank	Penn Discourse Treebank Version 2.0	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	749X-B3A9H4J9B5	1	Evaluation Data	Mongolian morphological segmentation data	Newly created-finished	Classical Mongolian (cmg)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	74X-C5G5J4B9A9	1	Corpus	ACE-R2	Newly created-in progress	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	74X-C5G5J4B9A9	2	Treebank	TERB	Newly created-finished	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	752X-D9B5B8D2H4	1	Corpus	named entity corpus	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	754X-J6J7E3B3F4	2	Crowdsourced annotation and human evaluation tool	Amazon Mechanical Turk	Existing-updated	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	754X-J6J7E3B3F4	1	Corpus	DUC 2001	Existing-used	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	757X-P8B2E7P2D6	1	Lexicon	STYLUS	__NOT_PROVIDED__	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	759X-P9B4E3E7P4	1	Corpus	Parallel Bible Corpus	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	759X-P9B4E3E7P4	2	Machine Learning Tool	style-obfuscation	Newly created-in progress	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	761X-B3J3P8G7D3	1	Corpus	Topic-dependent Evidence Corpus	Newly created-finished	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	765X-G7E7B3B5C7	1	Evaluation Package	Evaluation package for sentence representations	Newly created-finished	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	767X-F6B5H5A4H6	1	Evaluation Data	Roget-300k dataset	Newly created-finished	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	76X-E3G6J3P6J6	1	Grammar/Language Model	LinGO Grammar Matrix	Existing-updated	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	770X-C5F7P4E6C9	1	Tagger/Parser	Morphological analyser for Chukchi	Newly created-in progress	Chukchi	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	781X-B8F8B7H6G7	1	Evaluation Data	Movie Review Data	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	781X-B8F8B7H6G7	3	Corpus	SemEval-2016 Task4: Sentiment Analysis in Twitter	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	781X-B8F8B7H6G7	4	Corpus	SemEval-2017 Task4: Sentiment Analysis in Twitter	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	781X-B8F8B7H6G7	5	Lexicon	SentiWordNet	__NOT_PROVIDED__	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	781X-B8F8B7H6G7	2	Evaluation Data	Standford Sentiment Treebank	Existing-used	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	783X-G6F4H4D9F7	1	Corpus	datasets spanish-nahuatl experiments	Newly created-in progress	Spanish	Nahuatl	NULL	NULL	NULL	NULL	Bi	
+COLING	2018	795X-C2D5E6D6H8	1	This is partly a corpus tool and partly an annotation tool.	Personal Dialog Analysis Scripts and Annotation Tool	Newly created-in progress	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	798X-G2D3F3A7P6	2	Corpus	AAPD	Newly created-finished	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	798X-G2D3F3A7P6	1	Corpus	Reuters RCV1	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	79X-D3B9P4F3P8	1	Corpus	Customer Product Reviews Corpus (CPRC)	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	800X-P2P6P3P6E3	1	Corpus	Internet Argument Corpus V2	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	810X-G4J3A3D3F3	1	Corpus	Fake news dataset	Newly created-finished	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	813X-G6J3B3A5A8	2	Corpus	OpenSubtitles2016	Existing-used	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	813X-G6J3B3A5A8	1	Machine Translation Tool	Sockeye	Existing-used	English (eng)	French (fra)	NULL	NULL	NULL	NULL	Bi	
+COLING	2018	829X-F3E8B3D3B6	1	Corpus	Enron Corpus	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	829X-F3E8B3D3B6	2	Evaluation Data	TREC LEGAL 2010 Enron labels	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	834X-P4E9G6F9G7	1	Corpus	E-commerce Dialogue Corpus	Newly created-finished	Chinese	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	842X-A2C9F2P7H5	1	Ontology	YAGO3	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	844X-D6E7C5B7D9	1	Corpus	Arg-Microtexts Synthesis Benchmark	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	847X-D5A8A8A7G6	1	Language Modeling Tool	LinGO Grammar Matrix	Existing-updated	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	857X-J6D3F9C6C6	1	Evaluation Package	Linguistic Diagnostics Toolkit	Newly created-finished	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	864X-B6A3J8F2F3	1	Corpus	VU Amsterdam Metaphor Corpus	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	865X-H4E7H8H3J3	1	Corpus Tool	TSED	Newly created-in progress	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	867X-A2A4F3E5C2	1	Corpus	TREC QA	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	867X-A2A4F3E5C2	2	Corpus	WikiQA	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	86X-A5H6J4H4C7	1	Corpus	HSK Word Usage Error Corrections Dataset	Newly created-finished	Chinese (zho)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	871X-C6P9H4D6A5	1	Corpus	SemEval 2017 Task 10 ScienceIE	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	875X-C2G3J8E6A8	1	Evaluation Package	CA8	Newly created-in progress	Chinese (zho)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	87X-B6G9C8H6G7	1	Corpus	the 2011 Text Analysis Conference MultiLing Pilot	Existing-used	English	Arabic	Czech	French	Greek	Hebrew, Hindi.	Multi	
+COLING	2018	881X-F3H4P5F2D3	1	Corpus	Question Pairs Dataset from Quora	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	881X-F3H4P5F2D3	2	Corpus	Stanford Sentiment Treebank	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	884X-J9P9B5F6F4	1	Corpus	CoNLL 2003 NER shared task corpus	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	890X-B3P9F9E4J5	1	Corpus	Medical Sentiment Analysis	Newly created-in progress	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	899X-J9B9F3E6P3	1	Evaluation Package	Reassessment of Grammatical Error Correction Metrics	Existing-updated	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	900X-G4J2H3A3F6	1	Corpus	Multilingual Question Answering dataset	Newly created-in progress	English	Hindi	NULL	NULL	NULL	NULL	Bi	
+COLING	2018	904X-H2C7C4F3J2	1	Corpus	Extension of the argumentative microtext corpus	Newly created-finished	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	908X-P7F9J8E6E9	1	Corpus	International Workshop on Spoken Language Translation (IWSLT) multilingual Corpora	Newly created-finished	English	German	French	Dutch	Italian	Romanian and Spanish	Multi	
+COLING	2018	910X-F6J9D8C7C9	1	Corpus	Parallel Censored-Uncensored Tweets with Sentiment Annotation	Newly created-finished	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	910X-F6J9D8C7C9	2	Sentiment Analysis Tool	Sentiment Classification with Vulgar Features	Newly created-finished	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	917X-C9F6P3E5G5	1	Corpus	http://manikvarma.org/downloads/XC/XMLRepository.html	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	919X-H4D8B4H3C4	1	Taxonomy creation and Semantic Question Matching Dataset	Semantic Question Matching Dataset	Newly created-finished	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	929X-B7J7E6C9J3	2	Corpus	CoNLL 2003 NER shared task corpus	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	929X-B7J7E6C9J3	1	Treebank	Penn Treebank 3.0	Existing-used	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	92X-F3P9D4A6D4	1	Corpus	NLU-Evaluation-Corpora	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	934X-G6H5C9A5P3	1	Lexicon	Hierarchical Values Lexicon	Newly created-finished	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	940X-A4P6D6B4J7	1	Corpus	HEED: Hindi Event Expression Dataset	Newly created-finished	Hindi (hin)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	941X-D4J4G3E6F6	1	Open Information Extractor	Graphene: Open IE Framework for Semantically Linked Propositions	Newly created-finished	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	943X-H2B4P9C5A5	1	Corpus	'Yahoo! Chiebukuro data'	Existing-used	Japanese	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	944X-A3E8P8F6H7	1	Corpus	Large Humor Dataset	Newly created-finished	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	954X-H2B5P6F2P7	1	Evaluation Data	Computational-Ungrammaticality-Coling2018	Newly created-in progress	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	956X-A3G5G7C8A8	1	Corpus	LDC Chinese-English Parallel Corpus	Existing-used	Chinese	English	NULL	NULL	NULL	NULL	Bi	
+COLING	2018	959X-F8J3P9G6D5	1	Corpus	Coarse Discourse	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	95X-F3E9F3A4A5	1	Corpus	Reddit rumor dataset	Newly created-finished	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	960X-H9D6D3G2B3	1	Lexicon	DuOMAn-subjectivitylexicon	Existing-used	Dutch (nld)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	963X-C5G7P7F2C5	1	Corpus	Project Gutenberg	Existing-used	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	963X-C5G7P7F2C5	2	Corpus	LocatedNear Relation Sentence Dataset	Newly created-finished	English (eng)	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	963X-C5G7P7F2C5	3	Evaluation Data	Commonsense LocatedNear object pairs	Newly created-finished	English	NULL	NULL	NULL	NULL	NULL	Mono	
+COLING	2018	963X-C5G7P7F2C5	4	Ontology	Wikidata	Existing-updated	NULL	NULL	NULL	NULL	NULL	NULL	Zero	
+COLING	2018	971X-A8J8G9H9J3	1	Corpus	Twitter Corpus of Resource-poor Languages for Sentiment Analysis and Emoji Prediction	Newly created-in progress	Hindi (hin)	Telugu (tel)	Bengali (ben)	NULL	NULL	NULL	Multi	
+COLING	2018	973X-P7J9G4C6E4	1	Corpus	ASPEC English-Japanese Translation Dataset	Existing-used	English	Japanese	NULL	NULL	NULL	NULL	Bi	
+COLING	2018	975X-B6G2F9B8H2	1	Corpus	WikiSQL	Existing-used	English (eng)	NULL	NULL	NULL	NULL	SQL	Bi	
+COLING	2018	975X-B6G2F9B8H2	2	Corpus	SENLIDB	Existing-used	English (eng)	NULL	NULL	NULL	NULL	SQL	Bi	

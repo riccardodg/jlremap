@@ -173,17 +173,17 @@ public class WriteFiles {
                 goahead = false;
             }
 
-            if (__RESOURCETYPE__.equals("") || __RESOURCETYPE__.equalsIgnoreCase("NULL") || __RESOURCETYPE__ == null) {
+            if (__RESOURCETYPE__.equals("") || __RESOURCETYPE__.equalsIgnoreCase("NULL") || __RESOURCETYPE__ == null || __RESOURCETYPE__.contains("NULL")) {
                 __RESOURCETYPE__ = __NA__;
 
             }
 
-            if (__RESOURCENAME__.equals("") || __RESOURCENAME__.equals("NULL") || __RESOURCENAME__ == null) {
+            if (__RESOURCENAME__.equals("") || __RESOURCENAME__.equals("NULL") || __RESOURCENAME__ == null || __RESOURCENAME__.contains("NULL")) {
                 __RESOURCENAME__ = __NA__;
                 System.err.println("NULL " + __RESOURCENAME__);
             }
 
-            if (__RESOURCEPRODSTATUS__.equals("") || __RESOURCEPRODSTATUS__.equals("NULL") || __RESOURCEPRODSTATUS__ == null) {
+            if (__RESOURCEPRODSTATUS__.equals("") || __RESOURCEPRODSTATUS__.equals("NULL") || __RESOURCEPRODSTATUS__ == null || __RESOURCEPRODSTATUS__.contains("NULL")) {
                 __RESOURCEPRODSTATUS__ = __NA__;
 
             }
@@ -461,7 +461,6 @@ public class WriteFiles {
                 __RESOURCETYPE__ = __NA__;
 
             } //else{ System.out.println("it.cnr.ilc.jlremap.io.WriteFiles.writeLangfile() TYPE -"+__RESOURCETYPE__+"-");}
-            
 
             if (__RESOURCENAME__.equals("") || __RESOURCENAME__.equalsIgnoreCase("NULL") || __RESOURCENAME__ == null || __RESOURCENAME__.contains("NULL")) {
                 __RESOURCENAME__ = __NA__;
@@ -470,7 +469,7 @@ public class WriteFiles {
 
             if (__RESOURCEPRODSTATUS__.equals("") || __RESOURCEPRODSTATUS__.equalsIgnoreCase("NULL") || __RESOURCEPRODSTATUS__ == null || __RESOURCEPRODSTATUS__.contains("NULL")) {
                 __RESOURCEPRODSTATUS__ = __NA__;
-                System.err.println("NULL " + __RESOURCEPRODSTATUS__);
+                // System.err.println("NULL " + __RESOURCEPRODSTATUS__);
 
             }
 
@@ -575,6 +574,30 @@ public class WriteFiles {
 
             __RESOURCEPRODSTATUS__ = __RESOURCEPRODSTATUS__.replaceAll("\\\\\"\"", "").replaceAll("\"", "'");
             __RESOURCEPRODSTATUS_CLEAN__ = __RESOURCEPRODSTATUS_CLEAN__.replaceAll("\\\\\"\"", "").replaceAll("\"", "'");
+
+            /*check langs fields if lang is null and the corresponding lang_norm is not */
+            if (__RESOURCELANG_1__.equals("NULL") && !__RESOURCELANG_1_CLEAN__.equals("NULL")) {
+                System.out.println("Lang1 -" + __RESOURCELANG_2__ + "- and lang_norm1 -" + __RESOURCELANG_1_CLEAN__ + "- differ for passcode: -" + __PASSCODE__ + "- and resid -"+__RESID__+"-");
+            }
+
+            if (__RESOURCELANG_2__.equals("NULL") && !__RESOURCELANG_2_CLEAN__.equals("NULL")) {
+                System.out.println("Lang2 -" + __RESOURCELANG_2__ + "- and lang_norm2 -" + __RESOURCELANG_2_CLEAN__ + "- differ for passcode: -" + __PASSCODE__ + "- and resid -"+__RESID__+"-");
+            }
+
+            if (__RESOURCELANG_3__.equals("NULL") && !__RESOURCELANG_3_CLEAN__.equals("NULL")) {
+                System.out.println("Lang3 -" + __RESOURCELANG_3__ + "- and lang_norm3 -" + __RESOURCELANG_3_CLEAN__ + "- differ for passcode: -" + __PASSCODE__ + "- and resid -"+__RESID__+"-");
+            }
+            if (__RESOURCELANG_4__.equals("NULL") && !__RESOURCELANG_4_CLEAN__.equals("NULL")) {
+                System.out.println("Lang4 -" + __RESOURCELANG_4__ + "- and lang_norm4 -" + __RESOURCELANG_4_CLEAN__ + "- differ for passcode: -" + __PASSCODE__ + "- and resid -"+__RESID__+"-");
+            }
+            if (__RESOURCELANG_5__.equals("NULL") && !__RESOURCELANG_5_CLEAN__.equals("NULL")) {
+                System.out.println("Lang5 -" + __RESOURCELANG_5__ + "- and lang_norm5 -" + __RESOURCELANG_5_CLEAN__ + "- differ for passcode: -" + __PASSCODE__ + "- and resid -"+__RESID__+"-");
+            }
+            
+            if (__RESOURCELANG_O__.equals("NULL") && !__RESOURCELANG_O_CLEAN__.equals("NULL")) {
+                System.out.println("Lang_other -" + __RESOURCELANG_O__ + "- and lang_other_norm -" + __RESOURCELANG_O_CLEAN__ + "- differ for passcode: -" + __PASSCODE__ + "- and resid -"+__RESID__+"-");
+            }
+
 
             if (goahead) {
 
