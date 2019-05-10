@@ -69,7 +69,7 @@ UNION ALL
 SELECT l.resourceid, lang5 FROM lremap_resource_langs_norm l, ods_lremap_resource_norm_keys k WHERE l.resourceid = k.resourceid AND  lang5 is not  null
 order by 1, 2 asc;
 
--- other langs 
+-- other langs norm
 REPLACE INTO lremap_resource_other_langs
 SELECT l.resourceid, langother FROM lremap_resource_langs l, ods_lremap_resource_keys k WHERE l.resourceid = k.resourceid AND langother is not null;
 
@@ -83,6 +83,7 @@ MD5(concat(CONF,'#',YEAR,'#',PASSCODE,'#',resourceid,'#',type,'#',name,'#',prods
 langdim
 FROM stage_lremap_resource_lang A;
 
+-- lang dim norm
 REPLACE INTO lremap_resource_langs_dim_norm
 SELECT 
 MD5(concat(CONF,'#',YEAR,'#',PASSCODE,'#',resourceid,'#',type,'#',name,'#',prodstatus)) as resourceid,

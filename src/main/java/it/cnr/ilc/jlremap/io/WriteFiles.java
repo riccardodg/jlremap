@@ -223,7 +223,7 @@ public class WriteFiles {
                 }
                 __RESID__ = new Integer(resid).toString();
             }
-            //System.err.println("resid1 -"+__RESID__+"-");
+            System.err.println("resid1 -" + __RESID__ + "- for passcode " + __PASSCODE__);
 
             /*check other fields */
             if (__RESOURCEAVAIL_CLEAN__.equals("")) {
@@ -395,6 +395,7 @@ public class WriteFiles {
         boolean goahead = true;
         String passChk = "";
         int resid = 1;
+        int dim = 0;
         List<String> files = new ArrayList<String>();
         File filenorm = new File(this.inFile + ".norm");
         File fileauthor = new File(this.inFile + ".auth");
@@ -406,6 +407,7 @@ public class WriteFiles {
         bwnorm = new BufferedWriter(fwnorm);
         int i = 0;
         for (List<String> items : table) {
+            dim=0;
             /*init fields*/
             //System.err.println("items  at " + i + ":  " + items);
             try {
@@ -500,18 +502,27 @@ public class WriteFiles {
             }
 
             /*check resid*/
+//            if (__RESID__.equals("")) {
+//                if (__PASSCODE__.equals(passChk)) {
+//                    resid = resid + 1;
+//                    //System.err.println("resid1 chk pc -" + __RESID__ + "-");
+//                } else {
+//                    resid = 1;
+//                }
+//                __RESID__ = new Integer(resid).toString();
+//                //System.err.println("resid1 -" + __RESID__ + "-");
+//            } else {
+//                //System.err.println("resid1 ELSE -" + __RESID__ + "-");
+//            }
             if (__RESID__.equals("")) {
                 if (__PASSCODE__.equals(passChk)) {
                     resid = resid + 1;
-                    //System.err.println("resid1 chk pc -" + __RESID__ + "-");
                 } else {
                     resid = 1;
                 }
                 __RESID__ = new Integer(resid).toString();
-                //System.err.println("resid1 -" + __RESID__ + "-");
-            } else {
-                //System.err.println("resid1 ELSE -" + __RESID__ + "-");
             }
+            //System.err.println("resid1 -" + __RESID__ + "- for passcode " + __PASSCODE__);
 
             /*check langs fields */
             if (__RESOURCELANG_1_CLEAN__.equals("")) {
@@ -577,27 +588,56 @@ public class WriteFiles {
 
             /*check langs fields if lang is null and the corresponding lang_norm is not */
             if (__RESOURCELANG_1__.equals("NULL") && !__RESOURCELANG_1_CLEAN__.equals("NULL")) {
-                System.out.println("Lang1 -" + __RESOURCELANG_2__ + "- and lang_norm1 -" + __RESOURCELANG_1_CLEAN__ + "- differ for passcode: -" + __PASSCODE__ + "- and resid -"+__RESID__+"-");
-            }
+                System.out.println("Lang1 -" + __RESOURCELANG_2__ + "- and lang_norm1 -" + __RESOURCELANG_1_CLEAN__ + "- differ for passcode: -" + __PASSCODE__ + "- and resid -" + __RESID__ + "-");
+            } 
 
             if (__RESOURCELANG_2__.equals("NULL") && !__RESOURCELANG_2_CLEAN__.equals("NULL")) {
-                System.out.println("Lang2 -" + __RESOURCELANG_2__ + "- and lang_norm2 -" + __RESOURCELANG_2_CLEAN__ + "- differ for passcode: -" + __PASSCODE__ + "- and resid -"+__RESID__+"-");
-            }
+                System.out.println("Lang2 -" + __RESOURCELANG_2__ + "- and lang_norm2 -" + __RESOURCELANG_2_CLEAN__ + "- differ for passcode: -" + __PASSCODE__ + "- and resid -" + __RESID__ + "-");
+            } 
 
             if (__RESOURCELANG_3__.equals("NULL") && !__RESOURCELANG_3_CLEAN__.equals("NULL")) {
-                System.out.println("Lang3 -" + __RESOURCELANG_3__ + "- and lang_norm3 -" + __RESOURCELANG_3_CLEAN__ + "- differ for passcode: -" + __PASSCODE__ + "- and resid -"+__RESID__+"-");
-            }
+                System.out.println("Lang3 -" + __RESOURCELANG_3__ + "- and lang_norm3 -" + __RESOURCELANG_3_CLEAN__ + "- differ for passcode: -" + __PASSCODE__ + "- and resid -" + __RESID__ + "-");
+            } 
             if (__RESOURCELANG_4__.equals("NULL") && !__RESOURCELANG_4_CLEAN__.equals("NULL")) {
-                System.out.println("Lang4 -" + __RESOURCELANG_4__ + "- and lang_norm4 -" + __RESOURCELANG_4_CLEAN__ + "- differ for passcode: -" + __PASSCODE__ + "- and resid -"+__RESID__+"-");
-            }
+                System.out.println("Lang4 -" + __RESOURCELANG_4__ + "- and lang_norm4 -" + __RESOURCELANG_4_CLEAN__ + "- differ for passcode: -" + __PASSCODE__ + "- and resid -" + __RESID__ + "-");
+            } 
             if (__RESOURCELANG_5__.equals("NULL") && !__RESOURCELANG_5_CLEAN__.equals("NULL")) {
-                System.out.println("Lang5 -" + __RESOURCELANG_5__ + "- and lang_norm5 -" + __RESOURCELANG_5_CLEAN__ + "- differ for passcode: -" + __PASSCODE__ + "- and resid -"+__RESID__+"-");
-            }
-            
-            if (__RESOURCELANG_O__.equals("NULL") && !__RESOURCELANG_O_CLEAN__.equals("NULL")) {
-                System.out.println("Lang_other -" + __RESOURCELANG_O__ + "- and lang_other_norm -" + __RESOURCELANG_O_CLEAN__ + "- differ for passcode: -" + __PASSCODE__ + "- and resid -"+__RESID__+"-");
-            }
+                System.out.println("Lang5 -" + __RESOURCELANG_5__ + "- and lang_norm5 -" + __RESOURCELANG_5_CLEAN__ + "- differ for passcode: -" + __PASSCODE__ + "- and resid -" + __RESID__ + "-");
+            } 
 
+            if (__RESOURCELANG_O__.equals("NULL") && !__RESOURCELANG_O_CLEAN__.equals("NULL")) {
+                System.out.println("Lang_other -" + __RESOURCELANG_O__ + "- and lang_other_norm -" + __RESOURCELANG_O_CLEAN__ + "- differ for passcode: -" + __PASSCODE__ + "- and resid -" + __RESID__ + "-");
+            } 
+            
+            // check lamgdim
+            if (!__RESOURCELANG_1_CLEAN__.equals("NULL"))
+                dim=dim+1;
+            if (!__RESOURCELANG_2_CLEAN__.equals("NULL"))
+                dim=dim+1;
+            if (!__RESOURCELANG_3_CLEAN__.equals("NULL"))
+                dim=dim+1;
+            if (!__RESOURCELANG_4_CLEAN__.equals("NULL"))
+                dim=dim+1;
+            if (!__RESOURCELANG_5_CLEAN__.equals("NULL"))
+                dim=dim+1;
+            if (!__RESOURCELANG_O_CLEAN__.equals("NULL"))
+                dim=dim+1;
+             
+            if (__RESOURCELANGDIM__.equals(__NA__)) {
+                if (dim == 0) {
+                    __RESOURCELANGDIM__="Zero";
+                }
+                if (dim == 1) {
+                    __RESOURCELANGDIM__="Mono";
+                }
+                if (dim == 2) {
+                    __RESOURCELANGDIM__="Bi";
+                }
+                if (dim >= 3) {
+                    __RESOURCELANGDIM__="Multi";
+                }
+            }
+            //System.err.println("dim -" + dim + " Dimension -"+__RESOURCELANGDIM__+ " for passcode " + __PASSCODE__ +" and resid "+__RESID__);
 
             if (goahead) {
 

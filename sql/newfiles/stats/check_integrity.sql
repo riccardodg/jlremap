@@ -156,4 +156,41 @@ WHERE
                     '#',
                     r.prodstatus));
 
-
+SELECT A.CONF, A.PASSCODE, A.resourceid, R.conf,
+    MD5(CONCAT(A.CONF,
+                    '#',
+                    A.YEAR,
+                    '#',
+                    A.PASSCODE,
+                    '#',
+                    A.resourceid,
+                    '#',
+                    A.type,
+                    '#',
+                    A.name,
+                    '#',
+                    A.prodstatus)) AS resourceid,
+    A.lang1,
+    A.lang2,
+    A.lang3,
+    A.lang4,
+    A.lang5,
+    A.langother
+FROM
+    stage_lremap_resource_lang_norm A LEFT OUTER JOIN 
+    lremap_resources_norm R
+ON
+    R.resourceid = MD5(CONCAT(A.CONF,
+                    '#',
+                    A.YEAR,
+                    '#',
+                    A.PASSCODE,
+                    '#',
+                    A.resourceid,
+                    '#',
+                    A.type,
+                    '#',
+                    A.name,
+                    '#',
+                    A.prodstatus))
+                    WHERE A.YEAR='2012' and R.conf is null
