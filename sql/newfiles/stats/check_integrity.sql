@@ -193,4 +193,4 @@ ON
                     A.name,
                     '#',
                     A.prodstatus))
-                    WHERE A.YEAR='2012' and R.conf is null
+                    WHERE A.YEAR='2011' and R.conf is null

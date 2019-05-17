@@ -31,7 +31,7 @@ FROM
 WHERE
     r.resourceid = k.resourceid
         AND k.resource_normid = rn.resourceid
-        AND r.conf = 'ACLHT2011';
+        AND r.conf = 'IS2011';
         
 SELECT 
     r.conf,
@@ -67,4 +67,4 @@ WHERE
     r.resourceid = k.resourceid
         AND k.resource_normid = rn.resourceid
        
-        AND r.conf = 'ACLHT2011'
+        AND r.conf = 'IS2011';
