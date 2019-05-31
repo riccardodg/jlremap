@@ -10,7 +10,7 @@
                 <goal>org.codehaus.mojo:exec-maven-plugin:1.2.1:exec</goal>
             </goals>
             <properties>
-                <exec.args>-classpath %classpath it.cnr.ilc.jlremap.CsvReader -d /home/riccardo/Dropbox/LREMap/24042019/GP/CLEANED/RANLP2011_MD.csv</exec.args>
+                <exec.args>-classpath %classpath it.cnr.ilc.jlremap.CsvReader -d /home/riccardo/Dropbox/LREMap/24042019/GP/CLEANED/COLING2010_MD.csv</exec.args>
                 <exec.executable>java</exec.executable>
             </properties>
         </action>
